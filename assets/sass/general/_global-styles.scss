@@ -1,0 +1,111 @@
+/*************************************
+* Body, html and other global styles *
+*************************************/
+
+// Default typography styles for the site
+body {
+  @include body-text();
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  line-height: 1.2;
+}
+
+h2 {
+  @include h2();
+}
+
+a {
+  color: inherit;
+}
+em {
+  font-style: italic;
+}
+#content {
+  padding-top: 60px;
+}
+
+// class for a page content site-wide for the purpose of WYSIWYG editor
+.content {
+  font-size: 16px;
+  line-height: 1.4;
+  text-align: left;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    padding: 20px 0px;
+    font-weight: 700;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+
+  h5 {
+    font-size: 18px;
+  }
+} // .content
+
+// Prevent scroll
+.no-scroll {
+  overflow: hidden;
+}
+
+// image to background helper class
+img[class$="-imgtobg"] {
+  display: none;
+}
+
+// class for animation purposes
+// hides element so animation can start smoothly
+.animated {
+  visibility: hidden;
+}
+/****************
+* Media queries *
+****************/
+
+@include tablet() {
+  h2 {
+    font-size: 44px;
+    line-height: 0.92;
+  }
+}
+
+@include desktop() {
+  h2 {
+    font-size: 48px;
+  }
+  p {
+    // letter-spacing: 0.8px;
+  }
+}
+@include desktop-xlg() {
+  h2 {
+    font-size: 58px;
+    line-height: 56px;
+  }
+  p {
+    font-size: 19px;
+  }
+}

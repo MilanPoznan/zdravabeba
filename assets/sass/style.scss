@@ -1,0 +1,26 @@
+/*!
+Theme Name: Austurhofn
+Theme URI: http://test.yes/
+Author: J&L
+Author URI: http://jl.is/
+Description: Austurhofn company custom Wordpress theme
+Version: 1.0.0
+Text Domain: austurhofn
+Tags:
+
+Austurhofn Theme is based on Timber framework http://timber.github.io/timber/.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/,
+and Eric Meyer http://meyerweb.com/eric/tools/css/reset/.
+*/
+
+@import 'general/reset',
+	'general/colors',
+	'general/screen-reader',
+	'general/font-families',
+	'general/font-styles',
+	'general/layout-mixins',
+	'general/elements-mixins',
+	'general/media-mixins',
+	'general/global-styles';
