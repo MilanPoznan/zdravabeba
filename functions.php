@@ -83,6 +83,136 @@ if ( ! function_exists( 'zdravabeba_setup' ) ) :
 endif;
 add_action( 'after_setup_theme', 'zdravabeba_setup' );
 
+
+/**
+* Register custom post types for Nordural theme
+*
+* @since 1.0.0
+* @access public
+*/
+function register_custom_post_types() {
+
+### Markers Custom Post Type ###
+
+  $planiranjeLabels = array(
+    'name'               => 'Planiranje',
+    'singular_name'      => 'Planiranje',
+    'menu_name'          => 'Planiranje',
+    'name_admin_bar'     => 'Planiranje',
+    'add_new'            => 'Add New',
+    'add_new_item'       => 'Add New Planiranje',
+    'new_item'           => 'New Planiranje',
+    'edit_item'          => 'Edit Planiranje',
+    'view_item'          => 'View Planiranje',
+    'all_items'          => 'All Planiranje',
+    'search_items'       => 'Search Planiranje',
+    'parent_item_colon'  => 'Parent Planiranje:',
+    'not_found'          => 'No Planiranje found.',
+    'not_found_in_trash' => 'No Planiranje found in Trash.',
+  );
+
+  $planiranjeArgs = array(
+    'labels'             => $planiranjeLabels,
+    'public'             => true,
+		'show_in_rest'			 => true,
+    'capability_type'    => 'post',
+    'has_archive'        => true,
+    'menu_icon'          => 'dashicons-palmtree',
+    // 'supports'           => array( 'title' ),
+    'taxonomies'         => array( 'category', 'post_tag' )
+  );
+
+	$trudnocaLabels = array(
+    'name'               => 'Trudnoca',
+    'singular_name'      => 'Trudnoca',
+    'menu_name'          => 'Trudnoca',
+    'name_admin_bar'     => 'Trudnoca',
+    'add_new'            => 'Add New',
+    'add_new_item'       => 'Add New Trudnoca',
+    'new_item'           => 'New Trudnoca',
+    'edit_item'          => 'Edit Trudnoca',
+    'view_item'          => 'View Trudnoca',
+    'all_items'          => 'All Trudnoca',
+    'search_items'       => 'Search Trudnoca',
+    'parent_item_colon'  => 'Parent Trudnoca:',
+    'not_found'          => 'No Trudnoca found.',
+    'not_found_in_trash' => 'No Trudnoca found in Trash.',
+  );
+
+  $trudnocaArgs = array(
+    'labels'             => $trudnocaLabels,
+    'public'             => true,
+		'show_in_rest'			 => true,
+    'capability_type'    => 'post',
+    'has_archive'        => true,
+    'menu_icon'          => 'dashicons-universal-access',
+    // 'supports'           => array( 'title' ),
+    'taxonomies'         => array( 'category', 'post_tag' )
+  );
+
+	$materinstvoLabels = array(
+    'name'               => 'Materistvo',
+    'singular_name'      => 'Materistvo',
+    'menu_name'          => 'Materistvo',
+    'name_admin_bar'     => 'Materistvo',
+    'add_new'            => 'Add New',
+    'add_new_item'       => 'Add New Materistvo',
+    'new_item'           => 'New Materistvo',
+    'edit_item'          => 'Edit Materistvo',
+    'view_item'          => 'View Materistvo',
+    'all_items'          => 'All Materistvo',
+    'search_items'       => 'Search Materistvo',
+    'parent_item_colon'  => 'Parent Materistvo:',
+    'not_found'          => 'No Materistvo found.',
+    'not_found_in_trash' => 'No Materistvo found in Trash.',
+  );
+
+  $materinstvoArgs = array(
+    'labels'             => $materinstvoLabels,
+    'public'             => true,
+		'show_in_rest'			 => true,
+    'capability_type'    => 'post',
+    'has_archive'        => true,
+    'menu_icon'          => 'dashicons-heart',
+    // 'supports'           => array( 'title' ),
+    'taxonomies'         => array( 'category', 'post_tag' )
+  );
+
+	$savetiLabels = array(
+    'name'               => 'Saveti',
+    'singular_name'      => 'Saveti',
+    'menu_name'          => 'Saveti',
+    'name_admin_bar'     => 'Saveti',
+    'add_new'            => 'Add New',
+    'add_new_item'       => 'Add New Saveti',
+    'new_item'           => 'New Saveti',
+    'edit_item'          => 'Edit Saveti',
+    'view_item'          => 'View Saveti',
+    'all_items'          => 'All Saveti',
+    'search_items'       => 'Search Saveti',
+    'parent_item_colon'  => 'Parent Saveti:',
+    'not_found'          => 'No Saveti found.',
+    'not_found_in_trash' => 'No Saveti found in Trash.',
+  );
+
+  $savetiArgs = array(
+    'labels'             => $savetiLabels,
+    'public'             => true,
+		'show_in_rest'			 => true,
+    'capability_type'    => 'post',
+    'has_archive'        => true,
+    'menu_icon'          => 'dashicons-welcome-write-blog',
+    // 'supports'           => array( 'title' ),
+    'taxonomies'         => array( 'category', 'post_tag' )
+  );
+
+	register_post_type( 'planiranje', $planiranjeArgs );
+	register_post_type( 'trudnoca', $trudnocaArgs );
+	register_post_type( 'materinstvo', $materinstvoArgs );
+  register_post_type( 'saveti', $savetiArgs );
+}
+
+add_action( 'init', 'register_custom_post_types' );
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
@@ -158,4 +288,3 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-
