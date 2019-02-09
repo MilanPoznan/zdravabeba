@@ -6,7 +6,7 @@
  * @link https://github.com/jonsuh/hamburgers
  */
 .hamburger {
-	padding: 15px 15px;
+	// padding: 15px 15px;
 	display: inline-block;
 	cursor: pointer;
 	transition-property: opacity, filter;
@@ -29,7 +29,7 @@
 .hamburger.is-active .hamburger-inner,
 .hamburger.is-active .hamburger-inner::before,
 .hamburger.is-active .hamburger-inner::after {
-	background-color: green;
+	background-color: $white;
 }
 
 .hamburger-box {
@@ -49,7 +49,7 @@
 .hamburger-inner::after {
 	width: 40px;
 	height: 3px;
-	background-color: green;
+	background-color: $white;
 	border-radius: 3px;
 	position: absolute;
 	transition-property: transform;

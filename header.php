@@ -50,7 +50,8 @@
 				</nav><!-- #site-navigation -->
 			</div>
 			<!-- Site Search -->
-			<div class="header__search">
+			<div class="header__search-icon"></div>
+			<div class="header__search-form">
 				<?php get_search_form() ?>
 			</div>
 
