@@ -2,8 +2,8 @@
 * Font styles *
 **************/
 
-@mixin font-style( $family, $size, $weight, $color: $text-black, $line-h: 1.4, $serif: false ) {
-	@if $serif {
+@mixin font-style( $family, $size, $weight, $color: $black, $line-h: 1.4) {
+	@if serif {
 		font-family: $family, serif;
 	} @else {
 		font-family: $family, sans-serif;
@@ -15,10 +15,10 @@
 }
 
 @mixin h1 {
-	@include font-style( $dante, 34px, 400, $dark-blue, 1.2 );
+	@include font-style( $dante, 34px, 400, $black, 1.2 );
 }
 @mixin h2 {
-	@include font-style( $dante, 34px, 400, $dark-blue, 1 );
+	@include font-style( $dante, 34px, 400, $black, 1 );
 }
 @mixin h1-tablet {
 	@include h1();
@@ -37,7 +37,6 @@
 	font-size: 48px;
 }
 
-
 @mixin h3 {
 	@include font-style($main-family, 32px, 700);
 }
@@ -55,15 +54,15 @@
 }
 
 @mixin body-text {
-	@include font-style($johnston-light, 16px, 400, $dark-blue);
+	@include font-style($johnston-light, 16px, 400, $black);
 }
 
 @mixin body-text-small {
-	@include font-style($johnston-light, 14px, 400, $dark-blue);
+	@include font-style($johnston-light, 14px, 400, $black);
 }
 
 @mixin copyright-text {
-	@include font-style($johnston-medium, 10px, 400, $gold);
+	@include font-style($johnston-medium, 10px, 400, $black);
 	text-transform: uppercase;
 	line-height: normal;
 }
