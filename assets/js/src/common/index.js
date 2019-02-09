@@ -7,6 +7,9 @@ import Navigation from './navigation';
 import ImgToBackground from './ImgToBackground';
 
 const imgToBgd = ImgToBackground(jQuery);
+const $hamburgerOpenBtn = $('.js-open-nav'),
+	$hamburgerCloseBtn = $('.js-close-nav');
+
 //Elements
 // DOM ready calls
 jQuery(function($) {
