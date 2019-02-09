@@ -85,7 +85,7 @@ add_action( 'after_setup_theme', 'zdravabeba_setup' );
 
 
 /**
-* Register custom post types for Nordural theme
+* Register custom post types for Zdravabeba theme
 *
 * @since 1.0.0
 * @access public
@@ -206,10 +206,39 @@ function register_custom_post_types() {
     'taxonomies'         => array( 'category', 'post_tag' )
   );
 
+	$proizvodiLabels = array(
+    'name'               => 'Proizvodi',
+    'singular_name'      => 'Proizvod',
+    'menu_name'          => 'Proizvodi',
+    'name_admin_bar'     => 'Proizvodi',
+    'add_new'            => 'Add New',
+    'add_new_item'       => 'Add New Proizvod',
+    'new_item'           => 'New Proizvod',
+    'edit_item'          => 'Edit Proizvod',
+    'view_item'          => 'Pogledaj Proizvod',
+    'all_items'          => 'Svi Proizvodi',
+    'search_items'       => 'Search Proizvodi',
+    'parent_item_colon'  => 'Parent Proizvodi:',
+    'not_found'          => 'No Proizvod found.',
+    'not_found_in_trash' => 'No Proizvod found in Trash.',
+  );
+
+  $proizvodArgs = array(
+    'labels'             => $proizvodiLabels,
+    'public'             => true,
+		'show_in_rest'			 => true,
+    'capability_type'    => 'post',
+    'has_archive'        => true,
+    'menu_icon'          => 'dashicons-awards',
+    // 'supports'           => array( 'title' ),
+    'taxonomies'         => array( 'category', 'post_tag' )
+  );
+
 	register_post_type( 'planiranje', $planiranjeArgs );
 	register_post_type( 'trudnoca', $trudnocaArgs );
 	register_post_type( 'materinstvo', $materinstvoArgs );
-  register_post_type( 'saveti', $savetiArgs );
+	register_post_type( 'saveti', $savetiArgs );
+  register_post_type( 'proizvodi', $proizvodArgs );
 }
 
 add_action( 'init', 'register_custom_post_types' );
