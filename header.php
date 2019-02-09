@@ -22,37 +22,43 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'zdravabeba' ); ?></a>
+	<div class="site-overlay js-overlay"></div>
+	<header id="masthead" class="header">
+		<div class="header__wrapp">
+			<!-- Hamburger menu -->
+			<div class="header__hamburger-wrapper js-open-nav">
+				<button class="hamburger hamburger--spin" type="button">
+					<span class="hamburger-box">
+					<span class="hamburger-inner"></span>
+					</span>
+				</button>
+			</div>
+			<!-- Logo Site  -->
+			<div class="header__logo">
+				<?php the_custom_logo(); ?>
+			</div>
+			<!-- Site Menu -->
+			<div class="header__menu">
+				<nav id="site-navigation" class="main-navigation">
+					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'zdravabeba' ); ?></button>
+					<?php
+					wp_nav_menu( array(
+						'theme_location' => 'menu-1',
+						'menu_id'        => 'primary-menu',
+					) );
+					?>
+				</nav><!-- #site-navigation -->
+			</div>
+			<!-- Site Search -->
+			<div class="header__search">
+				<?php get_search_form() ?>
+			</div>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$zdravabeba_description = get_bloginfo( 'description', 'display' );
-			if ( $zdravabeba_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $zdravabeba_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'zdravabeba' ); ?></button>
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
-		</nav><!-- #site-navigation -->
+
+		</div>
+
+
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
