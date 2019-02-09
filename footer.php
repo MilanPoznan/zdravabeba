@@ -27,6 +27,29 @@
 				printf( esc_html__( 'Theme: %1$s by %2$s.', 'zdravabeba' ), 'zdravabeba', '<a href="http://underscores.me/">MIlan Poznan</a>' );
 				?>
 		</div><!-- .site-info -->
+		<div class="footer">
+			<div class="footer__description">
+			<p>Femibion powstał po to, by pomóc
+Ci w szczególnym okresie planowania dziecka, ciąży oraz macierzyństwa. Wiemy, że to niesamowite wyzwanie, ale również wielka przygoda. Pamiętaj, że jesteśmy tu dla Ciebie
+i możesz na nas liczyć.</p>
+</div>
+			<div class="footer__nav">
+			<h3 class="footer__nav-title">Etapy</h3>
+			<ul>
+				<li>Planowanie</li>
+				<li>Ciąża</li>
+				<li>Macierzyństwo</li>
+			</ul>
+			<h3 class="footer__nav-title">O FEMIBION</h3>
+			<ul>
+				<li>O NAS</li>
+				<li>FAQ</li>
+			</ul>
+			</div>
+			<div class="footer__social"></div>
+			<div class="footer__copy"></div>
+			<div class="footer__policy-privacy"></div>
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
