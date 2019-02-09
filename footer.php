@@ -14,43 +14,67 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'zdravabeba' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'zdravabeba' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'zdravabeba' ), 'zdravabeba', '<a href="http://underscores.me/">MIlan Poznan</a>' );
-				?>
-		</div><!-- .site-info -->
+
 		<div class="footer">
+			<div class="footer__wrapper">
 			<div class="footer__description">
-			<p>Femibion powstał po to, by pomóc
+				Femibion powstał po to, by pomóc
 Ci w szczególnym okresie planowania dziecka, ciąży oraz macierzyństwa. Wiemy, że to niesamowite wyzwanie, ale również wielka przygoda. Pamiętaj, że jesteśmy tu dla Ciebie
-i możesz na nas liczyć.</p>
-</div>
-			<div class="footer__nav">
-			<h3 class="footer__nav-title">Etapy</h3>
-			<ul>
-				<li>Planowanie</li>
-				<li>Ciąża</li>
-				<li>Macierzyństwo</li>
-			</ul>
-			<h3 class="footer__nav-title">O FEMIBION</h3>
-			<ul>
-				<li>O NAS</li>
-				<li>FAQ</li>
-			</ul>
+i możesz na nas liczyć.
 			</div>
-			<div class="footer__social"></div>
-			<div class="footer__copy"></div>
-			<div class="footer__policy-privacy"></div>
-		</div>
+
+			<div class="footer__links">
+				<div class="footer__box">
+					<p class="footer__links--title">Etapy</p>
+					<ul>
+						<li><a href="#">Planowanie</a></li>
+						<li><a href="#">Ciąża</a></li>
+						<li><a href="#">Macierzyństwo</a></li>
+					</ul>
+				</div><!-- .footer__box -->
+				<div class="footer__box">
+					<p class="footer__links--title">O FEMIBION</p>
+					<ul>
+						<li><a href="#">O NAS</a></li>
+						<li><a href="#">FAQ</a></li>
+					</ul>
+				</div><!-- .footer__box -->
+				<div class="footer__box">
+					<p class="footer__links--title">PRZYDATNE INFORMACJE</p>
+					<ul>
+						<li><a href="#">Kalendarz dni płodnych</a></li>
+						<li><a href="#">Wybierz imię dla swojego dziecka</a></li>
+					</ul>
+				</div><!-- .footer__box -->
+			</div><!-- .footer__links -->
+		</div><!-- .footer__wrapper -->
+
+			<div class="footer__socials">
+				<div class="footer__social">
+					<p class="footer__social--title">Znajdź nas na:</p>
+					<div class="footer__social-icons">
+						<a href="https://www.facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+						<a href="https://www.twitter.com"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+						<a href="https://plus.google.com/"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+						<a href="https://www.youtube.com"><i class="fa fa-youtube-play"></i></a>
+					</div>
+				</div><!-- .footer__social-->			
+				<div class="footer__copy">&copy; <?php echo date("Y"); ?> Copyright | EL Pharma.</div>
+			</div><!-- .footer__social -->
+
+		</div><!-- .footer -->
 	</footer><!-- #colophon -->
+
+	<div class="footer__privacy-policy">
+		<div class="footer__terms">
+			<a href="#">Polityka prywatności</a>
+			<a href="#">Mapa strony</a>
+			<a href="#">Warunki korzystania z aplikacji</a>
+		</div>
+		<div class="footer__logo">
+			<img src="<?php echo get_template_directory_uri() ?>/assets/img/footer-logo.jpg" alt="Footer Logo Image">
+		</div>
+	</div><!-- .footer__privacy-policy -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
