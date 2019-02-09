@@ -4,17 +4,77 @@
 	padding: 30px 5%;
 	background: $purple;
 	display: flex;
+	position: relative;
+	z-index: 10;
 	&__wrapp {
+		width: 100%;
 		display: flex;
 		align-items: center;
+		justify-content: space-between;
 	}
 	&__menu {
-		position: absolute;
 		display: none;
-		color: $purple;
+		position: absolute;
+		width: 100%;
+		height: auto;
+		left: 0;
+		top: 120px;
+		color: $white;
+		background-color: $purple-grey;
+		z-index: 5;
+	}
+	&__logo {
+		width: 170px;
+		height: 58px;
 	}
 	&__search-form {
 		position: absolute;
+		width: 100%;
+		left: 0;
+		top: 120px;
+		padding: 30px 20%;
+		align-items: center;
+		justify-content: center;
+		background-color: $purple-grey;
 		display: none;
+	}
+	&__search-icon {
+		color: $white;
+		font-size: 32px;
+	}
+}
+
+@include desktop() {
+	.header {
+		padding: 30px 10%;
+		&__hamburger-wrapper {
+			display: none;
+		}
+		&__menu {
+			display: flex;
+			align-items: center;
+			width: 80%;
+			margin: 0 auto;
+			position: relative;
+			background: transparent;
+			height: 36px;
+			top: 0;
+		}
+		&__search-icon {
+			display: none;
+		}
+		&__search-form {
+			position: relative;
+			display: flex;
+			width: 255px;
+			height: 36px;
+			top: 0;
+			padding: 0;
+			background: transparent;
+			input {
+				background-color: rgba(0, 0, 0, 0.3);
+				color: $white;
+			}
+		}
 	}
 }

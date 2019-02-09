@@ -17,6 +17,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
+
 	<?php wp_head(); ?>
 </head>
 
@@ -38,9 +39,8 @@
 				<?php the_custom_logo(); ?>
 			</div>
 			<!-- Site Menu -->
-			<div class="header__menu">
+			<div class="header__menu js-menu">
 				<nav id="site-navigation" class="main-navigation">
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'zdravabeba' ); ?></button>
 					<?php
 					wp_nav_menu( array(
 						'theme_location' => 'menu-1',
@@ -48,16 +48,35 @@
 					) );
 					?>
 				</nav><!-- #site-navigation -->
+				<div class="menu__folow-us">
+					<div class="menu__folow-text">
+						Pratite Nas
+					</div>
+					<div class="menu__folow-socials">
+						<a href="#" target="_blank">
+							<i class="fa fa-facebook" aria-hidden="true"></i>
+						</a>
+						<a href="#" target="_blank">
+							<i class="fa fa-twitter" aria-hidden="true"></i>
+						</a>
+						<a href="#" target="_blank">
+							<i class="fa fa-google-plus" aria-hidden="true"></i>
+						</a>
+						<a href="#" target="_blank">
+							<i class="fa fa-youtube-play" aria-hidden="true"></i>
+						</a>
+					</div>
+				</div>
 			</div>
 			<!-- Site Search -->
-			<div class="header__search-icon"></div>
+			<div class="header__search-icon js-search">
+				<i class="fa fa-search"></i>
+			</div>
 			<div class="header__search-form">
 				<?php get_search_form() ?>
 			</div>
-
-
-
 		</div>
+
 
 
 	</header><!-- #masthead -->
