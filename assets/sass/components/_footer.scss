@@ -150,6 +150,9 @@
     padding: 80px 0px 80px;
   }
   .footer {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0;
     justify-content: space-around;
     font-size: 16px;
     line-height: 1.5;
@@ -191,7 +194,9 @@
       }
     }
     &__privacy-policy {
-      margin: 30px 0;
+      max-width: 1160px;
+      margin: 30px auto;
+      padding: 0;
     }
     &__terms {
       flex-direction: row;
