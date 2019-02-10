@@ -7,6 +7,9 @@
   <div class="archive-page__tabs">
     <?php include 'tab-archive.php'; ?>
   </div>
+  <div class="archive-page__last-posts">
+    <?php get_last_articles(); ?>
+  </div>
 </div>
 
 <?php get_footer(); ?>
