@@ -41,7 +41,11 @@
                   echo $single_post[0]->post_content;
                   $post_link = get_permalink($single_post[0]->ID);
                 ?>
+<<<<<<< HEAD
                 <a href="<?php echo $post_link ?>"  class="archive-tab__post-cta">Procitajte vise</a>
+=======
+                <a href="<?php echo $post_link ?>"  class="archive-tab__post-cta genertal-cta">Procitajte vise</a>
+>>>>>>> cddfd1e68c8a767578db17aa7b3a5305e9fbf683
               </div>
             </div>
 

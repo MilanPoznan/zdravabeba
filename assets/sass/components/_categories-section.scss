@@ -1,0 +1,249 @@
+.categories {
+
+  &__inner-wrapper {
+    position: relative;
+    background: transparent;
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  &__single {
+    position: relative;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 3;
+  }
+
+  &__icon {
+    height: 82px;
+    width: 82px;
+    margin-bottom: 26px;
+
+    img {
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: $light-purple;
+    opacity: 0.75;
+    transition: .4s;
+  }
+
+  &__content {
+    height: 0;
+    opacity: 0;
+    transition: .4s;
+  }
+
+  &__title {
+    position: relative;
+    margin-bottom: 45px;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: $white;
+
+    &::after {
+      position: absolute;
+      display: block;
+      height: 1px;
+      width: 38px;
+      content: '';
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -19px;
+      background-color: $white;
+    }
+  }
+
+  &__text {
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1.07;
+    text-transform: uppercase;
+    text-align: center;
+    color: $white;
+  }
+
+  &__small {
+    margin-bottom: 42px;
+    font-size: 16px;
+    line-height: 1.38;
+    text-align: center;
+    color: $white;
+  }
+
+  &__button {
+    display: flex;
+    height: 64px;
+    width: fit-content;
+    margin-bottom: 68px;
+    padding: 0 20px 0 27px;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+    background-color: transparent;
+    border: 1px solid $white;
+
+    &-title {
+      display: inline-block;
+      padding-top: 5px;
+      font-size: 24px;
+      text-transform: uppercase;
+    }
+
+    &-arrow {
+      display: inline-block;
+      margin-left: 40px;
+      padding: 4px;
+      transform: rotate(-45deg);
+      border: solid $white;
+      border-width: 0 3px 3px 0;
+    }
+  }
+
+  &__show-link {
+    position: relative;
+    display: flex;
+    height: 70px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+    background-color: $orange;
+    
+    &-title {
+      display: inline-block;
+      padding-top: 5px;
+      font-size: 24px;
+      text-transform: uppercase;
+    }
+
+    &-arrow {
+      display: inline-block;
+      margin-left: 40px;
+      margin-bottom: 10px;
+      padding: 5px;
+      transform: rotate(45deg);
+      border: solid $white;
+      border-width: 0 3px 3px 0;
+    }
+  }
+
+  &__overlay {
+    opacity: 0;
+
+    position: relative;
+    height: 200px;
+  }
+
+  .js-overlay {
+    position: absolute;
+    height: unset;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: $light-purple;
+    opacity: 0.75;
+  }
+
+  .js-cat-content {
+    position: relative;
+    display: flex;
+    height: unset;
+    padding: 50px 5%;
+    flex-flow: column;
+    align-items: center;
+    opacity: 1;
+    z-index: 1;
+  }
+
+}
+
+@include desktop() {
+  .categories {
+    position: relative;
+
+    &__bottom-gray {
+      position: absolute;
+      top: 50%;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: $gray;
+    }
+
+    &__inner-wrapper {
+      max-width: 1090px;
+      flex-flow: row;
+      margin: 0 auto;
+      justify-content: space-between;
+    }
+  
+    &__single {
+      min-height: 444px;
+      width: 350px;
+
+      &:hover {
+        .categories__content {
+          opacity: 1;
+        }
+        .categories__overlay {
+          opacity: 0.75;
+        }
+        .categories__show-link {
+          opacity: 0;
+        }
+      }
+    }
+  
+    &__overlay {
+      position: absolute;
+      height: unset;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: $light-purple;
+      opacity: 0;
+    }
+  
+    &__content {
+      position: relative;
+      display: flex;
+      height: unset;
+      padding: 50px 5% 0;
+      flex-flow: column;
+      align-items: center;
+      opacity: 0;
+      z-index: 1;
+    }
+  
+    &__button {
+      margin-bottom: 0;
+    }
+  
+    &__show-link {
+      pointer-events: none;
+      
+      &-arrow {
+        display: none;
+      }
+    }
+    
+  }
+
+}
