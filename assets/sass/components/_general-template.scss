@@ -1,10 +1,16 @@
-.general-title {
-  font-size: 50px;
-  line-height: 1.21;
-  color: $purple;
+.wrapper {
+  padding: 0 5%;
+  
 }
-.general-content {
+.general-text {
+  &__title {
+    font-size: 50px;
+    line-height: 1.21;
+    color: $purple;
+  }
+  &__content {
 
+  }
   &__social-share {
 
   }
@@ -12,7 +18,7 @@
 
   }
   &__purple-box-title {
-
+    
   }
   &__purple-box-text {
     
