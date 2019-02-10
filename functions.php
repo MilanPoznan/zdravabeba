@@ -118,7 +118,7 @@ function register_custom_post_types() {
     'capability_type'    => 'post',
     'has_archive'        => true,
     'menu_icon'          => 'dashicons-palmtree',
-    // 'supports'           => array( 'title' ),
+    'supports'           => array( 'title', 'editor', 'thumbnail' ),
     'taxonomies'         => array( 'category', 'post_tag' )
   );
 
