@@ -356,7 +356,10 @@ add_action( 'widgets_init', 'zdravabeba_widgets_init' );
  */
 function zdravabeba_scripts() {
 	wp_enqueue_style( 'zdravabeba-style', get_stylesheet_uri() );
-  wp_enqueue_style( 'font-awsome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' );
+
+  wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Raleway:300,300i,400,500,600,700,800,900' ); 
+	wp_enqueue_style( 'font-awsome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' );
+	
   wp_enqueue_script( 'example-scripts', get_template_directory_uri() . '/assets/js/example.js', array( 'jquery' ), 1.0, true );
   wp_enqueue_script( 'category-overlay', get_template_directory_uri() . '/assets/js/category-overlay.js', array( 'jquery' ), 1.0, true );
 
