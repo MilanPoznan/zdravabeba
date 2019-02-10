@@ -34,30 +34,20 @@
     </section>
     <!-- Hero Section End -->
 
+    <!-- Info Section End -->
     <section class="home__info">
-      <p class="home__info-subtitile"></p>
-      <h2 class="home__info-title"></h2>
-      <div class="home__info-text"></div>
+      <div class="home__info-inner-wrapper">
+        <p class="home__info-subtitle"><?php echo get_field('info_subtitle')?></p>
+        <h2 class="home__info-title"><?php echo get_field('info_title')?></h2>
+        <div class="home__info-text"><?php echo get_field('info_content')?></div>
+      </div> 
     </section>
+    <!-- Info Section End -->
+
+    <!-- Post Archives Start -->
+    <?php get_template_part('template-parts/categories-section'); ?>
+    <!-- Post Archives Start -->
   </div>
-  
-
-
-
-
-
-
-  
-  <?php
-  if(have_posts()):
-    while(have_posts()): the_post();?>
-      <h1><?php the_title();?></h1>
-      <div><?php the_content();?></div>
-    <?php endwhile;
-  endif;
-  ?>
-
-
 
 <?php
 // get_sidebar();

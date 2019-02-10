@@ -16,7 +16,7 @@ jQuery(function($) {
 	$(window).on('resize', () => {});
 	// init navigation module
 	const navigation = new Navigation($);
-	navigation.init();
+  navigation.init();
 });
 /*#######################
 ### Window load event ###
@@ -24,3 +24,5 @@ jQuery(function($) {
 jQuery(window).load(function() {
 	imgToBgd.makeImgBackground('.js-image-imgtobg', '.js-background-imgtobg');
 });
+
+console.log('urgh!');
