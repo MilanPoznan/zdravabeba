@@ -13,6 +13,7 @@ get_header();
 		<?php
 		while ( have_posts() ) :
 			the_post(); ?>
+			<div class="general">
 			<div class="general-text wrapper">
 				<div class="general-text__box">
 					<h1 class="general-text__title"><?php echo get_field('text_title'); ?></h1>
@@ -40,9 +41,12 @@ get_header();
 			</div><!-- .general-text -->
 
 			<div class="purple-box wrapper">
-				<h2 class="purple-box__title"><?php echo get_field('box_title'); ?></h2>
+				<div class="purple-box__title">
+					<h2><?php echo get_field('box_title'); ?></h2>
+				</div>
 				<div class="purple-box__text"><?php echo get_field('box_content'); ?></div>
 			</div>
+		</div><!-- .general -->
 		<?php
 		endwhile; // End of the loop.
 		?>
