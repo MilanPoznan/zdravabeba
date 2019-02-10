@@ -5,15 +5,41 @@
 // load modules
 import Navigation from './navigation';
 import ImgToBackground from './ImgToBackground';
-
 const imgToBgd = ImgToBackground(jQuery);
-const $hamburgerOpenBtn = $('.js-open-nav'),
-	$hamburgerCloseBtn = $('.js-close-nav');
 
-//Elements
 // DOM ready calls
 jQuery(function($) {
+	//Elements
+
+	if ($(window).width() < 1200) {
+		const $hamburger = $('.hamburger');
+		$hamburger.on('click', () => {
+			$('.hamburger').toggleClass('is-active');
+			$('.js-menu').slideToggle();
+			$('.menu-item').toggleClass('enable-click');
+		});
+
+		$('.js-search').on('click', () => {
+			$('.header__search-form').slideToggle();
+		});
+
+		$('.menu-item-has-children').on('click', e => {
+			e.preventDefault();
+			let menuWithChildren = e.target;
+			$(e.target)
+				.next()
+				.toggleClass('show-submenu');
+		});
+	} else {
+		$('.menu-item-has-children').on('hover', e => {
+			$('.sub-menu').toggle('slow');
+		});
+	}
+
+	// Submenu open
+
 	$(window).on('resize', () => {});
+
 	// init navigation module
 	const navigation = new Navigation($);
   navigation.init();
