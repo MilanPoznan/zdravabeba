@@ -8,7 +8,7 @@
     <?php include 'tab-archive.php'; ?>
   </div>
   <div class="archive-page__last-posts">
-    <?php get_last_articles('planiranje', 8 ); ?>
+    <?php get_last_articles('planiranje', array(8, 9, 10 ), array('purple', 'yellow', 'orange') ); ?>
   </div>
 </div>
 
