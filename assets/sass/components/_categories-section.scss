@@ -2,17 +2,19 @@
 
   &__inner-wrapper {
     position: relative;
-    background: red;
+    background: transparent;
     display: flex;
     flex-flow: column;
     width: 100%;
-    max-width: 1068px;
     align-items: center;
   }
 
   &__single {
     position: relative;
     width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     z-index: 3;
   }
 
@@ -93,7 +95,7 @@
     align-items: center;
     color: $white;
     background-color: transparent;
-    border: 1px solid white;
+    border: 1px solid $white;
 
     &-title {
       display: inline-block;
@@ -132,7 +134,8 @@
     &-arrow {
       display: inline-block;
       margin-left: 40px;
-      padding: 4px;
+      margin-bottom: 10px;
+      padding: 5px;
       transform: rotate(45deg);
       border: solid $white;
       border-width: 0 3px 3px 0;
@@ -166,6 +169,81 @@
     align-items: center;
     opacity: 1;
     z-index: 1;
+  }
+
+}
+
+@include desktop() {
+  .categories {
+    position: relative;
+
+    &__bottom-gray {
+      position: absolute;
+      top: 50%;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: $gray;
+    }
+
+    &__inner-wrapper {
+      max-width: 1090px;
+      flex-flow: row;
+      margin: 0 auto;
+      justify-content: space-between;
+    }
+  
+    &__single {
+      min-height: 444px;
+      width: 350px;
+
+      &:hover {
+        .categories__content {
+          opacity: 1;
+        }
+        .categories__overlay {
+          opacity: 0.75;
+        }
+        .categories__show-link {
+          opacity: 0;
+        }
+      }
+    }
+  
+    &__overlay {
+      position: absolute;
+      height: unset;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: $light-purple;
+      opacity: 0;
+    }
+  
+    &__content {
+      position: relative;
+      display: flex;
+      height: unset;
+      padding: 50px 5% 0;
+      flex-flow: column;
+      align-items: center;
+      opacity: 0;
+      z-index: 1;
+    }
+  
+    &__button {
+      margin-bottom: 0;
+    }
+  
+    &__show-link {
+      pointer-events: none;
+      
+      &-arrow {
+        display: none;
+      }
+    }
+    
   }
 
 }

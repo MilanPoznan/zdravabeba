@@ -34,7 +34,7 @@
     </section>
     <!-- Hero Section End -->
 
-    <!-- Info Section End -->
+    <!-- Info Section Start -->
     <section class="home__info">
       <div class="home__info-inner-wrapper">
         <p class="home__info-subtitle"><?php echo get_field('info_subtitle')?></p>
@@ -44,9 +44,16 @@
     </section>
     <!-- Info Section End -->
 
-    <!-- Post Archives Start -->
+    <!-- Category Section Start -->
     <?php get_template_part('template-parts/categories-section'); ?>
-    <!-- Post Archives Start -->
+    <!-- Category Section End -->
+
+    <!-- Info Section Start -->
+    <div class="home__gray-section">
+      
+      <p>test</p>
+    </div>
+    <!-- Info Section E -->
   </div>
 
 <?php

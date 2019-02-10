@@ -5,7 +5,11 @@
 // load modules
 import Navigation from './navigation';
 import ImgToBackground from './ImgToBackground';
+import CategorySection from './category-section';
+
+
 const imgToBgd = ImgToBackground(jQuery);
+const categorySection = new CategorySection(jQuery);
 
 // DOM ready calls
 jQuery(function($) {
@@ -48,7 +52,15 @@ jQuery(function($) {
 ### Window load event ###
 #######################*/
 jQuery(window).load(function() {
-	imgToBgd.makeImgBackground('.js-image-imgtobg', '.js-background-imgtobg');
+  imgToBgd.makeImgBackground('.js-image-imgtobg', '.js-background-imgtobg');
+  categorySection.init();
 });
 
-console.log('urgh!');
+/*#######################
+### Window resize event ###
+#######################*/
+
+jQuery( window ).resize(function () {
+ categorySection.handleResize();
+});
+

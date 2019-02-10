@@ -1,4 +1,5 @@
 <section class="categories">
+  <div class="categories__bottom-gray"></div>
   <div class="categories__inner-wrapper">
   <?php
     if(have_rows('overlays')):
@@ -37,7 +38,6 @@
             <span class="categories__show-link-arrow"></span>
           </a>
         </div>
-
         
       
     <?php endwhile;
