@@ -10,7 +10,9 @@ body {
 #site-navigation {
 	z-index: -1;
 }
-
+.more-link {
+	display: none;
+}
 h1,
 h2,
 h3,
@@ -29,8 +31,84 @@ a {
 em {
 	font-style: italic;
 }
-#content {
-	padding-top: 60px;
+.general-cta {
+	width: 180px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+	position: relative;
+	padding: 10px 20px;
+	z-index: 10;
+	transition: 0.3s;
+	background: $white;
+	&:after {
+		content: '';
+		position: absolute;
+		width: 8px;
+		height: 8px;
+		right: 20px;
+		transform: rotate(45deg);
+		top: calc(50% - 5px);
+	}
+	&--purple {
+		border: 1px solid $purple;
+		color: $purple;
+		&:after {
+			border-top: 2px solid $purple;
+			border-right: 2px solid $purple;
+		}
+	}
+}
+
+// Single article hover effect
+.single-post-hover {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 4px;
+	border-top-left-radius: 30%;
+	border-top-right-radius: 30%;
+	transition: 0.5s;
+	z-index: 1;
+	&--purple {
+		background: $viol-purple;
+	}
+	&--yellow {
+		background: $yellow;
+	}
+	&--orange {
+		background: $orange;
+	}
+}
+.post-desc,
+.post-title {
+	transition: 0.5s;
+}
+.post-title {
+	&--purple {
+		color: $viol-purple;
+	}
+	&--yellow {
+		color: $yellow;
+	}
+	&--orange {
+		color: $orange;
+	}
+}
+.single-post {
+	position: relative;
+	&:hover {
+		.post-desc,
+		.post-title {
+			color: $white;
+		}
+
+		.single-post-hover {
+			height: 450px;
+		}
+	}
 }
 
 .wrapper {

@@ -15,10 +15,10 @@
 }
 
 @mixin h1 {
-	@include font-style( $dante, 34px, 400, $black, 1.2 );
+	@include font-style( $raleway, 34px, 400, $black, 1.2 );
 }
 @mixin h2 {
-	@include font-style( $dante, 34px, 400, $black, 1 );
+	@include font-style( $raleway, 34px, 400, $black, 1 );
 }
 @mixin h1-tablet {
 	@include h1();
@@ -54,15 +54,15 @@
 }
 
 @mixin body-text {
-	@include font-style($johnston-light, 16px, 400, $black);
+	@include font-style($raleway-light, 16px, 400, $black);
 }
 
 @mixin body-text-small {
-	@include font-style($johnston-light, 14px, 400, $black);
+	@include font-style($raleway-light, 14px, 400, $black);
 }
 
 @mixin copyright-text {
-	@include font-style($johnston-medium, 10px, 400, $black);
+	@include font-style($raleway-medium, 10px, 400, $black);
 	text-transform: uppercase;
 	line-height: normal;
 }
@@ -72,7 +72,7 @@
 }
 
 @mixin nav-text {
-	@include font-style($johnston-medium, 20px, 400, $white);
+	@include font-style($raleway-medium, 20px, 400, $white);
 	text-transform: uppercase;
 	text-align: center;
 }

@@ -4,46 +4,53 @@
 
 // Families definitions
 @font-face {
-	font-family: 'Dante MT Std';
-	src: url('assets/fonts/DanteMTStd-Regular.woff') format('woff');
+	font-family: 'Raleway Regular';
+	src: url('assets/fonts/Raleway-Regular.ttf') format('woff2');
 	font-weight: normal;
 }
 @font-face {
-	font-family: 'Johnston ITC Std Light';
-	src: url('assets/fonts/JohnstonITCStd-Light.woff') format('woff');
+	font-family: 'Raleway Light Italic';
+	src: url('assets/fonts/Raleway-LightItalic.ttf') format('woff2');
 	font-weight: normal;
 }
 @font-face {
-	font-family: 'Johnston ITC Std Light Italic';
-	src: url('assets/fonts/JohnstonITCStd-LightItalic.woff') format('woff');
+	font-family: 'Raleway Light';
+	src: url('assets/fonts/Raleway-Light.ttf') format('woff2');
 	font-weight: normal;
 }
 @font-face {
-	font-family: 'Johnston ITC Std Medium';
-	src: url('assets/fonts/JohnstonITCStd-Medium.woff') format('woff');
+	font-family: 'Raleway Medium';
+	src: url('assets/fonts/Raleway-Medium.ttf') format('woff2');
 	font-weight: normal;
 }
 @font-face {
-	font-family: 'Johnston ITC Std Medium Italic';
-	src: url('assets/fonts/JohnstonITCStd-MediumItalic.woff') format('woff');
+	font-family: 'Raleway SemiBold';
+	src: url('assets/fonts/Raleway-SemiBold.ttf') format('woff2');
 	font-weight: normal;
 }
 @font-face {
-	font-family: 'Johnston ITC Std Bold';
-	src: url('assets/fonts/JohnstonITCStd-Bold.woff') format('woff');
+	font-family: 'Raleway Bold';
+	src: url('assets/fonts/Raleway-Bold.ttf') format('woff2');
 	font-weight: normal;
 }
 @font-face {
-	font-family: 'Johnston ITC Std Bold Italic';
-	src: url('assets/fonts/JohnstonITCStd-BoldItalic.woff') format('woff');
+	font-family: 'Raleway ExtraBold';
+	src: url('assets/fonts/Raleway-ExtraBold.ttf') format('woff2');
+	font-weight: normal;
+}
+@font-face {
+	font-family: 'Raleway Black';
+	src: url('assets/fonts/Raleway-Black.ttf') format('woff2');
 	font-weight: normal;
 }
 
 // Families variables
-$dante: 'Dante MT Std';
-$johnston-light: 'Johnston ITC Std Light';
-$johnston-light-italic: 'Johnston ITC Std Light Italic';
-$johnston-medium: 'Johnston ITC Std Medium';
-$johnston-medium-italic: 'Johnston ITC Std Medium Italic';
-$johnston-bold: 'Johnston ITC Std Bold';
-$johnston-bold-italic: 'Johnston ITC Std Bold Italic';
+$raleway: 'Raleway Regular';
+$raleway-light: 'Raleway Light';
+$raleway-light-italic: 'Raleway Light';
+$raleway-medium: 'Raleway Medium';
+$raleway-semi-bold: 'Raleway SemiBold';
+$raleway-bold: 'Raleway Bold';
+$raleway-extra-bold: 'Raleway ExtarBold';
+$raleway-black: 'Raleway Black';
+
