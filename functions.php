@@ -83,6 +83,82 @@ if ( ! function_exists( 'zdravabeba_setup' ) ) :
 endif;
 add_action( 'after_setup_theme', 'zdravabeba_setup' );
 
+function get_last_articles($class, $categories, $colors) {
+	// If parameter is array
+
+	if (is_array($categories)) { ?>
+		<div class="category-articles category-articles--<?php echo $class ?> category-articles--<?php echo $colors[$key] ?>">
+			<div class="category-articles__overlay"></div>
+			<div class="category-articles__wrapper">
+				<?php
+				foreach ($categories as $key=>$value) {
+					var_dump();
+					$args = array(
+					 'posts_per_page' => 1,
+					 'cat' => $value
+					);
+					$single_post = get_posts($args);
+					wp_reset_query();
+					$featuredImageUrl = get_the_post_thumbnail_url($single_post[0]->ID);
+					?>
+					<div class="category-articles__post single-post category-articles__post--<?php echo $colors[$key] ?>">
+						<div class="category-articles__post-img" style="background-image: url('<?php echo $featuredImageUrl ?>')">
+						</div>
+						<div class="category-articles__post-content">
+							<div class="category-articles__post-title post-title post-title--<?php echo $colors[$key] ?>">
+								<?php echo $single_post[0]->post_title ?>
+							</div>
+							<div class="category-articles__post-desc post-desc">
+								<?php
+								 echo $single_post[0]->post_content;
+								$post_link = get_permalink($single_post[0]->ID);
+								 ?>
+							</div>
+							<a href="<?php echo $post_link ?>"  class="category-articles__post-cta general-cta general-cta--<?php echo $color ?>">Procitajte vise</a>
+						</div>
+						<div class="single-post-hover single-post-hover--<?php echo $colors[$key] ?>"></div>
+					</div>
+					<?php } ?>
+			</div>
+		</div>
+		<?
+	} else {
+
+		$category_post = new WP_Query( 'cat='.$categories.'&posts_per_page=3' );
+		?>
+		<div class="category-articles category-articles--<?php echo $class ?>">
+			<div class="category-articles__overlay"></div>
+			<div class="category-articles__wrapper">
+				<?php
+					while($category_post->have_posts()) : $category_post->the_post();
+					$post_ID = get_the_ID();
+					$featuredImageUrl = get_the_post_thumbnail_url($post_ID);
+					?>
+					<div class="category-articles__post single-post category-articles__post--<?php echo $class ?>">
+						<div class="category-articles__post-img" style="background-image: url('<?php echo $featuredImageUrl ?>')">
+						</div>
+						<div class="category-articles__post-content">
+							<div class="category-articles__post-title post-title">
+								<?php the_title(); ?>
+							</div>
+							<div class="category-articles__post-desc post-desc">
+								<?php the_content(); ?>
+							</div>
+							<a href="<?php the_permalink(); ?>"  class="category-articles__post-cta general-cta general-cta--<?php echo $color ?>">Procitajte vise</a>
+						</div>
+						<div class="single-post-hover single-post-hover--<?php echo $color ?>"></div>
+					</div>
+				<?php endwhile ?>
+				<a href="" class="category-articles__archive-link">Pogledaj sve artikle</a>
+			</div>
+		</div>
+		<?
+	}
+		?>
+
+		<?php
+}
+
 
 /**
 * Register custom post types for Zdravabeba theme
@@ -118,7 +194,7 @@ function register_custom_post_types() {
     'capability_type'    => 'post',
     'has_archive'        => true,
     'menu_icon'          => 'dashicons-palmtree',
-    // 'supports'           => array( 'title' ),
+    'supports'           => array( 'title', 'editor', 'thumbnail' ),
     'taxonomies'         => array( 'category', 'post_tag' )
   );
 
