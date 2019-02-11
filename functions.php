@@ -152,7 +152,7 @@ function get_last_articles($class, $categories, $colors) {
 				<a href="" class="category-articles__archive-link">Pogledaj sve artikle</a>
 			</div>
 		</div>
-		<?
+		<?php
 	}
 		?>
 

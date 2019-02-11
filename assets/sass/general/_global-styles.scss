@@ -115,11 +115,96 @@ em {
   padding: 0 5%;  
 }
 
-// Class for general template which we use on multiple pages
+// Class for wysiwyg and general template which we use on multiple pages
 .general {
-	margin-bottom: 80px;
+  margin-bottom: 80px;
+  h1 {
+    font-size: 52px;
+    font-family: $raleway-light;
+  }
+  h2 {
+    font-size: 40px;
+  }
+  h3 {
+    font-size: 30px;
+  }
+  h4 {
+    font-size: 24px;
+  }
+  h5 {
+    font-size: 18px;
+  }
+  h2,
+  h3, 
+  h4, 
+  h5 {
+    font-family: $raleway-bold;
+  }
+  p {
+    font-size: 18px;
+    line-height: 24px;
+    font-family: $raleway;
+    color: $dark-grey;
+  }
+  p b, 
+  p i {
+    font-size: 18px;
+    line-height: 24px;
+    color: $dark-grey;
+  }
+  p b {
+    font-family: $raleway-bold;
+  }
+  p i {
+    font-family: $raleway-light-italic;
+  }
+  p a {
+    font-size: 18px;
+    line-height: 24px;
+    color: $pink;
+  }
+  ul, ol {
+    padding: 0 5%;
+    font-family: $raleway;
+  }
+  ul li {
+    display: flex;
+    align-items: center;
+    // font-family: $raleway;
+    &::before {
+      content: "\2022";
+      display: inline-block;
+      padding-right: 30px;
+      color: $pink;
+      font-size: 200%;
+    }
+  }
+  ol {
+    counter-reset: li;
+  }
+  ol li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    counter-increment: li;
+    list-style-position: inside;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &::before {
+      content: counter(li);
+      display: inline-block;
+      padding-right: 30px;
+      color: $pink;
+      text-align: left;
+      font-family: $raleway-bold;
+    }
+  }
+
 	strong {
-		font-family: $raleway-bold;
+    font-family: $raleway-bold;
+    color: $dark-grey;
 	}
 }
 .general-text {
@@ -146,7 +231,7 @@ em {
   &__social-share {
     display: flex;
     font-size: 26px;
-    font-weight: 900;
+    font-family: $raleway-semi-bold;
     padding-top: 30px;
     a{
       margin-left: 30px;
@@ -159,7 +244,6 @@ em {
   padding-top: 50px;
   padding-bottom: 50px;
   background-color: $purple;
-  color: $white;
 
   &__title {
     margin-bottom: 30px;
@@ -175,6 +259,7 @@ em {
       font-size: 16px;
       line-height: 1.5;
       margin-bottom: 20px;
+      color: $white;
       &:last-child {
         margin-bottom: 0;
       }
@@ -271,42 +356,6 @@ em {
     }
   }
 }
-// class for a page content site-wide for the purpose of WYSIWYG editor
-.content {
-	font-size: 16px;
-	line-height: 1.4;
-	text-align: left;
-
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		padding: 20px 0px;
-		font-weight: 700;
-	}
-
-	h1 {
-		font-size: 32px;
-	}
-
-	h2 {
-		font-size: 32px;
-	}
-
-	h3 {
-		font-size: 24px;
-	}
-
-	h4 {
-		font-size: 20px;
-	}
-
-	h5 {
-		font-size: 18px;
-	}
-} // .content
 
 // Prevent scroll
 .no-scroll {
