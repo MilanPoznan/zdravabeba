@@ -7,6 +7,9 @@ body {
 	@include body-text();
 	z-index: 1;
 }
+html {
+	scroll-behavior: smooth;
+}
 #site-navigation {
 	z-index: -1;
 }
@@ -385,7 +388,30 @@ img[class$='-imgtobg'] {
 
 @include desktop() {
 	h2 {
-		font-size: 48px;
+		position: relative;
+		width: fit-content;
+		margin: 0 auto 60px;
+		font-size: 43px;
+		text-transform: uppercase;
+		text-align: center;
+		color: $purple;
+		line-height: 1.25;
+
+		&:before,
+		&:after {
+			content: '';
+			top: 42%;
+			position: absolute;
+			width: 95px;
+			height: 1px;
+			background: $purple;
+		}
+		&:before {
+			left: -125px;
+		}
+		&:after {
+			right: -125px;
+		}
 	}
 	p {
 		// letter-spacing: 0.8px;
