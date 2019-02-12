@@ -15,6 +15,9 @@
 	&__content-overlay {
 		display: none;
 	}
+	&__single-proizvod {
+		background: $beige;
+	}
 }
 
 @include desktop() {
@@ -42,6 +45,11 @@
 			height: 70px;
 			background: $beige;
 			z-index: -1;
+		}
+		&__title-section {
+			h2 {
+				margin-bottom: 0;
+			}
 		}
 	}
 }
