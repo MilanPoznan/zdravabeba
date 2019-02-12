@@ -2,18 +2,29 @@
   <div class="archive-tab__wrapper">
   <?php if( have_rows('archive_tab_repeater') ): ?>
     <div class="archive-tab__header-wrap">
-      <ul class="archive-tab__header">
+      <ul class="archive-tab__header archive-tab__header--desktop js-desktop-archive-header">
           <?php while( have_rows('archive_tab_repeater') ): the_row(); ?>
-            <li class="archive-tab__header-tab"><?php the_sub_field('archive_tab_title') ?></li>
+            <a class="js-header-tab-link" href="#category_<?php echo get_row_index(); ?>">
+              <li data-row="<?php echo get_row_index(); ?>" class="archive-tab__header-tab"><?php the_sub_field('archive_tab_title') ?></li>
+            </a>
           <?php endwhile; ?>
       </ul>
+
+      <div class="archive-tab__mask-select js-tab-select">
+        Dobro je znati
+      </div>
+      <div class="archive-tab__mask-select-wrapp js-select-mask-wrap">
+        <?php while( have_rows('archive_tab_repeater') ): the_row(); ?>
+          <a href="#category_<?php echo get_row_index(); ?>" class="js-mobile-header-tab-link" value="<?php the_sub_field('archive_tab_title') ?>"><?php the_sub_field('archive_tab_title') ?></a>
+        <?php endwhile; ?>
+      </div>
     </div>
 
   <?php endif; ?>
   <?php if( have_rows('archive_tab_content_repeater') ): ?>
     <div class="archive-tab__content">
       <?php while( have_rows('archive_tab_content_repeater') ): the_row(); ?>
-        <div class="archive-tab__single-content">
+        <div class="archive-tab__single-content" id="category_<?php echo get_row_index(); ?>">
           <div class="archive-tab__content-title">
             <h2><?php the_sub_field('content_title') ?></h2>
           </div>
@@ -41,7 +52,7 @@
                   echo $single_post[0]->post_content;
                   $post_link = get_permalink($single_post[0]->ID);
                 ?>
-                <a href="<?php echo $post_link ?>"  class="archive-tab__post-cta genertal-cta">Procitajte vise</a>
+                <a href="<?php echo $post_link ?>"  class="archive-tab__post-cta general-cta general-cta--purple">Procitajte vise</a>
               </div>
             </div>
 
@@ -49,8 +60,10 @@
         </div>
 
         <div class="archive-page__last-posts">
-          <?php get_last_articles('planiranje',  array($catId,$catId,$catId) ,'purple' ); ?>
+          <?php $category_id = get_sub_field('category_id');?>
+          <?php get_last_articles('planiranje',  $category_id, 'purple' ); ?>
         </div>
+
       <?php endwhile; ?>
     </div>
   <?php endif; ?>

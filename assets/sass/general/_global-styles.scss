@@ -7,6 +7,9 @@ body {
 	@include body-text();
 	z-index: 1;
 }
+html {
+	scroll-behavior: smooth;
+}
 #site-navigation {
 	z-index: -1;
 }

@@ -4,11 +4,10 @@
 
 // load modules
 import Navigation from './navigation';
-import ImgToBackground from './ImgToBackground';
+// import ImgToBackground from './ImgToBackground';
 import CategorySection from './category-section';
 
-
-const imgToBgd = ImgToBackground(jQuery);
+// const imgToBgd = ImgToBackground(jQuery);
 const categorySection = new CategorySection(jQuery);
 
 // DOM ready calls
@@ -17,6 +16,8 @@ jQuery(function($) {
 
 	if ($(window).width() < 1200) {
 		const $hamburger = $('.hamburger');
+
+		//Menu
 		$hamburger.on('click', () => {
 			$('.hamburger').toggleClass('is-active');
 			$('.js-menu').slideToggle();
@@ -39,28 +40,25 @@ jQuery(function($) {
 			$('.sub-menu').toggle('slow');
 		});
 	}
-
-	// Submenu open
-
+	// End menu
 	$(window).on('resize', () => {});
 
 	// init navigation module
 	const navigation = new Navigation($);
-  navigation.init();
+	navigation.init();
 });
 /*#######################
 ### Window load event ###
 #######################*/
 jQuery(window).load(function() {
-  imgToBgd.makeImgBackground('.js-image-imgtobg', '.js-background-imgtobg');
-  categorySection.init();
+	// imgToBgd.makeImgBackground('.js-image-imgtobg', '.js-background-imgtobg');
+	categorySection.init();
 });
 
 /*#######################
 ### Window resize event ###
 #######################*/
 
-jQuery( window ).resize(function () {
- categorySection.handleResize();
+jQuery(window).resize(function() {
+	categorySection.handleResize();
 });
-

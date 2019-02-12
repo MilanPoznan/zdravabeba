@@ -84,8 +84,8 @@ endif;
 add_action( 'after_setup_theme', 'zdravabeba_setup' );
 
 function get_last_articles($class, $categories, $colors) {
-	// If parameter is array
 
+	// If parameter is array
 	if (is_array($categories)) { ?>
 		<div class="category-articles category-articles--<?php echo $class ?> category-articles--<?php echo $colors[$key] ?>">
 			<div class="category-articles__overlay"></div>
@@ -100,12 +100,11 @@ function get_last_articles($class, $categories, $colors) {
 					wp_reset_query();
 					$featuredImageUrl = get_the_post_thumbnail_url($single_post[0]->ID);
 					?>
-					<div class="category-articles__post single-post category-articles__post--<?php echo $colors[$key] ?>">
-						<div class="category-articles__post-img" style="background-image: url('<?php echo $featuredImageUrl ?>')">
-						</div>
+					<div class="category-articles__post single-post category-articles__post--<?php echo $colors[$key]; ?>">
+						<div class="category-articles__post-img" style="background-image: url('<?php echo $featuredImageUrl; ?>')"></div>
 						<div class="category-articles__post-content">
-							<div class="category-articles__post-title post-title post-title--<?php echo $colors[$key] ?>">
-								<?php echo $single_post[0]->post_title ?>
+							<div class="category-articles__post-title post-title post-title--<?php echo $colors[$key]; ?>">
+								<?php echo $single_post[0]->post_title; ?>
 							</div>
 							<div class="category-articles__post-desc post-desc">
 								<?php
@@ -113,49 +112,55 @@ function get_last_articles($class, $categories, $colors) {
 								$post_link = get_permalink($single_post[0]->ID);
 								 ?>
 							</div>
-							<a href="<?php echo $post_link ?>"  class="category-articles__post-cta general-cta general-cta--<?php echo $color ?>">Procitajte vise</a>
+							<a href="<?php echo $post_link; ?>"  class="category-articles__post-cta general-cta general-cta--<?php echo $color ?>">Procitajte vise</a>
 						</div>
-						<div class="single-post-hover single-post-hover--<?php echo $colors[$key] ?>"></div>
+						<div class="single-post-hover single-post-hover--<?php echo $colors[$key]; ?>"></div>
 					</div>
 					<?php } ?>
 			</div>
 		</div>
 		<?
 	} else {
+		$args = array( 'posts_per_page' => 3,'offset' => 1, 'category' => $categories );
+		$myposts = get_posts( $args );
 
-		$category_post = new WP_Query( 'cat='.$categories.'&posts_per_page=3' );
+		// $category_post = new WP_Query( 'cat='.$categories.'&posts_per_page=3' );
 		?>
-		<div class="category-articles category-articles--<?php echo $class ?>">
+		<div class="category-articles category-articles--<?php echo $class; ?>">
 			<div class="category-articles__overlay"></div>
 			<div class="category-articles__wrapper">
 				<?php
-					while($category_post->have_posts()) : $category_post->the_post();
-					$post_ID = get_the_ID();
+					foreach ( $myposts as $post ) : setup_postdata( $post );
+					// echo '<pre>';
+					// var_dump($post);
+					$category_url = get_category_link($categories);
+					// var_dump($category_url);
+					$post_ID = $post->ID;
+					$post_link = get_permalink($post_ID);
 					$featuredImageUrl = get_the_post_thumbnail_url($post_ID);
 					?>
-					<div class="category-articles__post single-post category-articles__post--<?php echo $class ?>">
-						<div class="category-articles__post-img" style="background-image: url('<?php echo $featuredImageUrl ?>')">
+					<div class="category-articles__post single-post category-articles__post--<?php echo $class; ?> category-articles__post--<?php echo $colors; ?>">
+						<div class="category-articles__post-img" style="background-image: url('<?php echo $featuredImageUrl; ?>')">
 						</div>
 						<div class="category-articles__post-content">
 							<div class="category-articles__post-title post-title">
-								<?php the_title(); ?>
+								<?php echo $post->post_title; ?>
 							</div>
 							<div class="category-articles__post-desc post-desc">
 								<?php the_content(); ?>
 							</div>
-							<a href="<?php the_permalink(); ?>"  class="category-articles__post-cta general-cta general-cta--<?php echo $color ?>">Procitajte vise</a>
+							<a href="<?php echo $post_link; ?>"  class="category-articles__post-cta general-cta general-cta--<?php echo $colors; ?>">Procitajte vise</a>
 						</div>
-						<div class="single-post-hover single-post-hover--<?php echo $color ?>"></div>
+						<div class="single-post-hover single-post-hover--<?php echo $colors; ?>"></div>
 					</div>
-				<?php endwhile ?>
-				<a href="" class="category-articles__archive-link">Pogledaj sve artikle</a>
+				<?php endforeach;
+				wp_reset_postdata();?>
+				<a href="<?php echo $category_url; ?>" class="category-articles__archive-link">Pogledaj sve artikle</a>
 			</div>
 		</div>
-		<?
-	}
-		?>
-
 		<?php
+	}
+
 }
 
 
@@ -359,8 +364,9 @@ function zdravabeba_scripts() {
   wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Raleway:300,300i,400,500,600,700,800,900' );
 	wp_enqueue_style( 'font-awsome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' );
 
-  wp_enqueue_script( 'example-scripts', get_template_directory_uri() . '/assets/js/example.js', array( 'jquery' ), 1.0, true );
-  wp_enqueue_script( 'category-overlay', get_template_directory_uri() . '/assets/js/category-overlay.js', array( 'jquery' ), 1.0, true );
+	wp_enqueue_script( 'example-scripts', get_template_directory_uri() . '/assets/js/example.js', array( 'jquery' ), 1.0, true );
+  wp_enqueue_script( 'tab-script', get_template_directory_uri() . '/assets/js/tab-script.js', array( 'jquery' ), 1.0, true );
+  // wp_enqueue_script( 'category-overlay', get_template_directory_uri() . '/assets/js/category-overlay.js', array( 'jquery' ), 1.0, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

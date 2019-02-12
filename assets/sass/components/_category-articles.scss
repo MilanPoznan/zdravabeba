@@ -5,7 +5,7 @@
 		position: absolute;
 		width: 100%;
 		top: 200px;
-		height: 100%;
+		height: calc(100% - 200px);
 		background: $beige;
 		display: block;
 		z-index: -1;

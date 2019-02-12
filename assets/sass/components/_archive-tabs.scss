@@ -1,52 +1,229 @@
 .archive-tab {
 	display: flex;
 	width: 100%;
+	font-family: $raleway;
 	&__wrapper {
-		width: 100%;
-		margin: 0 auto;
 	}
 	&__header-wrap {
-		background: $purple;
-		color: $white;
-		height: 50px;
 		width: 100%;
+		height: 214px;
+		padding-bottom: 22px;
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+		background: $purple;
+		position: relative;
 	}
 	&__header {
-		display: flex;
-		max-width: 1160px;
-		margin: 0 auto;
-		li {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			height: 50px;
+		&--desktop {
+			display: none;
+		}
+		&--mobile {
+			width: 80%;
+			margin: 0 auto;
+			text-align: center;
+			background: $white;
 		}
 	}
-	&__header-tab {
-		width: 25%;
-	}
-
-	&__single-content {
-		max-width: 1080px;
+	&__mask-select {
+		position: relative;
+		width: 75%;
 		margin: 0 auto;
-		padding: 100px 0;
-		border: 1px solid red;
+		height: 60px;
+		background: $white;
+		color: $purple;
+		font-size: 20px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		&:before {
+			content: 'Pogledajte jos';
+			position: absolute;
+			width: 100%;
+			text-align: center;
+			font-size: 16px;
+			top: -40px;
+			color: $white;
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			right: 20px;
+			top: 25px;
+			width: 10px;
+			height: 10px;
+			border-top: 2px solid $purple;
+			border-right: 2px solid $purple;
+			transform: rotate(135deg);
+		}
 	}
-	&__post {
-		border: 1px solid green;
-	}
-	&__post-image {
-		width: 570px;
-		height: 260px;
-		@include bgImage();
-	}
-	&__content-title {
+	&__mask-select-wrapp {
+		width: 75%;
+		padding: 15px;
+		margin: 0 auto;
+		display: none;
+		position: absolute;
+		left: 12.5%;
+		top: 135px;
+		background: $white;
+		a {
+			width: 100%;
+			display: block;
+			color: $purple;
+			text-align: center;
+			padding: 10px 0;
+		}
 	}
 	&__content-description {
-		strong {
-			font-weight: bold;
+		width: 90%;
+		margin: 0 auto;
+		margin-bottom: 40px;
+	}
+	&__content {
+		width: 100%;
+		color: $grey;
+		h2 {
 			color: $purple;
-			margin-bottom: 80px;
+			margin-bottom: 30px;
+			text-align: center;
 		}
+		strong {
+			color: $purple;
+		}
+	}
+	&__single-content {
+		padding-top: 60px;
+	}
+	&__post-image {
+		height: 240px;
+		width: 100%;
+		margin-bottom: 40px;
+		@include bgImage();
+	}
+	&__post-content {
+		width: 90%;
+		margin: 0 auto;
+		color: $grey;
+	}
+	&__post-title {
+		color: $purple;
+		margin-bottom: 20px;
+		font-family: $raleway-bold;
+	}
+	&__post-description {
+		margin-bottom: 30px;
+	}
+	&__post-cta {
+		margin: 40px 0;
+	}
+	.active-tab-link {
+		background: $white;
+		color: $purple;
+	}
+}
+
+@include desktop() {
+	.archive-tab {
+		display: flex;
+		width: 100%;
+		&__wrapper {
+			width: 100%;
+			margin: 0 auto;
+		}
+		&__header-wrap {
+			background: $purple;
+			color: $white;
+			height: 50px;
+			width: 100%;
+			padding: 0;
+		}
+		&__header {
+			display: flex;
+			max-width: 1160px;
+			width: 100%;
+			margin: 0 auto;
+			&--mobile {
+				display: none;
+			}
+			&:first-child() {
+				background: $white;
+				color: $purple;
+			}
+			a {
+				display: flex;
+				align-items: center;
+				height: 50px;
+				width: 25%;
+				z-index: 10;
+			}
+			li {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 100%;
+				height: 100%;
+				z-index: 1;
+			}
+		}
+		&__header-tab {
+			width: 25%;
+		}
+		&__mask-select {
+			display: none;
+			a {
+				padding: 15px 0;
+			}
+		}
+		&__content {
+			padding: 0;
+			position: relative;
+		}
+
+		&__single-content {
+			max-width: 1080px;
+			margin: 0 auto;
+			padding: 100px 0 80px;
+		}
+		&__post {
+			display: flex;
+			flex-flow: row-reverse;
+		}
+		&__post-image {
+			min-width: 570px;
+			width: 570px;
+			height: 260px;
+			margin: 0;
+		}
+		&__post-content {
+			height: 260px;
+			display: flex;
+			flex-flow: column;
+			justify-content: space-between;
+		}
+		&__post-description {
+			padding-right: 30px;
+			margin: 0;
+			min-height: 70%;
+			display: flex;
+			flex-flow: column;
+			justify-content: space-between;
+		}
+		&__content-title {
+		}
+		&__content-description {
+			margin-bottom: 80px;
+			strong {
+				font-weight: bold;
+				color: $purple;
+				margin-bottom: 80px;
+			}
+		}
+		&__post-cta {
+			margin: 50px 0 0px;
+		}
+	}
+	.active-tab-link {
+		background: $white;
+		color: $purple;
 	}
 }
