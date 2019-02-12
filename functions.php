@@ -174,89 +174,7 @@ function register_custom_post_types() {
 
 ### Markers Custom Post Type ###
 
-  $planiranjeLabels = array(
-    'name'               => 'Planiranje',
-    'singular_name'      => 'Planiranje',
-    'menu_name'          => 'Planiranje',
-    'name_admin_bar'     => 'Planiranje',
-    'add_new'            => 'Add New',
-    'add_new_item'       => 'Add New Planiranje',
-    'new_item'           => 'New Planiranje',
-    'edit_item'          => 'Edit Planiranje',
-    'view_item'          => 'View Planiranje',
-    'all_items'          => 'All Planiranje',
-    'search_items'       => 'Search Planiranje',
-    'parent_item_colon'  => 'Parent Planiranje:',
-    'not_found'          => 'No Planiranje found.',
-    'not_found_in_trash' => 'No Planiranje found in Trash.',
-  );
 
-  $planiranjeArgs = array(
-    'labels'             => $planiranjeLabels,
-    'public'             => true,
-		'show_in_rest'			 => true,
-    'capability_type'    => 'post',
-    'has_archive'        => true,
-    'menu_icon'          => 'dashicons-palmtree',
-    'supports'           => array( 'title', 'editor', 'thumbnail' ),
-    'taxonomies'         => array( 'category', 'post_tag' )
-  );
-
-	$trudnocaLabels = array(
-    'name'               => 'Trudnoca',
-    'singular_name'      => 'Trudnoca',
-    'menu_name'          => 'Trudnoca',
-    'name_admin_bar'     => 'Trudnoca',
-    'add_new'            => 'Add New',
-    'add_new_item'       => 'Add New Trudnoca',
-    'new_item'           => 'New Trudnoca',
-    'edit_item'          => 'Edit Trudnoca',
-    'view_item'          => 'View Trudnoca',
-    'all_items'          => 'All Trudnoca',
-    'search_items'       => 'Search Trudnoca',
-    'parent_item_colon'  => 'Parent Trudnoca:',
-    'not_found'          => 'No Trudnoca found.',
-    'not_found_in_trash' => 'No Trudnoca found in Trash.',
-  );
-
-  $trudnocaArgs = array(
-    'labels'             => $trudnocaLabels,
-    'public'             => true,
-		'show_in_rest'			 => true,
-    'capability_type'    => 'post',
-    'has_archive'        => true,
-    'menu_icon'          => 'dashicons-universal-access',
-    // 'supports'           => array( 'title' ),
-    'taxonomies'         => array( 'category', 'post_tag' )
-  );
-
-	$materinstvoLabels = array(
-    'name'               => 'Materistvo',
-    'singular_name'      => 'Materistvo',
-    'menu_name'          => 'Materistvo',
-    'name_admin_bar'     => 'Materistvo',
-    'add_new'            => 'Add New',
-    'add_new_item'       => 'Add New Materistvo',
-    'new_item'           => 'New Materistvo',
-    'edit_item'          => 'Edit Materistvo',
-    'view_item'          => 'View Materistvo',
-    'all_items'          => 'All Materistvo',
-    'search_items'       => 'Search Materistvo',
-    'parent_item_colon'  => 'Parent Materistvo:',
-    'not_found'          => 'No Materistvo found.',
-    'not_found_in_trash' => 'No Materistvo found in Trash.',
-  );
-
-  $materinstvoArgs = array(
-    'labels'             => $materinstvoLabels,
-    'public'             => true,
-		'show_in_rest'			 => true,
-    'capability_type'    => 'post',
-    'has_archive'        => true,
-    'menu_icon'          => 'dashicons-heart',
-    // 'supports'           => array( 'title' ),
-    'taxonomies'         => array( 'category', 'post_tag' )
-  );
 
 	$savetiLabels = array(
     'name'               => 'Saveti',
@@ -314,9 +232,6 @@ function register_custom_post_types() {
     'taxonomies'         => array( 'category', 'post_tag' )
   );
 
-	register_post_type( 'planiranje', $planiranjeArgs );
-	register_post_type( 'trudnoca', $trudnocaArgs );
-	register_post_type( 'materinstvo', $materinstvoArgs );
 	register_post_type( 'saveti', $savetiArgs );
   register_post_type( 'proizvodi', $proizvodArgs );
 }
