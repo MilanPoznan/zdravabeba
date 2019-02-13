@@ -13,7 +13,7 @@ function ImgToBackground($) {
 	// check if parameter is present
 	if (typeof $ == 'undefined') {
 		console.error(
-			'imgToBackground was instantiated without parameter. Parameter needs to be instance of jQuery.'
+			'imgToBackground was instantiated without parameter. Parameter needs to be instance of jQuery.',
 		);
 	}
 
@@ -43,7 +43,7 @@ function ImgToBackground($) {
 			// if parent is not imgtobg parent element throw error
 			if ($templateParent.length < 1) {
 				console.error(
-					"Image template parent element has to have 'js-background-imgtobg' class."
+					"Image template parent element has to have 'js-background-imgtobg' class.",
 				);
 			}
 
@@ -67,7 +67,7 @@ function ImgToBackground($) {
 		// check if there is any image
 		if ($images.length < 1) {
 			console.error(
-				`There is no images on the page with provided css selector: ${imgSelector}.`
+				`There is no images on the page with provided css selector: ${imgSelector}.`,
 			);
 		}
 
@@ -85,7 +85,7 @@ function ImgToBackground($) {
 				const elemToString = placeholder.innerHTML;
 
 				console.error(
-					`Element ${elemToString} is not an valid image HTML element.`
+					`Element ${elemToString} is not an valid image HTML element.`,
 				);
 			}
 
@@ -98,7 +98,7 @@ function ImgToBackground($) {
 				console.error(
 					`Image ${
 						image.src
-					} does not have a parent element with provided css selector: ${parentSelector}.`
+					} does not have a parent element with provided css selector: ${parentSelector}.`,
 				);
 			}
 
@@ -116,7 +116,7 @@ function ImgToBackground($) {
 
 	return {
 		lazyLoadImages,
-		makeImgBackground
+		makeImgBackground,
 	};
 }
 
