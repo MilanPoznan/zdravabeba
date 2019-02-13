@@ -17,7 +17,6 @@ export default ($) => {
       prevArrow,
       swipe: false,
       slidesToShow: 2,
-      // slidesToScroll: 2,
       responsive: [
           {
           breakpoint: 768,

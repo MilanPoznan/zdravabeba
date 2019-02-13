@@ -29,9 +29,6 @@
       right: 0;
       transform: rotate(-45deg);
     }
-    &-single {
-      
-    }
   }
 
   &__image-container {
@@ -40,24 +37,10 @@
     width: 100%;
     height: auto;
     margin: 0 auto;
-
-    &:hover, &:active {
-      .products-section__image{
-        // transform: scale(1.1);
-      }
-      // .products-section__content-title {
-      //   transform: scale(1.1);
-
-      //   &::before {
-      //     transform: scale(1.1);
-      //   }
-      // }
-    }
   }
 
   &__image {
     position: relative;
-    // height: 340px;
     height: auto;
     width: 90%;
     max-width: 500px;
@@ -233,7 +216,7 @@
             transform: scale(1.05);
 
             &::after {
-              width: 50px;
+              width: 70px;
             }
           }
         }
@@ -282,10 +265,25 @@
       height: 35px;
       min-width: 130px;
       font-size: 14px;
+      overflow: hidden;
+      z-index: 2;
 
+      span {
+        position: relative;
+        z-index: 2;
+      }
 
       &::before {
-        // padding: 3px;
+        position: absolute;
+        display: block;
+        content: '';
+        height: 200%;
+        width: 150%;
+        background-color: $purple;
+        border-radius: 100%;
+        transform: translateY(80%);
+        transition: 1s;
+        z-index: 1;
       }
   
       &::after {
@@ -295,78 +293,14 @@
       }
   
       &:hover {
-        // color: $white;
-  
-        &:before {
-          
-        }
-      }
-    }
-  }
-}
+        color: $white;
 
-
-
-
-
-
-@include desktop() {
-  .products-section {
-    &__inner-wrapper {
-      
-    }
-    &__title {
-
-    }
-  
-    &__slider {
-      
-      .slick-arrow {
-  
-      }
-      .slick-prev {
-
-      }
-      .slick-next {
-        
-      }
-      &-single {
-        
-      }
-    }
-  
-    &__image-container {
-
-    }
-  
-    &__image {
-    }
-  
-    &__content {
-  
-      &-title {
-  
         &::after {
+          border-color: $white;
         }
-      }
-  
-      &-description {
-      }
-    }
-  
-    &__button {
-      &::before {
-  
-      }
-  
-      &::after {
-      }
-  
-      &:hover {
-        // color: $white;
   
         &:before {
-          
+          transform: translateY(-5%);
         }
       }
     }
