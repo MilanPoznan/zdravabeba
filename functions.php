@@ -281,7 +281,7 @@ function zdravabeba_scripts() {
 
 	wp_enqueue_script( 'example-scripts', get_template_directory_uri() . '/assets/js/example.js', array( 'jquery' ), 1.0, true );
   wp_enqueue_script( 'tab-script', get_template_directory_uri() . '/assets/js/tab-script.js', array( 'jquery' ), 1.0, true );
-  // wp_enqueue_script( 'category-overlay', get_template_directory_uri() . '/assets/js/category-overlay.js', array( 'jquery' ), 1.0, true );
+  wp_enqueue_script( 'single-product', get_template_directory_uri() . '/assets/js/single-product.js', array( 'jquery' ), 1.0, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

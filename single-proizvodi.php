@@ -9,6 +9,10 @@ get_header();
     <?php  include 'template-parts/one-product.php'; ?>
   </div>
 </section>
+<div class="proizvod__single-proizvod">
+  <?php  include 'template-parts/single-product-tab-section.php'; ?>
+</div>
+</section>
 <?php
 get_footer();
 ?>

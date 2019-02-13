@@ -1,0 +1,58 @@
+.single-tab {
+	font-family: $raleway;
+	&__mob {
+		padding: 0 5%;
+	}
+	&__mob-section-title {
+		position: relative;
+		padding: 20px;
+		font-size: 24px;
+		color: $purple;
+		border-top: 1px solid $purple;
+		border-bottom: 1px solid $purple;
+		&:after {
+			content: '';
+			position: absolute;
+			right: 20px;
+			top: calc(50% - 10px);
+			width: 10px;
+			height: 10px;
+			border-top: 2px solid $purple;
+			border-right: 2px solid $purple;
+			transform: rotate(135deg);
+		}
+	}
+	&__table {
+		display: flex;
+		flex-flow: column;
+	}
+	&__table-row {
+		div {
+			background: $black-purple;
+		}
+		&:nth-child(even) {
+			div {
+				background: $white-purple;
+			}
+		}
+	}
+	&__table-title {
+		margin: 10px 0;
+		padding: 20px;
+		display: flex;
+		align-content: center;
+		justify-content: center;
+	}
+	&__description {
+		padding: 20px 0;
+		color: $grey;
+	}
+}
+
+@include desktop() {
+	.single-tab {
+		&__mob {
+			display: none;
+		}
+	}
+}
