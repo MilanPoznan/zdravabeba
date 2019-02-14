@@ -47,12 +47,83 @@
 		padding: 20px 0;
 		color: $grey;
 	}
+	&__desktop {
+		display: none;
+	}
 }
 
 @include desktop() {
 	.single-tab {
 		&__mob {
 			display: none;
+		}
+		&__desktop {
+			display: flex;
+			background: $beige;
+			padding: 80px 0;
+		}
+		&__wrapper {
+			max-width: 1160px;
+			margin: 0 auto;
+		}
+		&__header {
+			display: flex;
+			justify-content: space-between;
+			border-bottom: 1px solid $purple;
+			margin-bottom: 80px;
+		}
+		&__header-column {
+			color: $purple;
+			padding: 20px 30px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		&__table {
+			position: relative;
+			&:before {
+				content: '';
+				position: absolute;
+				width: 2px;
+				height: 100%;
+				left: 230px;
+				top: 0;
+				bottom: 0;
+				background: $beige;
+			}
+		}
+		&__table-row {
+			display: flex;
+			align-items: center;
+			background: $black-purple;
+			margin-bottom: 2px;
+			&:nth-child(even) {
+				background: $white-purple;
+			}
+		}
+		&__table-title {
+			position: relative;
+			margin: 0;
+			max-width: 230px;
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-wrap: wrap;
+			padding: 20px 46px;
+			// &:after {
+			// 	content: '';
+			// 	height: calc(100% + 10px);
+			// 	width: 4px;
+			// 	background: $beige;
+			// 	position: absolute;
+			// 	right: 0;
+			// 	top: 0;
+			// 	bottom: 0;
+			// }
+		}
+		&__table-desc {
+			padding: 34px 30px 34px 68px;
 		}
 	}
 }
