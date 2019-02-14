@@ -60,7 +60,6 @@
 
     &-title {
       position: relative;
-      // width: 80%;
       max-width: 300px;
       margin-bottom: 60px;
       padding: 0 10px;
@@ -94,7 +93,6 @@
       margin-bottom: 66px;
       text-align: center;
       font-family: $raleway-medium;
-      // font-size: 16px;
       font-size: 28px;
       line-height: 0.98;
       letter-spacing: -0.7px;
@@ -116,10 +114,6 @@
     text-transform: uppercase;
     border: 1px solid $purple;
 
-    &::before {
-
-    }
-
     &::after {
       position: absolute;
       display: block;
@@ -131,14 +125,6 @@
       border: solid $purple;
       border-width: 0 2px 2px 0;
       z-index: 1;
-    }
-
-    &:hover {
-      // color: $white;
-
-      &:before {
-        
-      }
     }
   }
   &__slider {
@@ -236,9 +222,6 @@
         right: 0;
         background: $white;
       }
-    }
-  
-    &__image {
     }
   
     &__content {
