@@ -14,6 +14,9 @@
 
 get_header();
 ?>
+  <!-- Category Section Start -->
+  <?php get_template_part('template-parts/general-hero'); ?>
+  <!-- Category Section End -->
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
