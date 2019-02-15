@@ -53,6 +53,16 @@
 }
 
 @include desktop() {
+	.proizvod {
+		background: $beige;
+		&__single-proizvod {
+			background: $white;
+		}
+	}
+
+	.js-product-row {
+		display: none;
+	}
 	.single-tab {
 		&__mob {
 			display: none;
@@ -78,9 +88,13 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			&:hover {
+				cursor: pointer;
+			}
 		}
 		&__table {
 			position: relative;
+			display: flex;
 			&:before {
 				content: '';
 				position: absolute;

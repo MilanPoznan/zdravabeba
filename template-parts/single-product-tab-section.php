@@ -36,7 +36,7 @@
       <h2>Saznaj Vise</h2>
       <div class="single-tab__header">
         <?php while ( have_rows('repeater_tab') ) : the_row(); ?>
-          <div class="single-tab__header-column">
+          <div class="single-tab__header-column" value="<?php echo get_row_index(); ?>">
               <?php the_sub_field('title'); ?>
           </div>
         <?php endwhile; ?>
@@ -50,9 +50,9 @@
           <?php if (get_sub_field('has_table')) {  ?>
             <?php if (have_rows('table_repeater')) {  ?>
               <!-- TABLE INFORMTION -->
-            <div class="single-tab__table">
+            <div class="single-tab__table js-product-row" value="<?php echo get_row_index(); ?>">
               <?php while( have_rows('table_repeater') ): the_row(); ?>
-                <div class="single-tab__table-row" value="<?php echo get_row_index(); ?>">
+                <div class="single-tab__table-row" >
                   <div class="single-tab__table-title">
                     <?php the_sub_field('table_title'); ?>
                   </div>
@@ -66,7 +66,7 @@
           <?php } ?>
           <?php } else { ?>
             <!-- DESCRIPTION  -->
-            <div class="single-tab__description" value="<?php echo get_row_index(); ?>">
+            <div class="single-tab__description js-product-row" value="<?php echo get_row_index(); ?>">
               <?php the_sub_field('table_description'); ?>
             </div>
           <?php } ?>

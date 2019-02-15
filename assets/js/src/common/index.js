@@ -6,9 +6,11 @@
 import Navigation from './navigation';
 // import ImgToBackground from './ImgToBackground';
 import CategorySection from './category-section';
+import ProductSlider from './products-section';
 
 // const imgToBgd = ImgToBackground(jQuery);
 const categorySection = new CategorySection(jQuery);
+const productsSlider = new ProductSlider(jQuery);
 
 // DOM ready calls
 jQuery(function($) {
@@ -45,7 +47,9 @@ jQuery(function($) {
 
 	// init navigation module
 	const navigation = new Navigation($);
-	navigation.init();
+  navigation.init();
+  // init products slider
+  productsSlider.init();
 });
 /*#######################
 ### Window load event ###

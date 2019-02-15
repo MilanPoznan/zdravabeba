@@ -50,6 +50,10 @@
 
     <!-- Info Section Start -->
     <div class="home__gray-section">
+
+      <!-- Category Section Start -->
+      <?php get_template_part('template-parts/products-section'); ?>
+      <!-- Category Section End -->
       
       <p>test</p>
     </div>
