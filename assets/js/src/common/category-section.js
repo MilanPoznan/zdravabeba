@@ -1,7 +1,8 @@
 export default ($) => {
 
   const $category = $('.categories__single');
-  const $button = $('.categories__show-link');
+  const $big = $('.categories__single--big');
+  const $button = $('.categories__wrapper-link');
   const $overlay = $('.categories__overlay');
   const $content = $('.categories__content');
 
@@ -24,9 +25,18 @@ export default ($) => {
     });
   }
 
+  function hideBig(big) {
+    big.each(function() {
+      const $this = $(this);
+      if($this.hasClass('js-show-big')) {
+        $this.removeClass('js-show-big');
+      }
+    });
+  }
+
   function showButton(button) {
     button.each(function() {
-      $(this).css("display", "flex");
+      $(this).removeClass('js-hide-small');
     });
   }
 
@@ -39,8 +49,9 @@ export default ($) => {
         if($button.length > 0) {
           $button.on('click', function(e) {
             e.preventDefault();
-  
+            
             // Hide content and overlay before showing current
+            hideBig($big);
             hideOverlay($overlay);
             hideContent($content);
             // Show button if it was hidden
@@ -48,16 +59,20 @@ export default ($) => {
   
             // Show current content and overlay and hide button
             const $this = $(this);
-            const $currentOverlay = $this.siblings('.categories__overlay');
-            const $currentContent = $this.siblings('.categories__content');
+            const $contentBig = $(this).siblings('.categories__single--big');
+            const $currentOverlay = $contentBig.find('.categories__overlay');
+            const $currentContent = $contentBig.find('.categories__content');
+
+            $contentBig.addClass('js-show-big');
             $currentOverlay.addClass('js-overlay');
             $currentContent.addClass('js-cat-content');
-            $this.hide();
+            $this.addClass('js-hide-small');
             
           });
         } 
       } else {
         // On brake point hide content and overlay and show button
+        hideBig($big);
         hideOverlay($overlay);
         hideContent($content);
         showButton($button);
