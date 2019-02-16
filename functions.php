@@ -46,6 +46,7 @@ if ( ! function_exists( 'zdravabeba_setup' ) ) :
 		register_nav_menus( array(
       'menu-1' => esc_html__( 'Primary', 'zdravabeba' ),
       'category_menu' => esc_html__( 'Categories', 'zdravabeba' ),
+			'search_menu' => esc_html__( 'Search', 'zdravabeba' ),
 		) );
 
 		/*

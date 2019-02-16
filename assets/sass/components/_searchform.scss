@@ -23,6 +23,9 @@
 		right: 26px;
 		color: $purple;
 	}
+	.page-header {
+		background: $white;
+	}
 }
 
 @include desktop() {
@@ -30,11 +33,11 @@
 		input {
 			width: 100%;
 			padding-left: 16px;
-			color: $white;
+			color: $grey;
 			text-align: left;
 			&::placeholder {
 				text-align: left;
-				color: $white;
+				color: $grey;
 			}
 			&:focus {
 				outline-color: $purple;

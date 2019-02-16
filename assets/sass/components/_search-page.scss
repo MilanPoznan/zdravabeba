@@ -67,6 +67,10 @@
 }
 
 .search-page {
+	&__main-header {
+		background: $white;
+		padding: 30px 0 0;
+	}
 	// Search on search page
 	&__title {
 		background: $white;
@@ -104,6 +108,12 @@
 				font-size: 20px;
 				color: $grey;
 			}
+		}
+	}
+	&__search-result {
+		text-align: center;
+		span {
+			font-family: $raleway-bold;
 		}
 	}
 }
