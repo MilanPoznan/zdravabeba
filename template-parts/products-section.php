@@ -19,7 +19,7 @@
         <div class="products-section__content">
           <p class="products-section__content-title"><?php echo get_field('product_title')?></p>
           <div class="products-section__content-description"><?php echo get_field('product_subtitle')?></div>
-          <a href="<?php echo get_field('product_cta_link')?>" class="products-section__button"><span><?php echo get_field('product_cta_text')?></span></a>
+          <a href="<?php echo the_permalink(); ?>" class="products-section__button"><span><?php echo get_field('product_cta_text')?></span></a>
         </div>
       </div>
 
