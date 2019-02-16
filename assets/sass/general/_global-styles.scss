@@ -5,7 +5,8 @@
 // Default typography styles for the site
 body {
 	@include body-text();
-	z-index: 1;
+  z-index: 1;
+  overflow-x: hidden; 
 }
 html {
 	scroll-behavior: smooth;
@@ -169,6 +170,7 @@ em {
   ul, ol {
     padding: 0 5%;
     font-family: $raleway;
+    margin-bottom: 30px;
   }
   ul li {
     display: flex;
