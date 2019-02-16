@@ -85,6 +85,9 @@ if ( ! function_exists( 'zdravabeba_setup' ) ) :
 endif;
 add_action( 'after_setup_theme', 'zdravabeba_setup' );
 
+
+//if => return 3 latest articles from one category if you set $categories as number
+//else => return 1 latest article from 3 categories if you set $categories as array -> example get_last_articles('class', array(8, 9, 10), array('purple', 'yellow', 'orange'))
 function get_last_articles($class, $categories, $colors) {
 
 	// If parameter is array
@@ -202,7 +205,7 @@ function register_custom_post_types() {
     'capability_type'    => 'post',
     'has_archive'        => true,
     'menu_icon'          => 'dashicons-welcome-write-blog',
-    // 'supports'           => array( 'title' ),
+    'supports'           => array( 'title', 'editor' ,'thumbnail' ),
     'taxonomies'         => array( 'category', 'post_tag' )
   );
 

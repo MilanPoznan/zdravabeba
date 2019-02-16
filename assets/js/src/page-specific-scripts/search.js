@@ -11,15 +11,12 @@ jQuery(function($) {
 	const curentUrl = $(location).attr('href');
 	const searchParamFromUrl = curentUrl.substr(curentUrl.lastIndexOf('/') + 1);
 
-	// console.log(searchUrl);
 	$searchMenuItems.on('click', e => {
 		e.preventDefault();
 		const menuItemsHref = e.target.href;
 		let fullSearchFilter = menuItemsHref + searchParamFromUrl;
 		window.location = fullSearchFilter;
-		// console.log();
 	});
-	console.log($searchMenuItems);
 	$searchResultProizvodi.text($proizvodiItems.length + ' rezultata');
 	$searchResultPost.text($postsItems.length + ' rezultata');
 	$searchResultSaveti.text($savetiSaveti.length + ' rezultata');
@@ -34,7 +31,6 @@ jQuery(function($) {
 		$('.show-more-1').on('click', e => {
 			$postsItems.css('display', 'flex');
 		});
-		console.log('pojavi se post');
 	} else if ($savetiSaveti.length > 3) {
 		$('.show-more-2').css('display', 'flex');
 		$('.show-more-2').on('click', e => {
