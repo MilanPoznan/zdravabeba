@@ -30,13 +30,26 @@ $allPosts = [];
 			</div>
 
 
-			<header class="page-header">
-				<h1 class="page-title">
+			<header class="search-page__main-header">
+				<h1 class="page-title search-page__search-result">
 					<?php
 					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', 'zdravabeba' ), '<span>' . get_search_query() . '</span>' );
+					printf( esc_html__( 'Rezultat pretrage za: %s', 'zdravabeba' ), '<span>' . get_search_query() . '</span>' );
 					?>
 				</h1>
+			  <section class="archive__hero">
+				<div class="archive__hero-dropdown">
+          <button class="archive__hero-dropdown-btn">Filter</button>
+          <?php
+            wp_nav_menu( array(
+              'theme_location' => 'search_menu',
+              'menu_id'        => 'search-menu',
+              'container'      => '',
+              'menu_class'     => 'archive__hero-dropdown-content'
+            ) );
+          ?>
+        </div>
+			</section>
 			</header><!-- .page-header -->
 			<div class="search-result-all">
 				<?php if ( have_posts() ) :
@@ -49,6 +62,7 @@ $allPosts = [];
 						<?php
 		        while( have_posts() ){
 		            the_post();
+
 		            if( $type == get_post_type() ){
 										get_template_part( 'template-parts/content', 'search' );
 		            }
