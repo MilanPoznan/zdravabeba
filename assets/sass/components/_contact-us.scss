@@ -1,0 +1,91 @@
+.contact { 
+    h1 {
+      margin: 60px auto;
+      font-size: 52px;
+      text-align: center;
+      font-family: $raleway-light;
+      color: $purple;
+      text-transform: uppercase;
+    }
+
+  &__content {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $light-grey;
+    padding: 10% 5% 12%; 
+
+    img {
+      width: 96px;
+      height: 96px;
+      margin-bottom: 45px;
+    }
+
+    h4 {
+      margin-bottom: 80px;
+      font-size: 30px;
+      font-family: $raleway-bold;
+      color: $purple;
+      text-align: center;
+    }
+  }
+  &__details {
+    align-self: flex-start;
+  }
+  &__info {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__box-title{
+    color: $purple;
+    font-family: $raleway-bold;
+    font-size: 24px;
+    text-transform: uppercase;
+  }
+  &__box-content {
+    font-size: 24px;
+    line-height: 1.5;
+    letter-spacing: 0.7px;
+  }
+}
+
+// Style for contact form 7
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  padding: 0 5%;
+  margin-bottom: 80px;
+}
+
+.cf7-row {
+  font-size: 24px;
+  letter-spacing: 0.7px;
+  font-family: $raleway-bold;
+  color: $purple;
+  padding: 20px 0;
+}
+input,
+textarea {
+  font-family: $raleway;
+  margin-top: 20px;
+  padding: 20px;
+}
+span {
+  color: $purple;
+}
+input[type="submit"] {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $white;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: $purple;
+  border-color: $purple;
+  width: 230px;
+  height: 60px;
+  text-align: center;
+}
+
