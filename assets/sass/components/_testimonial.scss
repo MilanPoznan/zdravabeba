@@ -1,0 +1,75 @@
+.testimonial {
+  display: flex;
+  flex-flow: column;
+  &__image {
+    align-self: center;
+    margin-bottom: 30px;
+    img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-flow: column;
+  }
+  &__title {
+    color: $purple;
+  }
+  &__link {
+    color: $purple;
+    font-family: $raleway;
+    font-size: 18px;
+  }
+  &__text {
+    p {
+      font-family: $raleway-light-italic;
+    }
+  }
+  &__title,
+  &__link {
+    align-self: center;
+    margin-bottom: 10px;
+  }
+} 
+
+@include tablet() {
+  .testimonial {
+    //
+  }
+}
+
+@include desktop() {
+  .testimonial {
+    flex-flow: row;
+    max-width: 730px;
+    margin: 0 auto;
+
+    &__image {
+      align-self: flex-start;
+      img {
+        width: 90px;
+        height: 90px;
+      } 
+    }
+    &__content {
+      max-width: 600px;
+      margin-left: 30px
+    }
+    &__text {
+      p {
+        font-size: 16px;
+      }
+    }
+    &__link {
+      margin-bottom: 20px;
+    }
+    &__title,
+    &__link {
+      font-size: 16px;
+      align-self: flex-start;
+    }
+  }
+}
