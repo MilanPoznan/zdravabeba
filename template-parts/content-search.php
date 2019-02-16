@@ -10,26 +10,28 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+	<?php
 
-		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
+		$the_post_id = get_the_ID();
+		$featured_image_url = get_the_post_thumbnail_url($the_post_id);
+
+	 ?>
+
+	<div class="result-item__image" style="background-image: url('<?php  echo $featured_image_url; ?>')">
+	</div>
+	<div class="result-item__content">
+		<p class="result-item__content-title"><?php the_title(); ?></p>
+		<div class="result-item__content-description">
 			<?php
-			zdravabeba_posted_on();
-			zdravabeba_posted_by();
-			?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
+				$product_subtitle = get_field('product_subtitle');
+				if ($product_subtitle) {
+					echo $product_subtitle;
+				} else {
+					the_content();
+				}
+			 ?>
 
-	<?php zdravabeba_post_thumbnail(); ?>
-
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
-
-	<footer class="entry-footer">
-		<?php zdravabeba_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+		</div>
+		<a href="<?php the_permalink() ?>" class="result-item__button"><span>Detaljnije</span></a>
+	</div>
 </article><!-- #post-<?php the_ID(); ?> -->

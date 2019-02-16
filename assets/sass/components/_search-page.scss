@@ -1,0 +1,150 @@
+.search-result-all {
+	.post-type-group-saveti,
+	.post-type-group-post,
+	.post-type-group-proizvodi {
+		padding-top: 120px;
+		position: relative;
+		&:before {
+			position: absolute;
+			top: 40px;
+			left: 0%;
+			color: $purple;
+			font-size: 46px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+		}
+	}
+	.post-type-group-proizvodi {
+		&:before {
+			content: 'PROIZVODI';
+		}
+	}
+	.post-type-group-post {
+		&:before {
+			content: 'POSTOVI';
+		}
+	}
+	.post-type-group-saveti {
+		&:before {
+			content: 'SAVETI';
+		}
+	}
+	.post-type-group-saveti,
+	.post-type-group-post {
+		&:after {
+			content: '';
+			position: absolute;
+			top: 10px;
+			width: 80%;
+			left: 10%;
+			height: 1px;
+			background: $purple;
+		}
+	}
+	.js-search-results {
+		text-align: center;
+	}
+	.show-more {
+		width: 70%;
+		margin: 0 auto;
+		height: 40px;
+		font-size: 20px;
+		background: $purple;
+		color: $white;
+		padding: 20px 30px;
+		display: none;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 60px;
+	}
+}
+.search-results-counter {
+	color: $purple;
+	font-family: $raleway-bold;
+	margin-bottom: 30px;
+}
+
+.search-page {
+	// Search on search page
+	&__title {
+		background: $white;
+		display: flex;
+		flex-flow: column;
+		align-items: center;
+		justify-content: center;
+		padding: 60px;
+		color: $purple;
+		h2 {
+			margin-bottom: 40px;
+		}
+	}
+	&__search-form {
+		width: 100%;
+		background: $light-purple;
+		height: 100px;
+		padding: 20px 5%;
+		input {
+			height: 60px;
+			font-size: 24px;
+			padding-left: 60px;
+			z-index: 100;
+			text-align: left;
+			&::placeholder {
+				text-align: left;
+				color: $grey;
+			}
+		}
+		i {
+			width: fit-content;
+			top: 20px;
+			left: 20px;
+			&:before {
+				font-size: 20px;
+				color: $grey;
+			}
+		}
+	}
+}
+// .search-res {
+// 	padding: 30px 0;
+// }
+@include desktop() {
+	.post-type-group-proizvodi {
+		display: flex;
+		align-items: flex-start;
+	}
+	.search-result-all {
+		.post-type-group-saveti,
+		.post-type-group-post,
+		.post-type-group-proizvodi {
+			&:before {
+				left: 0%;
+			}
+		}
+		.post-type-group-saveti,
+		.post-type-group-post {
+			&:after {
+				content: '';
+				position: absolute;
+				top: 10px;
+				width: 1200px;
+				left: 0%;
+				height: 1px;
+				background: $purple;
+			}
+		}
+	}
+	.search-result-all {
+		.show-more {
+			width: 235px;
+			height: 35px;
+			cursor: pointer;
+		}
+	}
+	.search-results-counter {
+		position: absolute;
+		left: 47%;
+	}
+}
