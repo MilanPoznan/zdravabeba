@@ -331,10 +331,10 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 
 // uncomment to test pagination on category archive pages
 
-function testing_pagination($query) {
-  if (!is_admin() && is_category() && $query->is_main_query()) {
-    $query->set('posts_per_page', 1);
-  }
-};
+// function testing_pagination($query) {
+//   if (!is_admin() && is_category() && $query->is_main_query()) {
+//     $query->set('posts_per_page', 1);
+//   }
+// };
 
-add_action( 'pre_get_posts', 'testing_pagination');
+// add_action( 'pre_get_posts', 'testing_pagination');
