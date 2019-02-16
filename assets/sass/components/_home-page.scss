@@ -30,6 +30,7 @@
       margin-top: 283px;
       width: 100%;
       max-width: 376px;
+      font-family: $raleway-bold;
       font-size: 78px;
       line-height: 1;
       color: $purple;
@@ -39,6 +40,7 @@
       width: 100%;
       max-width: 376px;
       margin-bottom: 50px;
+      font-family: $raleway-bold;
       font-size: 37px;
       line-height: 1.2;
       text-transform: uppercase;
@@ -51,6 +53,7 @@
       color: $purple;
 
       p {
+        font-family: $raleway-semi-bold;
         font-size: 30px;
         text-transform: uppercase;
       }
@@ -96,6 +99,7 @@
 
     &-subtitle {
       margin-bottom: 24px;
+      font-family: $raleway-bold;
       font-size: 30px;
       line-height: 0.8;
       color: $purple;
@@ -103,6 +107,7 @@
 
     &-title {
       margin-bottom: 60px;
+      font-family: $raleway-light;
       font-size: 52px;
       line-height: 1;
       text-transform: uppercase;
@@ -112,7 +117,9 @@
     &-text {
       p {
         margin-bottom: 30px;
+        font-family: $raleway;
         font-size: 30px;
+        color: $grey;
       }
     }
   }
@@ -221,7 +228,7 @@
           position: absolute;
           display: block;
           content: '';
-          top: 35%;
+          top: 50%;
           height: 1px;
           width: 95px;
           background-color: $purple;
@@ -240,6 +247,7 @@
         p {
           font-size: 18px;
           line-height: 1.33;
+          text-align: center;
         }
       }
     }
