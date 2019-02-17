@@ -17,7 +17,7 @@
 
 	 ?>
 
-	<div class="result-item__image" style="background-image: url('<?php  echo $featured_image_url; ?>')">
+	<div class="result-item__image" style="background-image: url('<?php  the_field('product_image'); ?>')">
 	</div>
 	<div class="result-item__content">
 		<p class="result-item__content-title"><?php the_title(); ?></p>
