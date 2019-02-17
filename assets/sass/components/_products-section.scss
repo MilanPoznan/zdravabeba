@@ -35,9 +35,8 @@
     display: flex;
     justify-content: center;
 		width: 100%;
-		height: auto;
-    margin: 0 auto;
-    
+    height: 260px;    
+    margin: 0 auto;    
     &::before {
       position: absolute;
       display: block;
@@ -58,7 +57,11 @@
 		margin: 0 auto;
     margin-bottom: -130px;
 		transition: 0.5s;
-		z-index: 2;
+    z-index: 2;
+    
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
 	}
 
 	&__content {

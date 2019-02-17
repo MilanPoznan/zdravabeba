@@ -25,11 +25,11 @@ get_header();
             the_post(); ?>
             <div class="archive-product__content-single">
               <a href="<?php the_permalink(); ?>" class="archive-product__content-single-image-container">
-                <img src="<?php echo get_field('product_image'); ?>" alt="product" class="archive-product__content-single-image">
+                <div class="archive-product__content-single-image" style="background-image: url('<?php  the_field('product_image'); ?>')"></div>    
               </a>
               <div class="archive-product__content-single-content">
-                <h3 class="archive-product__content-single-title"><?php echo get_field('product_title')?></h3>
-                <div class="archive-product__content-single-description"><?php echo get_field('product_subtitle')?></div>
+                <h3 class="archive-product__content-single-title"><?php the_field('product_title')?></h3>
+                <div class="archive-product__content-single-description"><?php the_field('product_subtitle')?></div>
                 <a href="<?php the_permalink(); ?>" class="archive-product__content-single-link"><span>Read More</span></a> 
               </div>
             </div>

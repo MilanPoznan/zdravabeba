@@ -34,6 +34,9 @@
         height: auto;
         margin: 0 auto;
 
+        height: 260px;
+
+
         &::before {
           position: absolute;
           display: block;
@@ -55,6 +58,12 @@
         margin-bottom: -130px;
         transition: 0.5s;
         z-index: 2;
+
+
+
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
       }
       &-content {
         display: flex;
