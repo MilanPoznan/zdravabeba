@@ -97,5 +97,8 @@
 				color: $white;
 			}
 		}
+		&__menu-wrapper {
+			z-index: -1;
+		}
 	}
 }
