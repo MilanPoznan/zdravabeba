@@ -5,7 +5,7 @@
     <?php 
       $proizvodi = new WP_Query(array(
         'post_type' => 'proizvodi',
-        'posts_per_page' => 2
+        'posts_per_page' => 3
       )); 
 
       if($proizvodi->have_posts()):

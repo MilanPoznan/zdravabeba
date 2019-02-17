@@ -64,5 +64,6 @@ jQuery(window).load(function() {
 #######################*/
 
 jQuery(window).resize(function() {
-	categorySection.handleResize();
+  categorySection.handleResize();
+  productsSlider.handleResize();
 });
