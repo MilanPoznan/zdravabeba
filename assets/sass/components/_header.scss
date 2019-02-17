@@ -16,12 +16,21 @@
 		display: none;
 		position: absolute;
 		width: 100%;
+		// min-height: calc(100vh - 120px);
 		height: auto;
+		flex-flow: column;
+		justify-content: space-between;
 		left: 0;
 		top: 120px;
 		color: $white;
 		background-color: $purple-grey;
 		z-index: 5;
+		&-wrapper {
+			display: flex;
+			flex-flow: column;
+			justify-content: space-between;
+			min-height: calc(100vh - 120px);
+		}
 	}
 	&__logo {
 		width: 170px;
@@ -43,10 +52,16 @@
 		font-size: 32px;
 	}
 }
-
+.is-open {
+	display: flex;
+}
 @include desktop() {
 	.header {
-		padding: 30px 10%;
+		padding: 0 10%;
+		&__wrapp {
+			max-width: 1160px;
+			margin: 0 auto;
+		}
 		&__hamburger-wrapper {
 			display: none;
 		}
@@ -54,11 +69,17 @@
 			display: flex;
 			align-items: center;
 			width: 80%;
+			height: 100%;
 			margin: 0 auto;
 			position: relative;
 			background: transparent;
-			height: 36px;
 			top: 0;
+			&-wrapper {
+				flex-flow: row;
+				height: 100%;
+				min-height: auto;
+				width: 100%;
+			}
 		}
 		&__search-icon {
 			display: none;

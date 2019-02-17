@@ -17,8 +17,8 @@ get_header();
 		while ( have_posts() ) :
 			the_post();
 
-			// include 'template-parts/general-template';
-			include 'template-parts/products-section';
+			include 'template-parts/general-template';
+			// include 'template-parts/products-section';
 
 			?>
 
