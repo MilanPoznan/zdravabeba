@@ -17,7 +17,7 @@
 
 	 ?>
 
-	<div class="result-item__image" style="background-image: url('<?php  echo $featured_image_url; ?>')">
+	<div class="result-item__image" style="background-image: url('<?php if(get_field('product_image')): the_field('product_image'); else: echo $featured_image_url; endif; ?>')">
 	</div>
 	<div class="result-item__content">
 		<p class="result-item__content-title"><?php the_title(); ?></p>
@@ -27,7 +27,8 @@
 				if ($product_subtitle) {
 					echo $product_subtitle;
 				} else {
-					the_content();
+          // the_content();
+          echo wp_trim_words(get_the_content(), 14);
 				}
 			 ?>
 

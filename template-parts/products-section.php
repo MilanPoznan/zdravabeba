@@ -5,7 +5,7 @@
     <?php 
       $proizvodi = new WP_Query(array(
         'post_type' => 'proizvodi',
-        'posts_per_page' => 2
+        'posts_per_page' => 3
       )); 
 
       if($proizvodi->have_posts()):
@@ -13,13 +13,13 @@
     ?>
       <div class="products-section__slider-single">
         <a href="<?php the_permalink(); ?>" class="products-section__image-container">
-          <img src="<?php echo get_field('product_image'); ?>" alt="product" class="products-section__image">
+          <div class="products-section__image" style="background-image: url('<?php  the_field('product_image'); ?>')"></div>          
         </a>
         
         <div class="products-section__content">
-          <p class="products-section__content-title"><?php echo get_field('product_title')?></p>
-          <div class="products-section__content-description"><?php echo get_field('product_subtitle')?></div>
-          <a href="<?php echo the_permalink(); ?>" class="products-section__button"><span><?php echo get_field('product_cta_text')?></span></a>
+          <p class="products-section__content-title"><?php the_field('product_title')?></p>
+          <div class="products-section__content-description"><?php the_field('product_subtitle')?></div>
+          <a href="<?php echo the_permalink(); ?>" class="products-section__button"><span><?php the_field('product_cta_text')?></span></a>
         </div>
       </div>
 

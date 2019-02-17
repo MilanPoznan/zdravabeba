@@ -48,7 +48,7 @@ get_header();
               <div class="archive__content-single-image" style="background-image: url(<?php the_post_thumbnail_url('large'); ?>)"></div>
               <div class="archive__content-single-content">
                 <h3 class="archive__content-single-title"><?php the_title(); ?></h3>
-                <div class="archive__content-single-excerpt"><?php echo wp_trim_words(get_the_content(), 10);?></div>
+                <div class="archive__content-single-excerpt"><?php echo wp_trim_words(get_the_content(), 14);?></div>
                 <a href="<?php the_permalink(); ?>" class="archive__content-single-link">Read More</a>
               </div>
             </div>

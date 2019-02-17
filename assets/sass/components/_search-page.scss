@@ -120,10 +120,25 @@
 // .search-res {
 // 	padding: 30px 0;
 // }
+
+@include tablet() {
+  .post-type-group-proizvodi {
+		display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    article {
+      width: 32%;
+    }
+  }
+}
+
 @include desktop() {
 	.post-type-group-proizvodi {
-		display: flex;
-		align-items: flex-start;
+		// display: flex;
+		// align-items: flex-start;
 	}
 	.search-result-all {
 		.post-type-group-saveti,

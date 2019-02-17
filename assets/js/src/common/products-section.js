@@ -4,6 +4,7 @@ export default ($) => {
   console.log($slider);
 
     const $arrowsContainer = $('.products-section__image-container');
+    let sliderInitialized = false;
 
     // Previous / next arrow template strings
     const prevArrow = `<div class="slick-prev"></div>`;
@@ -16,8 +17,12 @@ export default ($) => {
       nextArrow,
       prevArrow,
       swipe: false,
-      slidesToShow: 2,
+      slidesToShow: 3,
       responsive: [
+          {
+            breakpoint: 9999,
+            settings: "unslick"
+          },
           {
           breakpoint: 768,
           settings: {
@@ -33,10 +38,22 @@ export default ($) => {
     function init() {
       // Initialize slick slider
       $slider.slick(args);
-      console.log('product slider');
+      sliderInitialized = true;
+    }
+
+    function handleResize() {
+
+      setTimeout(function() {
+        if(window.innerWidth < 768 && !sliderInitialized) {
+          init();
+          sliderInitialized = true;
+        } else if (window.innerWidth >= 768 && sliderInitialized) {
+          sliderInitialized = false;
+        }
+      }, 250)
     }
   
-    return { init }
+    return { init, handleResize }
   
 
 }
