@@ -1,0 +1,228 @@
+.search-results {
+	background: $beige;
+}
+.type-proizvodi {
+	&:nth-child(-n + 4) {
+		border-bottom: 5px solid $viol-purple;
+	}
+	&:nth-child(2n) {
+		border-bottom: 5px solid $yellow;
+	}
+	&:nth-child(3n) {
+		border-bottom: 5px solid $orange;
+	}
+}
+.type-post {
+	border-bottom: 5px solid $viol-purple;
+	&:nth-child(3n + 2) {
+		border-bottom: 5px solid $yellow;
+	}
+	&:nth-child(3n) {
+		border-bottom: 5px solid $orange;
+	}
+}
+.type-saveti,
+.type-post,
+.type-proizvodi {
+	display: none;
+	&:nth-child(-n + 3) {
+		display: block;
+	}
+	width: 90%;
+	margin: 0 auto 40px;
+	.post-thumbnail {
+		position: relative;
+		display: block;
+		width: 100%;
+		height: auto;
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		img {
+		}
+	}
+	.result-item {
+		&__image {
+			position: relative;
+			height: auto;
+			width: 90%;
+			height: 100%;
+			min-height: 300px;
+			max-width: 500px;
+			margin: 0 auto;
+			@include bgImage();
+			background-size: contain;
+			margin-bottom: -25%;
+			transition: 0.5s;
+			z-index: 2;
+		}
+		&__content {
+			display: flex;
+			padding: 50px 20px 45px;
+			flex-flow: column;
+			align-items: center;
+			justify-content: space-between;
+			background-color: $white;
+
+			&-title {
+				position: relative;
+				max-width: 300px;
+				margin-bottom: 60px;
+				padding: 0 10px;
+				font-family: $raleway-bold;
+				font-size: 20px;
+				line-height: 1.52;
+				text-align: center;
+				text-transform: uppercase;
+				letter-spacing: -0.3px;
+				color: $viol-purple;
+				transition: 0.5s;
+
+				&::after {
+					position: absolute;
+					display: block;
+					height: 2px;
+					width: 27px;
+					content: '';
+					left: 50%;
+					bottom: -20px;
+					transform: translateX(-50%);
+					background-color: $viol-purple;
+					z-index: 1;
+					transition: 0.5s;
+				}
+			}
+
+			&-description {
+				width: 90%;
+				max-width: 400px;
+				margin-bottom: 66px;
+				text-align: center;
+				font-family: $raleway-medium;
+				font-size: 16px;
+				line-height: 20px;
+				color: $grey;
+			}
+		}
+		&__button {
+			position: relative;
+			display: flex;
+			height: 60px;
+			width: fit-content;
+			min-width: 250px;
+			padding: 0 30px;
+			flex-flow: column;
+			justify-content: center;
+			align-items: center;
+			font-family: $raleway-semi-bold;
+			text-transform: uppercase;
+			border: 1px solid $purple;
+
+			&::after {
+				position: absolute;
+				display: block;
+				padding: 4px;
+				content: '';
+				top: calc(50% - 6px);
+				right: 20px;
+				transform: rotate(-45deg);
+				border: solid $purple;
+				border-width: 0 2px 2px 0;
+				z-index: 1;
+			}
+		}
+	}
+}
+.type-saveti,
+.type-post {
+	.result-item__image {
+		width: 100%;
+		height: 335px;
+		margin-bottom: 0;
+		background-size: cover;
+	}
+}
+
+// Post type
+
+@include tablet() {
+	.search-result-all {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+	.type-proizvodi {
+		width: 100%;
+		max-width: 350px;
+		display: inline-block;
+	}
+	.type-proizvodi {
+		margin-top: 60px;
+		.result-item {
+			&__content {
+				&-title {
+					font-size: 20px;
+					position: relative;
+				}
+				&-description {
+					font-size: 16px;
+					line-height: 20px;
+					height: 160px;
+				}
+			}
+		}
+	}
+	.type-saveti,
+	.type-post {
+		margin-top: 60px;
+		display: none;
+		&:nth-child(-n + 4) {
+			display: flex;
+		}
+		position: relative;
+		height: 220px;
+		width: 100%;
+		.result-item {
+			&__image {
+				max-width: 350px;
+				height: 220px;
+				width: 100%;
+				margin: 0;
+				min-height: 220px;
+			}
+			&__content {
+				padding: 30px;
+				width: 100%;
+				align-items: flex-start;
+				font-size: 16px;
+				&-title {
+					width: 100%;
+					max-width: 100%;
+					font-size: 20px;
+					text-align: left;
+					position: relative;
+					padding: 0;
+					margin-bottom: 40px;
+					&:after {
+						left: 15px;
+					}
+				}
+				&-description {
+					font-size: 16px;
+					line-height: 18px;
+					text-align: left;
+				}
+			}
+			&__button {
+				width: 135px;
+				height: 35px;
+				position: absolute;
+				right: 30px;
+				bottom: 34px;
+				min-width: 160px;
+				padding: 10px 20px;
+				font-size: 14px;
+			}
+		}
+	}
+}

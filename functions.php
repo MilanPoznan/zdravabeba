@@ -44,7 +44,9 @@ if ( ! function_exists( 'zdravabeba_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'zdravabeba' ),
+      'menu-1' => esc_html__( 'Primary', 'zdravabeba' ),
+      'category_menu' => esc_html__( 'Categories', 'zdravabeba' ),
+			'search_menu' => esc_html__( 'Search', 'zdravabeba' ),
 		) );
 
 		/*
@@ -83,6 +85,9 @@ if ( ! function_exists( 'zdravabeba_setup' ) ) :
 endif;
 add_action( 'after_setup_theme', 'zdravabeba_setup' );
 
+
+//if => return 3 latest articles from one category if you set $categories as number
+//else => return 1 latest article from 3 categories if you set $categories as array -> example get_last_articles('class', array(8, 9, 10), array('purple', 'yellow', 'orange'))
 function get_last_articles($class, $categories, $colors) {
 
 	// If parameter is array
@@ -200,7 +205,7 @@ function register_custom_post_types() {
     'capability_type'    => 'post',
     'has_archive'        => true,
     'menu_icon'          => 'dashicons-welcome-write-blog',
-    // 'supports'           => array( 'title' ),
+    'supports'           => array( 'title', 'editor' ,'thumbnail' ),
     'taxonomies'         => array( 'category', 'post_tag' )
   );
 
@@ -228,7 +233,7 @@ function register_custom_post_types() {
     'capability_type'    => 'post',
     'has_archive'        => true,
     'menu_icon'          => 'dashicons-awards',
-    // 'supports'           => array( 'title' ),
+    'supports'           => array( 'title', 'thumbnail' ),
     'taxonomies'         => array( 'category', 'post_tag' )
   );
 
@@ -280,6 +285,8 @@ function zdravabeba_scripts() {
 	wp_enqueue_style( 'font-awsome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' );
 
   wp_enqueue_script( 'example-scripts', get_template_directory_uri() . '/assets/js/example.js', array( 'jquery' ), 1.0, true );
+  wp_enqueue_script( 'archive-menu', get_template_directory_uri() . '/assets/js/archiveMenu.js', NULL, 1.0, true );
+
 
   // Slick Slider styles
   wp_enqueue_style( 'slick', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.css', false, '1.8.0' );
@@ -287,7 +294,8 @@ function zdravabeba_scripts() {
   wp_enqueue_script( 'slick', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js', false, '1.8.1', true );
 	wp_enqueue_script( 'example-scripts', get_template_directory_uri() . '/assets/js/example.js', array( 'jquery' ), 1.0, true );
   wp_enqueue_script( 'tab-script', get_template_directory_uri() . '/assets/js/tab-script.js', array( 'jquery' ), 1.0, true );
-  wp_enqueue_script( 'single-product', get_template_directory_uri() . '/assets/js/single-product.js', array( 'jquery' ), 1.0, true );
+	wp_enqueue_script( 'single-product', get_template_directory_uri() . '/assets/js/single-product.js', array( 'jquery' ), 1.0, true );
+  wp_enqueue_script( 'search', get_template_directory_uri() . '/assets/js/search.js', array( 'jquery' ), 1.0, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -324,3 +332,14 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+
+// uncomment to test pagination on category archive pages
+
+// function testing_pagination($query) {
+//   if (!is_admin() && is_category() && $query->is_main_query()) {
+//     $query->set('posts_per_page', 1);
+//   }
+// };
+
+// add_action( 'pre_get_posts', 'testing_pagination');

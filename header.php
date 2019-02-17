@@ -40,31 +40,33 @@
 			</div>
 			<!-- Site Menu -->
 			<div class="header__menu js-menu">
-				<nav id="site-navigation" class="main-navigation">
-					<?php
-					wp_nav_menu( array(
-						'theme_location' => 'menu-1',
-						'menu_id'        => 'primary-menu',
-					) );
-					?>
-				</nav><!-- #site-navigation -->
-				<div class="menu__folow-us">
-					<div class="menu__folow-text">
-						Pratite Nas
-					</div>
-					<div class="menu__folow-socials">
-						<a href="#" target="_blank">
-							<i class="fa fa-facebook" aria-hidden="true"></i>
-						</a>
-						<a href="#" target="_blank">
-							<i class="fa fa-twitter" aria-hidden="true"></i>
-						</a>
-						<a href="#" target="_blank">
-							<i class="fa fa-google-plus" aria-hidden="true"></i>
-						</a>
-						<a href="#" target="_blank">
-							<i class="fa fa-youtube-play" aria-hidden="true"></i>
-						</a>
+				<div class="header__menu-wrapper">
+					<nav id="site-navigation" class="main-navigation">
+						<?php
+						wp_nav_menu( array(
+							'theme_location' => 'menu-1',
+							'menu_id'        => 'primary-menu',
+						) );
+						?>
+					</nav><!-- #site-navigation -->
+					<div class="menu__folow-us">
+						<div class="menu__folow-text">
+							Pratite Nas
+						</div>
+						<div class="menu__folow-socials">
+							<a href="#" target="_blank">
+								<i class="fa fa-facebook" aria-hidden="true"></i>
+							</a>
+							<a href="#" target="_blank">
+								<i class="fa fa-twitter" aria-hidden="true"></i>
+							</a>
+							<a href="#" target="_blank">
+								<i class="fa fa-google-plus" aria-hidden="true"></i>
+							</a>
+							<a href="#" target="_blank">
+								<i class="fa fa-youtube-play" aria-hidden="true"></i>
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
