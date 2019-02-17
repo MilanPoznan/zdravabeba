@@ -1,6 +1,6 @@
 <section class="products-section">
   <div class="products-section__inner-wrapper">
-    <h2 class="products-section__title">Products</h2>
+    <h2 class="products-section__title">Proizvodi</h2>
     <div class="products-section__slider">
     <?php 
       $proizvodi = new WP_Query(array(
