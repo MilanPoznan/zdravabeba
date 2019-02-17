@@ -7,12 +7,15 @@ import Navigation from './navigation';
 // import ImgToBackground from './ImgToBackground';
 import CategorySection from './category-section';
 import ProductSlider from './products-section';
+import CookiePopup from './cookie-popup';
 
 // const imgToBgd = ImgToBackground(jQuery);
 const categorySection = new CategorySection(jQuery);
 const productsSlider = new ProductSlider(jQuery);
 var scrollTop = 0;
 let resetTimeout;
+const cookiePopup = new CookiePopup(jQuery);
+cookiePopup.init();
 
 // DOM ready calls
 jQuery(function($) {
