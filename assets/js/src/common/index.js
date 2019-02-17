@@ -11,19 +11,33 @@ import ProductSlider from './products-section';
 // const imgToBgd = ImgToBackground(jQuery);
 const categorySection = new CategorySection(jQuery);
 const productsSlider = new ProductSlider(jQuery);
+var scrollTop = 0;
+let resetTimeout;
 
 // DOM ready calls
 jQuery(function($) {
 	//Elements
 
+	$(window).on('scroll', function() {
+		clearTimeout(resetTimeout);
+		resetTimeout = setTimeout(() => {
+			console.log(scrollTop);
+			scrollTop = $(this).scrollTop();
+		}, 300);
+	});
+	//Hack for submenu - horrible, but works ;)
+	$('.menu-item').on('hover', () => {
+		$('.sub-menu').css('top', 120 - scrollTop);
+	});
 	if ($(window).width() < 1200) {
 		const $hamburger = $('.hamburger');
 
 		//Menu
 		$hamburger.on('click', () => {
 			$('.hamburger').toggleClass('is-active');
-			$('.js-menu').slideToggle();
+			$('.js-menu').slideToggle(400);
 			$('.menu-item').toggleClass('enable-click');
+			$('body').toggleClass('prevent-scroll');
 		});
 
 		$('.js-search').on('click', () => {
@@ -39,7 +53,7 @@ jQuery(function($) {
 		});
 	} else {
 		$('.menu-item-has-children').on('hover', e => {
-			$('.sub-menu').toggle('slow');
+			// $('.sub-menu').toggle('slow');
 		});
 	}
 	// End menu
@@ -47,9 +61,9 @@ jQuery(function($) {
 
 	// init navigation module
 	const navigation = new Navigation($);
-  navigation.init();
-  // init products slider
-  productsSlider.init();
+	navigation.init();
+	// init products slider
+	productsSlider.init();
 });
 /*#######################
 ### Window load event ###
