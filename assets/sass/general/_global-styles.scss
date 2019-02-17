@@ -389,21 +389,17 @@ img[class$='-imgtobg'] {
 ****************/
 
 @include tablet() {
-	h2 {
+	h1 {
 		font-size: 44px;
 		line-height: 0.92;
 	}
 }
 
 @include desktop() {
-	#site-navigation {
-		z-index: 1;
-		height: 100%;
-	}
-	h2 {
+	h1 {
 		position: relative;
 		width: fit-content;
-		margin: 0 auto 60px;
+		margin: 60px auto;
 		font-size: 43px;
 		text-transform: uppercase;
 		text-align: center;
@@ -431,7 +427,7 @@ img[class$='-imgtobg'] {
 	}
 }
 @include desktop-xlg() {
-	h2 {
+	h1 {
 		font-size: 58px;
 		line-height: 56px;
 	}
