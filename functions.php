@@ -86,6 +86,45 @@ endif;
 add_action( 'after_setup_theme', 'zdravabeba_setup' );
 
 
+
+/**
+	 * Prepare template for inserting og tags
+	 *
+	 * @since 1.0.0
+	 * @access public
+	 */
+	function insert_social_in_head() {
+		$og_description = 'Predivan je osećaj znati da se vaša beba razvija dobro i da ste oboje zdravi i srećni.';
+		if (is_singular()) {
+			$og_description = wp_trim_words(the_content(), 15);
+		}
+		$og_type = get_post_type();
+		$og_url = get_permalink();
+		$og_image = 'https://www.femibion.com/content/dam/web/health-care/consumer-health/web/Femibion/en_INT/Pillars/baner/Pregnancy_Femibion_2_ENG_packshot_d_1600x725.jpg';
+		?>
+		 <meta property="og:title"         content="<?php the_title(); ?>"/>
+		 <meta name="twitter:title"        content="<?php the_title(); ?>" />
+
+		 <meta property="og:description"   content="<?php echo $og_description ?>" />
+		 <meta name="twitter:description"  content="<?php echo $og_description ?>" />
+
+		 <meta property="og:type"          content="<?php echo $og_type ?>"/>
+		 <meta property="og:url"           content="<?php echo $og_url ?>"/>
+		 <meta property="og:site_name"     content="AUSTURHÖFN"/>
+		 <meta property="og:image"         content="<?php echo $og_image ?>"/>
+		 <meta property="og:image:width"   content="300" />
+		 <meta property="og:image:height"  content="300" />
+		 <meta name="twitter:image"        content="<?php echo $og_image ?>" />
+
+		<?php
+
+	}
+	add_action('wp_head', 'insert_social_in_head');
+
+	function add_cf_to_page() {
+		echo do_shortcode( '[contact-form-7 id="1234" title="Contact form 1"]' );
+	}
+
 //if => return 3 latest articles from one category if you set $categories as number
 //else => return 1 latest article from 3 categories if you set $categories as array -> example get_last_articles('class', array(8, 9, 10), array('purple', 'yellow', 'orange'))
 function get_last_articles($class, $categories, $colors) {

@@ -16,7 +16,7 @@
           <h1 class="home__hero-title"><?php echo get_field('hero_title')?></h1>
           <p class="home__hero-subtitle"><?php echo get_field('hero_subtitle')?></p>
           <div class="home__hero-text"><?php echo get_field('hero_text')?></div>
-          <?php 
+          <?php
             $link = get_field('cta_button');
 
             if($link):
@@ -40,7 +40,7 @@
         <p class="home__info-subtitle"><?php echo get_field('info_subtitle')?></p>
         <h2 class="home__info-title"><?php echo get_field('info_title')?></h2>
         <div class="home__info-text"><?php echo get_field('info_content')?></div>
-      </div> 
+      </div>
     </section>
     <!-- Info Section End -->
 
@@ -54,7 +54,7 @@
       <!-- Category Section Start -->
       <?php get_template_part('template-parts/products-section'); ?>
       <!-- Category Section End -->
-      
+
       <p>test</p>
     </div>
     <!-- Info Section E -->
