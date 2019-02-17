@@ -1,0 +1,86 @@
+.hero-share {
+	display: none;
+}
+.cf_share {
+	display: none;
+}
+@include desktop() {
+	.hero-share {
+		overflow: hidden;
+		display: flex;
+		flex-flow: column;
+		position: fixed;
+		top: 50%;
+		right: 0;
+		cursor: pointer;
+		&__wrapper {
+			display: flex;
+			flex-flow: column;
+			align-items: flex-end;
+		}
+		&__links {
+			background: $purple;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 40px;
+			height: 40px;
+			margin-bottom: 2px;
+			i {
+				color: $white;
+				font-size: 24px;
+			}
+		}
+		&__other {
+			display: flex;
+			margin-right: -170px;
+			transition: 0.6s;
+			&:hover {
+				margin-right: 0px;
+			}
+		}
+		&__icon {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 40px;
+			height: 40px;
+			background: $pink;
+			.fa-share-alt {
+				color: $white;
+				font-size: 24px;
+			}
+		}
+		&__share-links {
+			display: flex;
+			// visibility: hidden;
+			align-items: center;
+			background: $purple;
+			color: $white;
+			transition: 0.5s;
+			p {
+				padding-left: 4px;
+				margin-right: 12px;
+			}
+			span {
+				margin: 0 5px;
+			}
+		}
+	}
+
+	.cf-share {
+		position: absolute;
+		top: -2000px;
+		left: calc(50% - 300px);
+		height: 500px;
+		width: 600px;
+		background: $grey;
+		transition: 1s;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.js-cf-7 {
+		z-index: 10;
+	}
+}

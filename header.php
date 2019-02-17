@@ -79,7 +79,12 @@
 			</div>
 		</div>
 
+		<?php include 'template-parts/hero-share.php'; ?>
 
+		<div class="cf-share">
+			<?php echo do_shortcode( '[contact-form-7 id="5" title="Contact form 1"]' ); ?>
+
+		</div>
 
 	</header><!-- #masthead -->
 
