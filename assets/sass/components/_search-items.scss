@@ -53,7 +53,7 @@
 			margin: 0 auto;
 			@include bgImage();
 			background-size: contain;
-			margin-bottom: -25%;
+			margin-bottom: -90px;
 			transition: 0.5s;
 			z-index: 2;
 		}
@@ -169,7 +169,51 @@
 					line-height: 20px;
 					height: 160px;
 				}
-			}
+      }
+      &__button {
+
+        height: 35px;
+        min-width: 130px;
+        font-size: 14px;
+        overflow: hidden;
+        z-index: 2;
+
+        span {
+          position: relative;
+          z-index: 2;
+        }
+
+        &::before {
+          position: absolute;
+          display: block;
+          content: '';
+          height: 200%;
+          width: 150%;
+          background-color: $purple;
+          border-radius: 100%;
+          transform: translateY(80%);
+          transition: 1s;
+          z-index: 1;
+        }
+
+        &::after {
+          padding: 3px;
+          top: calc(50% - 4px);
+          right: 16px;
+        }
+
+        &:hover {
+          color: $white;
+
+          &::after {
+            border-color: $white;
+          }
+
+          &:before {
+            transform: translateY(-5%);
+          }
+        }
+      }
 		}
 	}
 	.type-saveti,

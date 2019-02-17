@@ -32,10 +32,21 @@
 
 	&__image-container {
 		position: relative;
-		display: block;
+    display: flex;
+    justify-content: center;
 		width: 100%;
-		height: auto;
-		margin: 0 auto;
+    height: 260px;    
+    margin: 0 auto;    
+    &::before {
+      position: absolute;
+      display: block;
+      height: 80px;
+      content: '';
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: $white;
+    }
 	}
 
 	&__image {
@@ -44,9 +55,13 @@
 		width: 90%;
 		max-width: 500px;
 		margin: 0 auto;
-		margin-bottom: -25%;
+    margin-bottom: -130px;
 		transition: 0.5s;
-		z-index: 2;
+    z-index: 2;
+    
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
 	}
 
 	&__content {
@@ -130,7 +145,7 @@
 		&-single {
 			border-bottom: 5px solid $viol-purple;
 
-			&:nth-child(2) {
+			&:nth-child(3n + 2) {
 				border-bottom: 5px solid $yellow;
 
 				.products-section__content-title {
@@ -140,7 +155,19 @@
 						background-color: $yellow;
 					}
 				}
-			}
+      }
+      
+      &:nth-child(3n) {
+				border-bottom: 5px solid $orange;
+
+				.products-section__content-title {
+					color: $orange;
+
+					&::after {
+						background-color: $orange;
+					}
+				}
+      }
 		}
 	}
 }
@@ -148,9 +175,9 @@
 @include tablet() {
 	.products-section {
 		&__inner-wrapper {
-			display: flex;
+      display: flex;
+      padding: 100px 0;
 			flex-flow: column;
-			align-items: center;
 		}
 		&__title {
 			position: relative;
@@ -178,18 +205,20 @@
 		}
 
 		&__slider {
-			.slick-list {
-				.slick-track {
-					display: flex;
-					max-width: 730px;
-					margin: 0 auto;
-					justify-content: space-between;
-				}
-			}
+      display: flex;
+      width: 100%;
+      max-width: 1090px;
+      margin: 0 auto;
+      flex-flow: row;
+      justify-content: space-between;
 
 			&-single {
-				width: 45% !important;
-				max-width: 350px;
+        display: flex !important;
+        height: auto !important;
+        width: calc(33% - 20px) !important;
+				max-width: 350px;        
+        flex-flow: column;
+        justify-content: space-between;
 
 				&:hover {
 					.products-section__image {
@@ -210,19 +239,18 @@
 			position: relative;
 
 			&::before {
-				position: absolute;
-				display: block;
-				content: '';
-				top: 30%;
-				bottom: 0;
-				left: 0;
-				right: 0;
-				background: $white;
+        height: unset;
+        top: 130px;
 			}
-		}
+    }
+    
+    &-image {
+      margin-bottom: -100px;
+    }
 
 		&__content {
-			min-height: 340px;
+      min-height: 340px;
+      flex: 1;
 
 			&-title {
 				margin-bottom: 40px;
