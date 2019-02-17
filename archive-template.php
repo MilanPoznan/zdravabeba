@@ -1,4 +1,9 @@
-<?php get_header(); ?>
+<?php
+/**
+* Template Name: Archive Template
+* Template Post Type: page, post
+*/
+ get_header(); ?>
 <div class="archive-page">
     <?php  include 'template-parts/general-hero.php'; ?>
   <div class="archive-page__content-wrapper">
@@ -16,7 +21,7 @@
   </div>
   <div class="archive-page__single-proizvod">
     <div class="archive-page__title-section">
-      <h2>PROZIVODI</h2>
+      <h2><<?php the_title(); ?></h2>
     </div>
     <?php  include 'template-parts/one-product.php'; ?>
   </div>

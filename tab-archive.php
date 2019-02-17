@@ -49,7 +49,8 @@
               </div>
               <div class="archive-tab__post-description">
                 <?php
-                  echo $single_post[0]->post_content;
+                $my_post_content = $single_post[0]->post_content;;
+                echo wp_trim_words($my_post_content, 30);
                   $post_link = get_permalink($single_post[0]->ID);
                 ?>
                 <a href="<?php echo $post_link ?>"  class="archive-tab__post-cta general-cta general-cta--purple">Procitajte vise</a>
