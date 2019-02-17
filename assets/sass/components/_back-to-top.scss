@@ -1,0 +1,56 @@
+.back-to-top {
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+  width: 250px;
+  top: -90px;
+  right: 5%;
+  color: $purple;
+  z-index: 999;
+  font-size: 18px;
+  font-family: $raleway-medium;
+  text-transform: uppercase;
+
+  &::after,
+  &::before {
+    position: absolute;
+    top: 11px;
+    right: 15px;
+    display: block;
+    content: '';
+    height: 10px;
+    width: 10px; 
+    z-index: 999;
+    transform: rotate(-45deg);
+    align-self: center;
+  }
+  &::after {
+    border-top: 3px solid $purple;
+  }
+  &::before {
+    border-right: 3px solid $purple;
+  }
+}
+
+@include tablet() {
+  .back-to-top {
+    top: -120px;
+    justify-content: flex-start;
+    font-size: 24px;
+
+    &::after, 
+    &::before {
+      top: 15px;
+      right: 0;
+      width: 12px;
+      height: 12px;
+    }
+  }
+}
+
+@include desktop() {
+  .back-to-top {
+    top: -140px;
+    right: 0;
+  }
+}

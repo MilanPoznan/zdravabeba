@@ -163,7 +163,7 @@ function get_last_articles($class, $categories, $colors) {
 					<?php } ?>
 			</div>
 		</div>
-		<?
+		<?php
 	} else {
 		$args = array( 'posts_per_page' => 3,'offset' => 1, 'category' => $categories );
 		$myposts = get_posts( $args );
