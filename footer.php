@@ -20,32 +20,29 @@
 			
 			<div class="footer__wrapper">
 			<div class="footer__description">
-				Femibion powstał po to, by pomóc
-Ci w szczególnym okresie planowania dziecka, ciąży oraz macierzyństwa. Wiemy, że to niesamowite wyzwanie, ale również wielka przygoda. Pamiętaj, że jesteśmy tu dla Ciebie
-i możesz na nas liczyć.
+        Dobrodošli na uzbudljiv put ka materinstvu. Mislite o Femibion-u kao o svom partneru u trudnoći koji Vam daje inspiraciju i stručne savete koji su Vam potrebni tokom ovog posebnog perioda. Ovde smo da Vam pomognemo ne samo da postanete sjajna mama već i da ostanete sjajna žena, kakva jeste. U čast avanture koja je pred Vama…
 			</div>
 
 			<div class="footer__links">
 				<div class="footer__box">
-					<p class="footer__links--title">Etapy</p>
+					<p class="footer__links--title">Faze</p>
 					<ul>
-						<li><a href="#">Planowanie</a></li>
-						<li><a href="#">Ciąża</a></li>
-						<li><a href="#">Macierzyństwo</a></li>
+						<li><a href="<?php echo get_category_link( 4 ); ?> ">Planiranje</a></li>
+						<li><a href="<?php echo get_category_link( 11 ); ?>">Trudnoća</a></li>
+						<li><a href="<?php echo get_category_link( 7 ); ?>">Materinstvo</a></li>
 					</ul>
 				</div><!-- .footer__box -->
 				<div class="footer__box">
-					<p class="footer__links--title">O FEMIBION</p>
+					<p class="footer__links--title">BREND</p>
 					<ul>
-						<li><a href="#">O NAS</a></li>
-						<li><a href="#">FAQ</a></li>
+						<li><a href="<?php echo get_page_link( 14 ); ?>">O nama</a></li>
 					</ul>
 				</div><!-- .footer__box -->
 				<div class="footer__box">
-					<p class="footer__links--title">PRZYDATNE INFORMACJE</p>
+					<p class="footer__links--title">Proizvođač</p>
 					<ul>
-						<li><a href="#">Kalendarz dni płodnych</a></li>
-						<li><a href="#">Wybierz imię dla swojego dziecka</a></li>
+						<li><a href="https://www.merckgroup.com/en">Merck</a></li>
+						<li><a href="http://www.elpharma.com/">El Pharma</a></li>
 					</ul>
 				</div><!-- .footer__box -->
 			</div><!-- .footer__links -->
@@ -53,11 +50,11 @@ i możesz na nas liczyć.
 
 			<div class="footer__socials">
 				<div class="footer__social">
-					<p class="footer__social--title">Znajdź nas na:</p>
+					<p class="footer__social--title">Pratite nas na:</p>
 					<div class="footer__social-icons">
-						<a href="https://www.facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-						<a href="https://www.twitter.com"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-						<a href="https://plus.google.com/"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+						<a href="https://www.facebook.com/FemibionRS/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+						<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+						<a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
 						<a href="https://www.youtube.com"><i class="fa fa-youtube-play"></i></a>
 					</div>
 				</div><!-- .footer__social-->			
@@ -69,9 +66,9 @@ i możesz na nas liczyć.
 
 	<div class="footer__privacy-policy">
 		<div class="footer__terms">
-			<a href="#">Polityka prywatności</a>
-			<a href="#">Mapa strony</a>
-			<a href="#">Warunki korzystania z aplikacji</a>
+			<a href="<?php echo get_page_link( 3 ); ?>">Politika privatnosti</a>
+			<!-- <a href="#">Mapa strony</a>  -->
+			<a href="">Uslovi korišćenja</a>
 		</div>
 		<div class="footer__logo">
 			<img src="<?php echo get_template_directory_uri() ?>/assets/img/footer-logo.jpg" alt="Footer Logo Image">

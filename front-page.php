@@ -55,7 +55,6 @@
       <?php get_template_part('template-parts/products-section'); ?>
       <!-- Category Section End -->
 
-      <p>test</p>
     </div>
     <!-- Info Section E -->
   </div>
