@@ -16,6 +16,8 @@
 	<footer id="colophon" class="site-footer">
 
 		<div class="footer">
+			<a class="back-to-top" href="#">Povratak na vrh</a>
+			
 			<div class="footer__wrapper">
 			<div class="footer__description">
 				Femibion powstał po to, by pomóc
