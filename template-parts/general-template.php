@@ -53,7 +53,7 @@ get_header();
 			if( $has_purple_box): ?>
 			<div class="purple-box wrapper">
 				<div class="purple-box__title">
-					<h2><?php echo get_field('box_title'); ?></h2>
+					<h3><?php the_field('box_title'); ?></h3>
 				</div>
 				<div class="purple-box__text">
 					<?php echo get_field('box_content'); ?>

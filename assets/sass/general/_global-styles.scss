@@ -130,11 +130,13 @@ em {
 .general {
 	margin-bottom: 80px;
 	h1 {
-		font-size: 52px;
-		font-family: $raleway-light;
+		font-size: 82px;
+		font-family: $raleway-black;
 	}
 	h2 {
-		font-size: 40px;
+		font-size: 52px;
+		font-family: $raleway-light;
+		color: $purple;
 	}
 	h3 {
 		font-size: 30px;
@@ -145,11 +147,11 @@ em {
 	h5 {
 		font-size: 18px;
 	}
-	h2,
 	h3,
 	h4,
 	h5 {
 		font-family: $raleway-bold;
+		color: $dark-grey;
 	}
 	p {
 		font-size: 18px;
@@ -260,7 +262,7 @@ em {
 
 	&__title {
 		margin-bottom: 30px;
-		h2 {
+		h3 {
 			font-size: 48px;
 			color: $white;
 			text-transform: uppercase;
@@ -346,7 +348,7 @@ em {
 			width: 160px;
 			margin-bottom: 0;
 			margin-right: 20px;
-			h2 {
+			h3 {
 				text-align: left;
 			}
 		}
@@ -390,14 +392,14 @@ img[class$='-imgtobg'] {
 ****************/
 
 @include tablet() {
-	h1 {
+	h2 {
 		font-size: 44px;
 		line-height: 0.92;
 	}
 }
 
 @include desktop() {
-	h1 {
+	h2 {
 		position: relative;
 		width: fit-content;
 		margin: 60px auto;
@@ -428,7 +430,7 @@ img[class$='-imgtobg'] {
 	}
 }
 @include desktop-xlg() {
-	h1 {
+	h2 {
 		font-size: 58px;
 		line-height: 56px;
 	}
