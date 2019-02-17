@@ -76,7 +76,7 @@ i możesz na nas liczyć.
 		</div>
 	</div><!-- .footer__privacy-policy -->
 </div><!-- #page -->
-
+<?php get_template_part('template-parts/cookie-popup'); ?>
 <?php wp_footer(); ?>
 
 </body>
