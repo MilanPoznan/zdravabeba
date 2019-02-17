@@ -1,0 +1,81 @@
+.cookie {
+  position: absolute;
+  display: none;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 9999;
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: .8;
+    z-index: 1;
+  }
+  &__container {
+    position: relative;
+    margin-top: 120px;
+    padding: 30px 5%;
+    background-color: $white;
+    z-index: 2;
+  }
+  &__wrapper {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+  &__title {
+    font-size: 24px;
+    font-family: $raleway-bold;
+    color: $purple;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  &__text {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: $dark-grey;
+    font-family: $raleway;
+
+    a {
+      color: $purple;
+      text-decoration: underline;
+    }
+  }
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 40px;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    font-family: $raleway-bold;
+    background-color: $purple;
+    color: $white;
+    text-transform: uppercase;
+  }
+}
+
+@include desktop() {
+  .cookie {
+    &__container {
+      padding: 40px 0;
+    }
+    &__wrapper {
+      flex-flow: row;
+      justify-content: space-between;
+      max-width: 1160px;
+      margin: 0 auto;
+    }
+    &__title,
+    &__text {
+      margin-bottom: 0;
+    }
+  }
+}
