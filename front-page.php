@@ -56,7 +56,9 @@
       <!-- Category Section End -->
 
     </div>
+
     <!-- Info Section E -->
+    <?php get_last_articles('class', array(8, 9, 10), array('purple', 'yellow', 'orange')); ?>
   </div>
 
 <?php
