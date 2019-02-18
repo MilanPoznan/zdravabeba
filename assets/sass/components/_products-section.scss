@@ -207,18 +207,28 @@
 		&__slider {
       display: flex;
       width: 100%;
-      max-width: 1090px;
+      max-width: 1160px;
       margin: 0 auto;
       flex-flow: row;
-      justify-content: space-between;
+      justify-content: center;
 
 			&-single {
         display: flex !important;
         height: auto !important;
         width: calc(33% - 20px) !important;
-				max-width: 350px;        
+        max-width: 350px;
+        margin-left: 16px;
+        margin-right: 16px;   
         flex-flow: column;
         justify-content: space-between;
+
+        &:first-child {
+          margin-left: 0;
+          // margin-right: 0;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
 
 				&:hover {
 					.products-section__image {
@@ -301,7 +311,9 @@
 			}
 
 			&:hover {
-				color: $white;
+        span {
+          color: $white;
+        }
 
 				&::after {
 					border-color: $white;
@@ -310,6 +322,18 @@
 				&:before {
 					transform: translateY(-5%);
 				}
+			}
+		}
+	}
+}
+
+@include desktop() {
+	.products-section {
+		&__slider {
+
+			&-single {
+        margin-left: 26px;
+        margin-right: 26px;
 			}
 		}
 	}
