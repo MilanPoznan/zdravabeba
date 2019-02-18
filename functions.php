@@ -156,7 +156,7 @@ function get_last_articles($class, $categories, $colors) {
 								$post_link = get_permalink($single_post[0]->ID);
 								 ?>
 							</div>
-							<a href="<?php echo $post_link; ?>"  class="category-articles__post-cta general-cta general-cta--<?php echo $color ?>">Procitajte vise</a>
+							<a href="<?php echo $post_link; ?>"  class="category-articles__post-cta general-cta general-cta--<?php echo $color ?>"><span>Procitajte više</span></a>
 						</div>
 						<div class="single-post-hover single-post-hover--<?php echo $colors[$key]; ?>"></div>
 					</div>
@@ -193,7 +193,7 @@ function get_last_articles($class, $categories, $colors) {
 							<div class="category-articles__post-desc post-desc">
 								<?php the_content(); ?>
 							</div>
-							<a href="<?php echo $post_link; ?>"  class="category-articles__post-cta general-cta general-cta--<?php echo $colors; ?>">Procitajte vise</a>
+							<a href="<?php echo $post_link; ?>"  class="category-articles__post-cta general-cta general-cta--<?php echo $colors; ?>"><span>Procitajte više</span></a>
 						</div>
 						<div class="single-post-hover single-post-hover--<?php echo $colors; ?>"></div>
 					</div>
