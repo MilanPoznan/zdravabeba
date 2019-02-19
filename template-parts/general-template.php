@@ -23,8 +23,6 @@ get_header();
 					<h2 class="general-text__title"><?php the_title(); ?></h2>
 					<div class="general-text__content">
 						<?php the_content(); ?>
-
-
 						<div class="general-text__social-share">Podeli:
 							<span class="facebook-share" data-js="facebook-share-single"><i class="fa fa-facebook-f"></i></span>
 				      <span class="twitter-share" data-js="twitter-share-single"><i class="fa fa-twitter"></i></span>
