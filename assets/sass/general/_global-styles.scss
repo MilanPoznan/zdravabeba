@@ -154,28 +154,24 @@ em {
 		font-family: $raleway-light;
 	}
 	h2 {
-		font-size: 38px;
+		font-size: 48px;
 		font-family: $raleway-light;
-		color: $purple;
-	}
-	h2:not(:first-child) {
-		margin-bottom: 30px;
 	}
 	h3 {
 		font-size: 30px;
 	}
 	h4 {
 		font-size: 24px;
-		color: $purple;
 	}
 	h5 {
 		font-size: 18px;
 	}
+	h2,
 	h3,
 	h4,
 	h5 {
 		font-family: $raleway-bold;
-		color: $dark-grey;
+		color: $purple;
 		margin-bottom: 30px;
 	}
 	p {
