@@ -1,9 +1,9 @@
 <section class="archive-tab">
   <div class="archive-tab__wrapper">
-  <?php if( have_rows('archive_tab_repeater') ): ?>
+  <?php if( have_rows('archive_tab_title_repeater') ): ?>
     <div class="archive-tab__header-wrap">
       <ul class="archive-tab__header archive-tab__header--desktop js-desktop-archive-header">
-          <?php while( have_rows('archive_tab_repeater') ): the_row(); ?>
+          <?php while( have_rows('archive_tab_title_repeater') ): the_row(); ?>
             <a class="js-header-tab-link" href="#category_<?php echo get_row_index(); ?>">
               <li data-row="<?php echo get_row_index(); ?>" class="archive-tab__header-tab"><?php the_sub_field('archive_tab_title') ?></li>
             </a>

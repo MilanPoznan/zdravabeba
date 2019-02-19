@@ -30,7 +30,7 @@ get_header();
               <div class="archive-product__content-single-content">
                 <h3 class="archive-product__content-single-title"><?php the_field('product_title')?></h3>
                 <div class="archive-product__content-single-description"><?php the_field('product_subtitle')?></div>
-                <a href="<?php the_permalink(); ?>" class="archive-product__content-single-link"><span>Read More</span></a> 
+                <a href="<?php the_permalink(); ?>" class="archive-product__content-single-link"><span>Detaljnije</span></a> 
               </div>
             </div>
           <?php endwhile; ?>            

@@ -29,15 +29,19 @@ jQuery(function($) {
 			scrollTop = $(this).scrollTop();
 		}, 300);
 	});
+	// Show modal for email share
+	$('.js-cf-7').on('click', () => {
+		$('.cf-share').css('top', '200px');
+	});
+	//Close modal dialog for email share
+	$('.fa-times').on('click', () => {
+		$('.cf-share').css('top', '-2000px');
+	});
 	//Hack for submenu - horrible, but works ;)
 	$('.menu-item').on('hover', () => {
 		$('.sub-menu').css('top', 120 - scrollTop);
 	});
-	// Social in hedaer
-	$('.js-cf-7').on('click', () => {
-		console.log('asd');
-		$('.cf-share').css('top', '200px');
-	});
+
 	if ($(window).width() < 1200) {
 		const $hamburger = $('.hamburger');
 
@@ -78,36 +82,46 @@ jQuery(function($) {
 ### Window load event ###
 #######################*/
 
+function twitterShareFx(e) {
+	console.log('asd');
+	e.preventDefault();
+	var twitterWindow = window.open(
+		'https://twitter.com/share?url=' + document.URL,
+		'twitter-popup',
+		'height=350,width=600',
+	);
+	if (twitterWindow.focus) {
+		twitterWindow.focus();
+	}
+	return false;
+}
+function facebookShareFx(e) {
+	e.preventDefault();
+	var facebookWindow = window.open(
+		'https://www.facebook.com/sharer/sharer.php?u=' + document.URL,
+		'facebook-popup',
+		'height=350,width=600',
+	);
+	if (facebookWindow.focus) {
+		facebookWindow.focus();
+	}
+	return false;
+}
 jQuery(window).load(function() {
 	var twitterShare = document.querySelector('[data-js="twitter-share"]');
-
-	twitterShare.onclick = function(e) {
-		e.preventDefault();
-		var twitterWindow = window.open(
-			'https://twitter.com/share?url=' + document.URL,
-			'twitter-popup',
-			'height=350,width=600',
-		);
-		if (twitterWindow.focus) {
-			twitterWindow.focus();
-		}
-		return false;
-	};
-
+	var twitterShareSingle = document.querySelector(
+		'[data-js="twitter-share-single"]',
+	);
 	var facebookShare = document.querySelector('[data-js="facebook-share"]');
+	var facebookShareSingle = document.querySelector(
+		'[data-js="facebook-share-single"]',
+	);
 
-	facebookShare.onclick = function(e) {
-		e.preventDefault();
-		var facebookWindow = window.open(
-			'https://www.facebook.com/sharer/sharer.php?u=' + document.URL,
-			'facebook-popup',
-			'height=350,width=600',
-		);
-		if (facebookWindow.focus) {
-			facebookWindow.focus();
-		}
-		return false;
-	};
+	jQuery(twitterShareSingle).on('click', twitterShareFx);
+	jQuery(twitterShare).on('click', twitterShareFx);
+
+	jQuery(facebookShareSingle).on('click', facebookShareFx);
+	jQuery(facebookShare).on('click', facebookShareFx);
 	// imgToBgd.makeImgBackground('.js-image-imgtobg', '.js-background-imgtobg');
 	categorySection.init();
 });
@@ -117,6 +131,6 @@ jQuery(window).load(function() {
 #######################*/
 
 jQuery(window).resize(function() {
-  categorySection.handleResize();
-  productsSlider.handleResize();
+	categorySection.handleResize();
+	productsSlider.handleResize();
 });

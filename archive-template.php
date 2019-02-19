@@ -21,7 +21,7 @@
   </div>
   <div class="archive-page__single-proizvod">
     <div class="archive-page__title-section">
-      <h2><?php the_title(); ?></h2>
+      <h2>PROIZVODI</h2>
     </div>
     <?php  include 'template-parts/one-product.php'; ?>
   </div>

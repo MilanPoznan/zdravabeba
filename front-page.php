@@ -48,16 +48,22 @@
     <?php get_template_part('template-parts/categories-section'); ?>
     <!-- Category Section End -->
 
-    <!-- Info Section Start -->
+    <!-- Gray Section Start -->
     <div class="home__gray-section">
 
-      <!-- Category Section Start -->
+      <!-- Product Section Start -->
       <?php get_template_part('template-parts/products-section'); ?>
-      <!-- Category Section End -->
+      <!-- Peoduct Section End -->
+      
+      <!-- 3-articles Section Start -->
+      <div class="home__three-articles">
+        <h2 class="home__three-articles-title">Preporučujemo</h2>
+        <?php get_last_articles('class', array(8, 9, 10), array('purple', 'yellow', 'orange')); ?>                  
+      </div>
+      <!-- 3-articles Section End -->
 
-      <p>test</p>
     </div>
-    <!-- Info Section E -->
+    <!-- Gray Section End -->
   </div>
 
 <?php

@@ -131,7 +131,7 @@ function get_last_articles($class, $categories, $colors) {
 
 	// If parameter is array
 	if (is_array($categories)) { ?>
-		<div class="category-articles category-articles--<?php echo $class ?> category-articles--<?php echo $colors[$key] ?>">
+    <div class="category-articles category-articles--<?php echo $class ?> category-articles--<?php echo $colors[$key] ?>">
 			<div class="category-articles__overlay"></div>
 			<div class="category-articles__wrapper">
 				<?php
@@ -144,7 +144,7 @@ function get_last_articles($class, $categories, $colors) {
 					wp_reset_query();
 					$featuredImageUrl = get_the_post_thumbnail_url($single_post[0]->ID);
 					?>
-					<div class="category-articles__post single-post category-articles__post--<?php echo $colors[$key]; ?>">
+					<div class="category-articles__post single-post-x category-articles__post--<?php echo $colors[$key]; ?>">
 						<div class="category-articles__post-img" style="background-image: url('<?php echo $featuredImageUrl; ?>')"></div>
 						<div class="category-articles__post-content">
 							<div class="category-articles__post-title post-title post-title--<?php echo $colors[$key]; ?>">
@@ -152,18 +152,18 @@ function get_last_articles($class, $categories, $colors) {
 							</div>
 							<div class="category-articles__post-desc post-desc">
 								<?php
-								 echo $single_post[0]->post_content;
+								 echo wp_trim_words($single_post[0]->post_content, 14);
 								$post_link = get_permalink($single_post[0]->ID);
 								 ?>
 							</div>
-							<a href="<?php echo $post_link; ?>"  class="category-articles__post-cta general-cta general-cta--<?php echo $color ?>">Procitajte vise</a>
+							<a href="<?php echo $post_link; ?>"  class="category-articles__post-cta general-cta general-cta--<?php echo $color ?>"><span>Procitajte više</span></a>
 						</div>
 						<div class="single-post-hover single-post-hover--<?php echo $colors[$key]; ?>"></div>
 					</div>
 					<?php } ?>
 			</div>
 		</div>
-		<?
+		<?php
 	} else {
 		$args = array( 'posts_per_page' => 3,'offset' => 1, 'category' => $categories );
 		$myposts = get_posts( $args );
@@ -191,9 +191,9 @@ function get_last_articles($class, $categories, $colors) {
 								<?php echo $post->post_title; ?>
 							</div>
 							<div class="category-articles__post-desc post-desc">
-								<?php the_content(); ?>
+								<?php echo wp_trim_words(the_content(), 14); ?>
 							</div>
-							<a href="<?php echo $post_link; ?>"  class="category-articles__post-cta general-cta general-cta--<?php echo $colors; ?>">Procitajte vise</a>
+							<a href="<?php echo $post_link; ?>"  class="category-articles__post-cta general-cta general-cta--<?php echo $colors; ?>"><span>Procitajte više</span></a>
 						</div>
 						<div class="single-post-hover single-post-hover--<?php echo $colors; ?>"></div>
 					</div>
@@ -336,6 +336,10 @@ function zdravabeba_scripts() {
 	wp_enqueue_script( 'single-product', get_template_directory_uri() . '/assets/js/single-product.js', array( 'jquery' ), 1.0, true );
   wp_enqueue_script( 'search', get_template_directory_uri() . '/assets/js/search.js', array( 'jquery' ), 1.0, true );
 
+	if (is_page_template('archive-template.php') || is_page('planiranje-page')) {
+		wp_enqueue_script( 'archive-template', get_template_directory_uri() . '/assets/js/archive-page-template.js', array( 'jquery' ), 1.0, true );
+
+	}
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}

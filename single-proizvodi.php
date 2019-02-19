@@ -15,7 +15,7 @@ get_header();
   <?php  include 'template-parts/products-section.php'; ?>
 </div>
 <div class="proizvod__preporucujemo">
-  <h2>PREPORUCUJEMO</h2>
+  <h2 class="proizvod__preporucujemo-title">PREPORUČUJEMO</h2>
   <?php get_last_articles('planiranje',  array(8, 9, 10), array('purple', 'yellow', 'orange') ); ?>
 </div>
 </section>

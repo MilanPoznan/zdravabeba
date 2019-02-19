@@ -67,14 +67,13 @@
       padding: 0 20px 0 27px;
       justify-content: center;
       align-items: center;
-      color: $white;
       background-color: $purple;
 
       &-title {
         display: inline-block;
-        padding-top: 5px;
         font-size: 24px;
         text-transform: uppercase;
+        color: $white;
       }
 
       &-arrow-right {
@@ -128,6 +127,17 @@
   &__gray-section {
     background-color: $gray;
   }
+
+  // 3-articles section
+  &__three-articles {
+    &-title {
+      margin-bottom: 30px;
+      font-family: $raleway-light;
+      font-size: 52px;
+      text-align: center;
+      color: $purple;
+    }
+  }
 }
 
 @include tablet() {
@@ -140,6 +150,14 @@
 
       &-subtitle {
         max-width: 58%;
+      }
+    }
+    // 3-articles section
+    &__three-articles {
+      &-title {
+        position: relative;
+        margin-bottom: 50px;
+        font-size: 48px;
       }
     }
   }
@@ -190,6 +208,7 @@
         margin-bottom: 0;
 
         &-title {
+          padding-top: 3px;
           font-size: 14px;
         }
 

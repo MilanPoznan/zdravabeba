@@ -1,9 +1,9 @@
 .site-footer {
   padding: 40px 0px;
   background-color: $purple;
-  overflow: hidden;
 }
 .footer {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -23,12 +23,13 @@
   &__links {
     display: flex;
     width: 100%;
-    justify-content: flex-start;
+    justify-content: space-between;
     color: $light-pink;
     text-transform: uppercase;
     &--title {
       margin-bottom: 20px;
       color: $white;
+      width: max-content;
     }
     li {
       margin-bottom: 10px;
@@ -38,7 +39,6 @@
     }
   }
   &__box {
-    padding-right: 20%;
     &:last-child {
       padding-right: 0;
       display: none;
@@ -121,9 +121,9 @@
       }
     }
     &__box {
-      padding-right: 30%;
       &:last-child {
-        padding-right: 0;
+        display: block;       
+        padding-right: 0;        
       }
     }
     &__social-icons {
@@ -173,9 +173,6 @@
     }
     &__box {
       padding-right: 5%;
-    }
-    &__box:last-child {
-      display: block;
     }
     &__description,
     &__links {

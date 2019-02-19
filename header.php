@@ -82,6 +82,7 @@
 		<?php include 'template-parts/hero-share.php'; ?>
 
 		<div class="cf-share">
+			<i class="fa fa-times"></i>
 			<?php echo do_shortcode( '[contact-form-7 id="5" title="Contact form 1"]' ); ?>
 		</div>
 
