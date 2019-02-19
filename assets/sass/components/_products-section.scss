@@ -1,11 +1,11 @@
 .products-section {
 	&__inner-wrapper {
-		padding: 100px 5%;
+		padding: 100px 5% 30px;
 	}
 	&__title {
     margin-bottom: 30px;
 		font-family: $raleway-light;
-		font-size: 52px;
+		font-size: 38px;
 		text-align: center;
 		color: $purple;
 	}
@@ -79,7 +79,7 @@
 			margin-bottom: 60px;
 			padding: 0 10px;
 			font-family: $raleway-bold;
-			font-size: 30px;
+			font-size: 26px;
 			line-height: 1.52;
 			text-align: center;
 			text-transform: uppercase;
@@ -108,7 +108,7 @@
 			margin-bottom: 66px;
 			text-align: center;
 			font-family: $raleway-medium;
-			font-size: 28px;
+			font-size: 24px;
 			line-height: 0.98;
 			letter-spacing: -0.7px;
 			color: $grey;
