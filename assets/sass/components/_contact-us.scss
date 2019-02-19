@@ -1,5 +1,5 @@
 .contact { 
-  h1 {
+  h2 {
     margin: 60px auto;
     font-size: 52px;
     text-align: center;
@@ -167,6 +167,39 @@ textarea::placeholder {
   text-transform: uppercase;
   color: $purple;
   border: 2px solid $purple;
+}
+
+span.wpcf7-not-valid-tip {
+  font-size: 12px;
+  text-transform: none;
+}
+input + span.wpcf7-not-valid-tip {
+  margin-top: 8px;
+}
+
+.wpcf7-form .wpcf7-response-output.wpcf7-validation-errors {
+  display: flex;
+  color: #D8000C;
+  background-color: #FFBABA;
+  border: 0;
+  padding: 10px;
+}
+.wpcf7-form .wpcf7-response-output.wpcf7-mail-sent-ok {
+  color: #4F8A10;
+  background-color: #DFF2BF;
+  border: 0;
+  padding: 10px;
+}
+div.wpcf7-mail-sent-ok:before,div.wpcf7-validation-errors:before {
+  font: 26px/30px FontAwesome;
+  margin-right: 16px;
+  vertical-align: middle;
+}
+div.wpcf7-mail-sent-ok:before {
+  content:'\f00c';
+}
+div.wpcf7-validation-errors:before {
+  content:'\f057';
 }
 
 @include tablet() {
