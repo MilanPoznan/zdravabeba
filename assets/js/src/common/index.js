@@ -82,36 +82,46 @@ jQuery(function($) {
 ### Window load event ###
 #######################*/
 
+function twitterShareFx(e) {
+	console.log('asd');
+	e.preventDefault();
+	var twitterWindow = window.open(
+		'https://twitter.com/share?url=' + document.URL,
+		'twitter-popup',
+		'height=350,width=600',
+	);
+	if (twitterWindow.focus) {
+		twitterWindow.focus();
+	}
+	return false;
+}
+function facebookShareFx(e) {
+	e.preventDefault();
+	var facebookWindow = window.open(
+		'https://www.facebook.com/sharer/sharer.php?u=' + document.URL,
+		'facebook-popup',
+		'height=350,width=600',
+	);
+	if (facebookWindow.focus) {
+		facebookWindow.focus();
+	}
+	return false;
+}
 jQuery(window).load(function() {
 	var twitterShare = document.querySelector('[data-js="twitter-share"]');
-
-	twitterShare.onclick = function(e) {
-		e.preventDefault();
-		var twitterWindow = window.open(
-			'https://twitter.com/share?url=' + document.URL,
-			'twitter-popup',
-			'height=350,width=600',
-		);
-		if (twitterWindow.focus) {
-			twitterWindow.focus();
-		}
-		return false;
-	};
-
+	var twitterShareSingle = document.querySelector(
+		'[data-js="twitter-share-single"]',
+	);
 	var facebookShare = document.querySelector('[data-js="facebook-share"]');
+	var facebookShareSingle = document.querySelector(
+		'[data-js="facebook-share-single"]',
+	);
 
-	facebookShare.onclick = function(e) {
-		e.preventDefault();
-		var facebookWindow = window.open(
-			'https://www.facebook.com/sharer/sharer.php?u=' + document.URL,
-			'facebook-popup',
-			'height=350,width=600',
-		);
-		if (facebookWindow.focus) {
-			facebookWindow.focus();
-		}
-		return false;
-	};
+	jQuery(twitterShareSingle).on('click', twitterShareFx);
+	jQuery(twitterShare).on('click', twitterShareFx);
+
+	jQuery(facebookShareSingle).on('click', facebookShareFx);
+	jQuery(facebookShare).on('click', facebookShareFx);
 	// imgToBgd.makeImgBackground('.js-image-imgtobg', '.js-background-imgtobg');
 	categorySection.init();
 });
