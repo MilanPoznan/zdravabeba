@@ -336,6 +336,10 @@ function zdravabeba_scripts() {
 	wp_enqueue_script( 'single-product', get_template_directory_uri() . '/assets/js/single-product.js', array( 'jquery' ), 1.0, true );
   wp_enqueue_script( 'search', get_template_directory_uri() . '/assets/js/search.js', array( 'jquery' ), 1.0, true );
 
+	if (is_page_template('archive-template.php') || is_page('planiranje-page')) {
+		wp_enqueue_script( 'archive-template', get_template_directory_uri() . '/assets/js/archive-page-template.js', array( 'jquery' ), 1.0, true );
+
+	}
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
