@@ -47,7 +47,7 @@ em {
 	padding: 10px 20px;
 	z-index: 10;
 	transition: 0.3s;
-	background: $white;
+  background: $white;
 	&:after {
 		content: '';
 		position: absolute;
@@ -107,7 +107,11 @@ em {
 	&:hover {
 		.post-desc,
 		.post-title {
-			color: $white;
+      color: $white;
+      
+      &::before {
+        background-color: $white;
+      }
 		}
 
 		.single-post-hover {

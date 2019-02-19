@@ -52,6 +52,30 @@
 	}
 }
 
+.proizvod {
+  &__preporucujemo {
+    &-title {
+      margin-bottom: 30px;
+      font-family: $raleway-light;
+      font-size: 52px;
+      text-align: center;
+      color: $purple;
+    }
+  }
+}
+
+@include tablet() {
+  .proizvod {
+    &__preporucujemo {
+      &-title {
+        position: relative;
+        margin-bottom: 50px;
+        font-size: 48px;
+      }
+    }
+  }
+}
+
 @include desktop() {
 	.proizvod {
 		background: $beige;

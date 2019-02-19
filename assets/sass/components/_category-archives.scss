@@ -280,6 +280,10 @@
           font-family: $raleway-bold;
           background-color: transparent;
           border-bottom: 5px solid $purple;
+
+          &::after {
+            display: none;
+          }
         }
       }
     }
@@ -288,7 +292,7 @@
       
       &-inner-wrapper {
         position: relative;
-        max-width: 1090px;
+        max-width: 1160px;
         margin: 0 auto;
       }
   
