@@ -154,22 +154,29 @@ em {
 		font-family: $raleway-light;
 	}
 	h2 {
-		font-size: 40px;
+		font-size: 38px;
+		font-family: $raleway-light;
+		color: $purple;
+	}
+	h2:not(:first-child) {
+		margin-bottom: 30px;
 	}
 	h3 {
 		font-size: 30px;
 	}
 	h4 {
 		font-size: 24px;
+		color: $purple;
 	}
 	h5 {
 		font-size: 18px;
 	}
-	h2,
 	h3,
 	h4,
 	h5 {
 		font-family: $raleway-bold;
+		color: $dark-grey;
+		margin-bottom: 30px;
 	}
 	p {
 		font-size: 18px;
@@ -240,6 +247,7 @@ em {
 		color: $dark-grey;
 	}
 }
+
 .general-text {
 	&__box {
 		padding: 50px 0;
@@ -286,7 +294,7 @@ em {
 
 	&__title {
 		margin-bottom: 30px;
-		h2 {
+		h3 {
 			font-size: 48px;
 			color: $white;
 			text-transform: uppercase;
@@ -351,12 +359,7 @@ em {
 	.general-text {
 		max-width: 730px;
 		margin: 0 auto;
-		&__content {
-			p {
-				font-size: 16px;
-				line-break: 24px;
-			}
-		}
+
 		&__social-share {
 			font-size: 18px;
 		}
@@ -372,7 +375,7 @@ em {
 			width: 160px;
 			margin-bottom: 0;
 			margin-right: 20px;
-			h2 {
+			h3 {
 				text-align: left;
 			}
 		}
@@ -427,7 +430,7 @@ img[class$='-imgtobg'] {
 		position: relative;
 		width: fit-content;
 		margin: 60px auto;
-		font-size: 43px;
+		font-size: 48px;
 		text-transform: uppercase;
 		text-align: center;
 		color: $purple;
