@@ -31,11 +31,11 @@
               </div>
               <p class="categories__title"><?php echo $title; ?></p>
               <p class="categories__text"><?php echo $text; ?></p>
-              <p class="categories__small"><?php echo $text_small; ?></p>
+              <p class="categories__small"><?php echo wp_trim_words($text_small, 14); ?></p>
               <?php 
                 if($link):
-                $link_url = $link['url'];
-                $link_title = $link['title'];
+                $link_url = $link['url'] ? $link['url'] : '';
+                $link_title = $link['title'] ? $link['title'] : '';
                 $link_target = $link['target'] ? $link['target'] : '_self';
               ?>
                 <a href="<?php echo esc_url($link_url); ?>" class="categories__button" target="<?php echo esc_attr($link_target); ?>">
@@ -45,7 +45,7 @@
               <?php endif; ?>     
             </div>
             <div class="categories__show-link">
-              <span class="categories__show-link-title"><?php echo esc_html($link_title); ?></span>
+              <!-- <span class="categories__show-link-title"><?php echo esc_html($link_title); ?></span> -->
               <span class="categories__show-link-arrow"></span>
             </div>
         </div>

@@ -152,7 +152,7 @@ function get_last_articles($class, $categories, $colors) {
 							</div>
 							<div class="category-articles__post-desc post-desc">
 								<?php
-								 echo $single_post[0]->post_content;
+								 echo wp_trim_words($single_post[0]->post_content, 14);
 								$post_link = get_permalink($single_post[0]->ID);
 								 ?>
 							</div>
@@ -191,7 +191,7 @@ function get_last_articles($class, $categories, $colors) {
 								<?php echo $post->post_title; ?>
 							</div>
 							<div class="category-articles__post-desc post-desc">
-								<?php the_content(); ?>
+								<?php echo wp_trim_words(the_content(), 14); ?>
 							</div>
 							<a href="<?php echo $post_link; ?>"  class="category-articles__post-cta general-cta general-cta--<?php echo $colors; ?>"><span>Procitajte više</span></a>
 						</div>
