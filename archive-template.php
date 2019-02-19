@@ -1,7 +1,7 @@
 <?php
 /**
 * Template Name: Archive Template
-* Template Post Type: page, post
+* Template Post Type: page, post, saveti
 */
  get_header(); ?>
 <div class="archive-page">
@@ -21,7 +21,7 @@
   </div>
   <div class="archive-page__single-proizvod">
     <div class="archive-page__title-section">
-      <h2>PROIZVODI</h2>
+      <h1>PROIZVODI</h1>
     </div>
     <?php  include 'template-parts/one-product.php'; ?>
   </div>
