@@ -1,6 +1,6 @@
-<section class="products-section">
-  <div class="products-section__inner-wrapper">
-    <h2 class="products-section__title">Saveti</h2>
+<section class="products-section saveti-section">
+  <h2 class="products-section__title saveti-section__title">Saveti</h2>
+  <div class="products-section__inner-wrapper saveti-section__inner-wrapper">
     <?php
       $proizvodi = new WP_Query(array(
         'post_type' => 'saveti',
@@ -25,7 +25,7 @@
           $post_link = get_permalink();
            ?>
         </div>
-        <a href="<?php echo $post_link; ?>"  class="category-articles__post-cta general-cta general-cta--<?php echo $colors[$count]; ?>">Procitajte vise</a>
+        <a href="<?php echo $post_link; ?>"  class="category-articles__post-cta general-cta general-cta--<?php echo $colors[$count]; ?>"><span>Pročitajte više</span></a>
       </div>
       <div class="single-post-hover single-post-hover--<?php echo $colors[$count]; ?>"></div>
     </div>

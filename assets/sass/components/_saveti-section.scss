@@ -1,0 +1,35 @@
+.single-post__other-posts {
+  background-color: $gray;
+}
+.saveti-section {
+  .saveti-section__inner-wrapper {
+    padding: 0px 5% 30px;
+  }
+  .single-post {
+    margin-bottom: 0;
+  }
+}
+
+@include desktop() {
+  .saveti-section {
+    .saveti-section__inner-wrapper {
+      display: flex;
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 0 30px;
+      flex-flow: row;
+      justify-content: center;
+    }
+    .single-post {
+      margin-left: 16px;
+      margin-right: 16px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
