@@ -53,6 +53,7 @@
 	}
 	ul & .show-submenu {
 		display: flex;
+		flex-flow: column;
 		width: 100%;
 	}
 }
@@ -116,10 +117,13 @@
 				height: 0px;
 				transition: 0.3s;
 				z-index: 10;
+				&:before {
+				}
 			}
 			&:hover {
 				.sub-menu {
-					height: 80px;
+					height: 54px;
+					padding-left: 20%;
 				}
 				&:before {
 					width: 100%;
@@ -137,15 +141,29 @@
 		ul {
 			background: $light-purple;
 			align-items: center;
-			justify-content: space-evenly;
+			justify-content: flex-start;
 			padding: 0 10%;
 			li {
 				color: $white;
 				width: fit-content;
 				padding: 0;
+				position: relative;
+				margin-right: 60px;
 				&:first-child {
 					border-top: none;
 					margin-top: 0;
+				}
+				&:after {
+					content: '';
+					position: absolute;
+					top: 20px;
+					right: -20px;
+					width: 12px;
+					height: 12px;
+					border-top: 1px solid $white;
+					border-right: 1px solid $white;
+					transform: rotate(45deg);
+					transition: 0.3s;
 				}
 			}
 		}

@@ -13,9 +13,11 @@ get_header();
 		<?php
 		while ( have_posts() ) :
 			the_post(); ?>
+			<?php if(get_field('page_hero_background')): ?>
 			<div class="general-text__hero">
 				<?php include 'general-hero.php'; ?>
 			</div>
+		<?php endif; ?>
 			<div class="general">
 			<div class="general-text wrapper">
 
@@ -24,10 +26,10 @@ get_header();
 					<div class="general-text__content">
 						<?php the_content(); ?>
 
-					
+
 							<div class="general-text__social-share">Podeli:
-								<span class=“facebook-share” data-js=“facebook-share-single”><i class=“fa fa-facebook-f”></i></span>
-								<span class=“twitter-share” data-js=“twitter-share-single”><i class=“fa fa-twitter”></i></span>
+								<span class=“facebook-share” data-js=“facebook-share-single”><i class="fa fa-facebook-f"></i></span>
+								<span class=“twitter-share” data-js=“twitter-share-single”><i class="fa fa-twitter"></i></span>
 							</div>
 					</div><!-- .general-text__content -->
 				</div><!-- .general-text__box-->

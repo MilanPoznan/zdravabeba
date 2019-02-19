@@ -32,8 +32,8 @@
   <?php endwhile; ?>
   </div>
   <div class="single-tab__desktop">
-    <div class="single-tab__wrapper">
-      <h2>Saznaj Vise</h2>
+    <div class="single-tab__wrapper ">
+      <h1>Saznaj Vise</h1>
       <div class="single-tab__header">
         <?php while ( have_rows('repeater_tab') ) : the_row(); ?>
           <div class="single-tab__header-column" value="<?php echo get_row_index(); ?>">
