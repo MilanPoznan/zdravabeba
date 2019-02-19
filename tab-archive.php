@@ -26,7 +26,7 @@
       <?php while( have_rows('archive_tab_content_repeater') ): the_row(); ?>
         <div class="archive-tab__single-content" id="category_<?php echo get_row_index(); ?>">
           <div class="archive-tab__content-title">
-            <h2><?php the_sub_field('content_title') ?></h2>
+            <h1><?php the_sub_field('content_title') ?></h1>
           </div>
           <div class="archive-tab__content-description">
             <?php the_sub_field('content_description') ?>

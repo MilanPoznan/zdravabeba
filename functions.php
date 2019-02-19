@@ -244,7 +244,7 @@ function register_custom_post_types() {
     'capability_type'    => 'post',
     'has_archive'        => true,
     'menu_icon'          => 'dashicons-welcome-write-blog',
-    'supports'           => array( 'title', 'editor' ,'thumbnail' ),
+    'supports'           => array( 'title', 'editor' ,'thumbnail', 'page-attributes' ),
     'taxonomies'         => array( 'category', 'post_tag' )
   );
 
