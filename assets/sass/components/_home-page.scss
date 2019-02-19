@@ -127,6 +127,17 @@
   &__gray-section {
     background-color: $gray;
   }
+
+  // 3-articles section
+  &__three-articles {
+    &-title {
+      margin-bottom: 30px;
+      font-family: $raleway-light;
+      font-size: 52px;
+      text-align: center;
+      color: $purple;
+    }
+  }
 }
 
 @include tablet() {
@@ -139,6 +150,14 @@
 
       &-subtitle {
         max-width: 58%;
+      }
+    }
+    // 3-articles section
+    &__three-articles {
+      &-title {
+        position: relative;
+        margin-bottom: 50px;
+        font-size: 48px;
       }
     }
   }

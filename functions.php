@@ -131,7 +131,7 @@ function get_last_articles($class, $categories, $colors) {
 
 	// If parameter is array
 	if (is_array($categories)) { ?>
-		<div class="category-articles category-articles--<?php echo $class ?> category-articles--<?php echo $colors[$key] ?>">
+    <div class="category-articles category-articles--<?php echo $class ?> category-articles--<?php echo $colors[$key] ?>">
 			<div class="category-articles__overlay"></div>
 			<div class="category-articles__wrapper">
 				<?php

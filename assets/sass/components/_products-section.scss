@@ -3,6 +3,7 @@
 		padding: 100px 5%;
 	}
 	&__title {
+    margin-bottom: 30px;
 		font-family: $raleway-light;
 		font-size: 52px;
 		text-align: center;
@@ -224,7 +225,6 @@
 
         &:first-child {
           margin-left: 0;
-          // margin-right: 0;
         }
         &:last-child {
           margin-right: 0;

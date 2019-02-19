@@ -18,7 +18,7 @@
           <div class="categories__single--small" style="background-image: url(<?php echo $backg_img; ?>)">
           </div>
           <div class="categories__show-link">
-            <span class="categories__show-link-title">Test</span>
+            <span class="categories__show-link-title"><?php echo $title?></span>
             <span class="categories__show-link-arrow"></span>
           </div>
         </a>
@@ -45,7 +45,7 @@
               <?php endif; ?>     
             </div>
             <div class="categories__show-link">
-              <!-- <span class="categories__show-link-title"><?php echo esc_html($link_title); ?></span> -->
+              <span class="categories__show-link-title"><?php echo $title; ?></span>
               <span class="categories__show-link-arrow"></span>
             </div>
         </div>
