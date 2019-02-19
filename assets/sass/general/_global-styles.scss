@@ -266,8 +266,14 @@ em {
 		font-size: 26px;
 		font-family: $raleway-semi-bold;
 		padding-top: 30px;
-		a {
+		span {
+			display: flex;
+			align-items: center;
+			font-size: 20px;
 			margin-left: 30px;
+			cursor: pointer;
+			position: relative;
+			z-index: 111;
 		}
 	}
 }
