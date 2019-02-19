@@ -15,7 +15,7 @@
           <?php the_field('product_description'); ?>
         </div>
         <a href="<?php the_field('product_cta_link'); ?>" class="one-product__cta general-cta general-cta--purple">
-          <?php the_field('product_cta_text'); ?>
+          <span><?php the_field('product_cta_text'); ?></span>
         </a>
       </div>
     </div>

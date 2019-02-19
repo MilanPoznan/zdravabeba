@@ -74,21 +74,25 @@
 			display: flex;
 			height: 100%;
 			width: 100%;
-			max-width: 1090px;
+			max-width: 1160px;
 			margin: 0 auto;
 			justify-content: flex-start;
 			align-items: flex-end;
 		}
 
 		&__title {
-			display: block;
-			margin-bottom: 38px;
+      display: block;
+      margin: 0 0 38px;
 			font-family: $raleway-black;
 			font-size: 100px;
 			text-transform: uppercase;
 			line-height: normal;
 			letter-spacing: normal;
-			color: $purple;
+      color: $purple;
+      
+      &::before, &::after {
+        display: none;
+      }
 		}
 
 		&__overlay {
