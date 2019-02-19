@@ -191,7 +191,7 @@ function get_last_articles($class, $categories, $colors) {
 								<?php echo $post->post_title; ?>
 							</div>
 							<div class="category-articles__post-desc post-desc">
-								<?php echo wp_trim_words(the_content(), 14); ?>
+								<?php echo wp_trim_words(get_the_content(), 14); ?>
 							</div>
 							<a href="<?php echo $post_link; ?>"  class="category-articles__post-cta general-cta general-cta--<?php echo $colors; ?>"><span>Procitajte više</span></a>
 						</div>

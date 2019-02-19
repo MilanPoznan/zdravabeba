@@ -53,7 +53,7 @@
                 echo wp_trim_words($my_post_content, 30);
                   $post_link = get_permalink($single_post[0]->ID);
                 ?>
-                <a href="<?php echo $post_link ?>"  class="archive-tab__post-cta general-cta general-cta--purple">Procitajte vise</a>
+                <a href="<?php echo $post_link ?>"  class="archive-tab__post-cta general-cta general-cta--purple"><span>Pročitajte više</span></a>
               </div>
             </div>
 
