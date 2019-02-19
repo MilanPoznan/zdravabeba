@@ -14,7 +14,7 @@
         Dobro je znati
       </div>
       <div class="archive-tab__mask-select-wrapp js-select-mask-wrap">
-        <?php while( have_rows('archive_tab_repeater') ): the_row(); ?>
+        <?php while( have_rows('archive_tab_title_repeater') ): the_row(); ?>
           <a href="#category_<?php echo get_row_index(); ?>" class="js-mobile-header-tab-link" value="<?php the_sub_field('archive_tab_title') ?>"><?php the_sub_field('archive_tab_title') ?></a>
         <?php endwhile; ?>
       </div>
@@ -24,7 +24,7 @@
   <?php if( have_rows('archive_tab_content_repeater') ): ?>
     <div class="archive-tab__content">
       <?php while( have_rows('archive_tab_content_repeater') ): the_row(); ?>
-        <div class="archive-tab__single-content" id="category_<?php echo get_row_index(); ?>">
+        <div class="archive-tab__single-content general" id="category_<?php echo get_row_index(); ?>">
           <div class="archive-tab__content-title">
             <h1><?php the_sub_field('content_title') ?></h1>
           </div>
