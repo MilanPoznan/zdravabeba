@@ -29,15 +29,19 @@ jQuery(function($) {
 			scrollTop = $(this).scrollTop();
 		}, 300);
 	});
+	// Show modal for email share
+	$('.js-cf-7').on('click', () => {
+		$('.cf-share').css('top', '200px');
+	});
+	//Close modal dialog for email share
+	$('.fa-times').on('click', () => {
+		$('.cf-share').css('top', '-2000px');
+	});
 	//Hack for submenu - horrible, but works ;)
 	$('.menu-item').on('hover', () => {
 		$('.sub-menu').css('top', 120 - scrollTop);
 	});
-	// Social in hedaer
-	$('.js-cf-7').on('click', () => {
-		console.log('asd');
-		$('.cf-share').css('top', '200px');
-	});
+
 	if ($(window).width() < 1200) {
 		const $hamburger = $('.hamburger');
 
@@ -117,6 +121,6 @@ jQuery(window).load(function() {
 #######################*/
 
 jQuery(window).resize(function() {
-  categorySection.handleResize();
-  productsSlider.handleResize();
+	categorySection.handleResize();
+	productsSlider.handleResize();
 });

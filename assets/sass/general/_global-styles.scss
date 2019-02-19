@@ -47,7 +47,7 @@ em {
 	padding: 10px 20px;
 	z-index: 10;
 	transition: 0.3s;
-  background: $white;
+	background: $white;
 	&:after {
 		content: '';
 		position: absolute;
@@ -102,16 +102,32 @@ em {
 		color: $orange;
 	}
 }
-.single-post {
+.category-articles__post {
+	&:hover {
+		.post-desc,
+		.post-title {
+			color: $white;
+
+			&::before {
+				background-color: $white;
+			}
+		}
+
+		.single-post-hover {
+			height: 450px;
+		}
+	}
+}
+.single-post-x {
 	position: relative;
 	&:hover {
 		.post-desc,
 		.post-title {
-      color: $white;
-      
-      &::before {
-        background-color: $white;
-      }
+			color: $white;
+
+			&::before {
+				background-color: $white;
+			}
 		}
 
 		.single-post-hover {

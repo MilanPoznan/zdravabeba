@@ -64,21 +64,45 @@
 			}
 			span {
 				margin: 0 5px;
+				color: $white;
 			}
 		}
 	}
 
 	.cf-share {
-		position: absolute;
+		position: fixed;
 		top: -2000px;
 		left: calc(50% - 300px);
-		height: 500px;
-		width: 600px;
-		background: $grey;
+		height: 50vh;
+		width: 500px;
+		background: $light-purple;
 		transition: 1s;
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		border-radius: 2%;
+		input {
+			margin: 12px auto;
+		}
+		i {
+			position: absolute;
+			top: 40px;
+			right: 40px;
+			color: $purple;
+			transition: 0.5s;
+			font-size: 20px;
+			cursor: pointer;
+			&:hover {
+				transform: scale(1.2);
+			}
+		}
+		.wpcf7-submit {
+			transition: 0.5s;
+			&:hover {
+				color: $white;
+				background: $purple;
+			}
+		}
 	}
 	.js-cf-7 {
 		z-index: 10;

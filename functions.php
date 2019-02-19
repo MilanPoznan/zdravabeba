@@ -144,7 +144,7 @@ function get_last_articles($class, $categories, $colors) {
 					wp_reset_query();
 					$featuredImageUrl = get_the_post_thumbnail_url($single_post[0]->ID);
 					?>
-					<div class="category-articles__post single-post category-articles__post--<?php echo $colors[$key]; ?>">
+					<div class="category-articles__post single-post-x category-articles__post--<?php echo $colors[$key]; ?>">
 						<div class="category-articles__post-img" style="background-image: url('<?php echo $featuredImageUrl; ?>')"></div>
 						<div class="category-articles__post-content">
 							<div class="category-articles__post-title post-title post-title--<?php echo $colors[$key]; ?>">
