@@ -20,29 +20,15 @@ get_header();
 			<div class="general-text wrapper">
 
 				<div class="general-text__box">
-					<h2 class="general-text__title"><?php the_title(); ?></h2>
+					<h1 class="general-text__title"><?php the_title(); ?></h1>
 					<div class="general-text__content">
 						<?php the_content(); ?>
 
-						<?php
-						$has_social = get_field('has_social');
-						if($has_social): ?>
+					
 							<div class="general-text__social-share">Podeli:
-								<?php if( have_rows('social_repeater') ):
-
-								while( have_rows('social_repeater') ): the_row();
-
-									$icon =  get_sub_field('social_icon');
-									$link = get_sub_field('social_url');
-
-								?>
-
-								<a href="<?php echo $link; ?>"><?php echo $icon ?></a>
-
-								<?php endwhile; ?>
-							<?php endif; ?>
+								<span class=“facebook-share” data-js=“facebook-share-single”><i class=“fa fa-facebook-f”></i></span>
+								<span class=“twitter-share” data-js=“twitter-share-single”><i class=“fa fa-twitter”></i></span>
 							</div>
-						<?php endif; ?>
 					</div><!-- .general-text__content -->
 				</div><!-- .general-text__box-->
 			</div><!-- .general-text -->

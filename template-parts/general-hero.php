@@ -11,7 +11,7 @@
     <div class="page-hero__inner-wrapper">
       <?php
         if(get_field('page_hero_title')): ?>
-          <h1 class="page-hero__title"><?php echo get_field('page_hero_title');?></h1>
+          <div class="page-hero__title"><?php echo get_field('page_hero_title');?></div>
       <?php endif?>
 
       <?php
