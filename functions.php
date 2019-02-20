@@ -387,7 +387,8 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 
 // add_action( 'pre_get_posts', 'testing_pagination');
 
-// uncomment to test pagination on category archive pages
+
+// Change arcive-product query
 
 function change_product_archive_query($query) {
   if (!is_admin() && is_archive('product') && $query->is_main_query()) {
