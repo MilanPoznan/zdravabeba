@@ -16,7 +16,7 @@
 
   &__content {
     position: relative;
-    padding: 50px 5% 110px;
+    padding: 50px 5% 50px;
     background-color: $gray;
 
     &-inner-wrapper {
@@ -167,6 +167,18 @@
       }
 		}
   }
+
+  &__description {
+    background-color: $gray;
+
+    &-inner-wrapper {
+      padding: 0 5% 160px;
+
+      p {
+        font-family: $raleway;
+      }
+    }
+  }
 }
 
 @include tablet() {
@@ -296,6 +308,12 @@
         }
       }
     }
+
+    &__description {
+      &-inner-wrapper {
+        
+      }
+    }
   }
 }
 
@@ -341,6 +359,14 @@
         &:nth-child(3n) {
           margin-right: 0;
         }     
+      }
+    }
+
+    &__description {
+      background-color: $white;
+
+      &-inner-wrapper {
+        
       }
     }
   }

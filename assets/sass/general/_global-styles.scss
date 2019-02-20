@@ -241,7 +241,39 @@ em {
 	strong {
 		font-family: $raleway-bold;
 		color: $dark-grey;
-	}
+  }
+  .single__breadcrumb {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 42px 5% 0;
+
+    &-home, &-archive {
+      position: relative;
+      margin-right: 15px;
+      font-family: $raleway-bold;
+      font-size: 18px;
+
+      &::after {
+        position: absolute;
+        display: block;
+        content: '/';
+        font-family: $raleway;
+        top: 50%;
+        right: -15px;
+        transform: translateY(-50%);
+      }
+
+    }
+
+    &-archive {
+
+    }
+
+    &-title {
+      font-family: $raleway;
+      font-size: 18px;
+    }
+  }
 }
 
 .general-text {
@@ -310,6 +342,19 @@ em {
 	}
 }
 
+.single-post__other-posts {
+  .single-post__artikli {
+    
+    &-title {
+      margin-bottom: 30px;
+      font-family: "Raleway Light";
+      font-size: 38px;
+      text-align: center;
+      color: $purple;
+    }
+  }
+}
+
 /*****************
  * Media queries *
  ****************/
@@ -348,12 +393,20 @@ em {
 				line-height: 24px;
 			}
 		}
-	}
+  }
+  .single-post__other-posts {
+    .single-post__artikli {
+      &-title {
+        margin-bottom: 50px;
+        font-size: 48px;
+      }
+    }
+  }
 }
 
 @include desktop() {
 	.general-text {
-		max-width: 730px;
+		max-width: 1160px;
 		margin: 0 auto;
 
 		&__social-share {
@@ -392,7 +445,7 @@ em {
 				line-height: 24px;
 			}
 		}
-	}
+  }
 }
 
 // Prevent scroll
