@@ -49,7 +49,7 @@
 
             ?>
             
-              <a href="<?php echo $link; ?>"><?php echo $icon ?></a>
+              <a href="<?php echo $link; ?>" target="_blank"><?php echo $icon ?></a>
             
             <?php endwhile; ?>
 

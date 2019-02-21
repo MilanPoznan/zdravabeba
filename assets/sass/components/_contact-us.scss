@@ -124,6 +124,9 @@ textarea {
   padding: 10px;
   font-family: $raleway;
 }
+textarea {
+  resize: none;
+}
 span {
   color: $purple;
 }
