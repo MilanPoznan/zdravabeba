@@ -202,6 +202,10 @@
       border: solid $white;
       border-width: 0 3px 3px 0;
     }
+
+    &:active {
+      background: $white;
+    }
   }
 
   &__show-link {

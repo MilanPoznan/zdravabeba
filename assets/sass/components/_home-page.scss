@@ -27,11 +27,12 @@
     }
 
     &-title {
-      margin-top: 283px;
       width: 100%;
       max-width: 376px;
+      margin-top: 283px;
+      margin-bottom: 30px;
       font-family: $raleway-bold;
-      font-size: 78px;
+      font-size: 52px;
       line-height: 1;
       color: $purple;
     }
@@ -39,9 +40,9 @@
     &-subtitle {
       width: 100%;
       max-width: 376px;
-      margin-bottom: 50px;
+      margin-bottom: 30px;
       font-family: $raleway-bold;
-      font-size: 37px;
+      font-size: 30px;
       line-height: 1.2;
       text-transform: uppercase;
       color: $pink;
@@ -54,7 +55,7 @@
 
       p {
         font-family: $raleway-semi-bold;
-        font-size: 30px;
+        font-size: 22px;
         text-transform: uppercase;
       }
     }
@@ -99,16 +100,16 @@
     &-subtitle {
       margin-bottom: 24px;
       font-family: $raleway-bold;
-      font-size: 30px;
-      line-height: 0.8;
+      font-size: 26px;
+      line-height: 1.1;
       color: $purple;
     }
 
     &-title {
       margin-bottom: 60px;
       font-family: $raleway-light;
-      font-size: 52px;
-      line-height: 1;
+      font-size: 38px;
+      line-height: 1.1;
       text-transform: uppercase;
       color: $purple;
     }
@@ -117,7 +118,8 @@
       p {
         margin-bottom: 30px;
         font-family: $raleway;
-        font-size: 30px;
+        font-size: 26px;
+        line-height: 1.4;
         color: $grey;
       }
     }
@@ -133,7 +135,7 @@
     &-title {
       margin-bottom: 30px;
       font-family: $raleway-light;
-      font-size: 52px;
+      font-size: 38px;
       text-align: center;
       color: $purple;
     }
@@ -148,8 +150,35 @@
         right: 0;
       }
 
+      &-title {
+        font-size: 78px;
+      }
+
       &-subtitle {
         max-width: 58%;
+        font-size: 37px;
+      }
+      &-text {  
+        p {
+          font-size: 30px;
+        }
+      }
+    }
+
+    &__info {
+  
+      &-subtitle {
+        font-size: 30px;
+      }
+  
+      &-title {
+        font-size: 52px;
+      }
+  
+      &-text {
+        p {
+          font-size: 30px;
+        }
       }
     }
     // 3-articles section

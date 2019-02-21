@@ -16,7 +16,7 @@
 
   &__content {
     position: relative;
-    padding: 50px 5% 110px;
+    padding: 50px 5% 50px;
     background-color: $gray;
 
     &-inner-wrapper {
@@ -167,6 +167,18 @@
       }
 		}
   }
+
+  &__description {
+    background-color: $gray;
+
+    &-inner-wrapper {
+      padding: 0 5% 160px;
+
+      p {
+        font-family: $raleway-medium;
+      }
+    }
+  }
 }
 
 @include tablet() {
@@ -182,11 +194,11 @@
   
       &-inner-wrapper {
         display: flex;
-        max-width: 730px;
+        max-width: 1160px;
         margin: 0 auto;
         flex-flow: row;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: center;
       }
   
       &-single {
@@ -194,6 +206,15 @@
         flex-flow: column;
         width: calc(50% - 15px);
         max-width: 350px;
+        margin-left: 16px;
+        margin-right: 16px; 
+
+        &:first-child {
+          margin-left: 0;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
 
         &:hover {
 					.archive-product__content-single-image {
@@ -287,6 +308,12 @@
         }
       }
     }
+
+    &__description {
+      &-inner-wrapper {
+        
+      }
+    }
   }
 }
 
@@ -315,14 +342,15 @@
 
       }
       &-inner-wrapper {
-        max-width: 1110px;
-        justify-content: flex-start;
+        // max-width: 1110px;
+        // justify-content: flex-start;
       }
   
       &-single {
-        margin-left: 15px;
-        margin-right: 15px;
+        // margin-left: 15px;
+        // margin-right: 15px;
         width: 33%;
+        max-width: 350px;
 
         &:nth-child(3n + 1) {
           margin-left: 0;
@@ -331,6 +359,14 @@
         &:nth-child(3n) {
           margin-right: 0;
         }     
+      }
+    }
+
+    &__description {
+      background-color: $white;
+
+      &-inner-wrapper {
+        
       }
     }
   }
