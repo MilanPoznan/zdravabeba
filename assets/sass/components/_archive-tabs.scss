@@ -81,7 +81,16 @@
 	}
 	&__content {
 		width: 100%;
-		color: $grey;
+    color: $grey;
+    
+    &-title {
+      width: 90%;
+      margin: 0 auto;
+      margin-bottom: 20px;
+      h1 {
+        text-align: center;
+      }
+    }
 		h2 {
 			color: $purple;
 			margin-bottom: 30px;
@@ -108,7 +117,7 @@
 	&__post-title {
 		color: $purple;
 		margin-bottom: 20px;
-		font-family: $raleway-bold;
+    font-family: $raleway-bold;
 	}
 	&__post-description {
 		margin-bottom: 30px;
