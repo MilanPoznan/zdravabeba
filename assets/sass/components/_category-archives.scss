@@ -140,7 +140,7 @@
           transform: translateX(-50%);
           background-color: $viol-purple;
           z-index: 1;
-          transition: .5s;
+          transition: 0.5s;
         }
       }
 
@@ -226,129 +226,125 @@
 }
 
 @include tablet() {
-  .archive {
-  
-    &__content {
-  
-      &-single {
-        
-        &-image {
-          height: 450px; 
-        }
-      }
-    }
-  }
+	.archive {
+		&__content {
+			&-single {
+				&-image {
+					height: 450px;
+				}
+			}
+		}
+	}
 }
 
 @include desktop() {
-  .archive {
-    &__hero {
-      padding-bottom: 0;
+	.archive {
+		&__hero {
+			padding-bottom: 0;
 
-      &-dropdown {
-        &-btn {
-          display: none;
-        }
+			&-dropdown {
+				&-btn {
+					display: none;
+				}
 
-        &-content {
-          position: relative;
-          display: flex;
-          width: auto;
-          margin: 0 auto;
-          padding: 0;
-          background-color: transparent;
-          top: unset;
-          box-shadow: none;
-        }
+				&-content {
+					position: relative;
+					display: flex;
+					width: auto;
+					margin: 0 auto;
+					padding: 0;
+					background-color: transparent;
+					top: unset;
+					box-shadow: none;
+				}
 
-        li {
-          height: auto;
-          margin: 0 55px;
-          padding: 0 10px 10px;
-          font-family: $raleway-medium;
-          font-size: 16px;
-          color: $purple;
+				li {
+					height: auto;
+					margin: 0 55px;
+					padding: 0 10px 10px;
+					font-family: $raleway-medium;
+					font-size: 16px;
+					color: $purple;
 
-          &:active {
-            font-family: $raleway-bold;
-            background-color: transparent;
-          }
-        }
+					&:active {
+						font-family: $raleway-bold;
+						background-color: transparent;
+					}
+				}
 
-        .current-menu-item {
-          padding-bottom: 5px;
-          font-family: $raleway-bold;
-          background-color: transparent;
-          border-bottom: 5px solid $purple;
+				.current-menu-item {
+					padding-bottom: 5px;
+					font-family: $raleway-bold;
+					background-color: transparent;
+					border-bottom: 5px solid $purple;
 
-          &::after {
-            display: none;
-          }
-        }
-      }
-    }
-  
-    &__content {
-      
-      &-inner-wrapper {
-        position: relative;
-        max-width: 1160px;
-        margin: 0 auto;
-      }
-  
-      &-single {
-        display: flex;
-        margin-bottom: 30px;
-        flex-flow: row;
+					&::after {
+						display: none;
+					}
+				}
+			}
+		}
 
-        &-image {
-          height: 220px;
-          width: 350px;
-        }
-        
-        &-content {
-          position: relative;
-          padding: 30px 0 0 30px;
-          flex: 1;
-          align-items: flex-start;
-        }
+		&__content {
+			&-inner-wrapper {
+				position: relative;
+				max-width: 1160px;
+				margin: 0 auto;
+			}
 
-        &-title {
-          max-width: 420px;
-          margin-bottom: 45px;
-          text-align: left;
-          font-size: 20px;
+			&-single {
+				display: flex;
+				margin-bottom: 30px;
+				flex-flow: row;
 
-          &::after {
-            width: 30px;
-            left: 0;
-            transform: translateX(0);
-          }
-        }
-  
-        &-excerpt {
-          max-width: 320px;          
-          margin-bottom: 0;
-          text-align: left;
-          font-size: 16px;
-        }
+				&-image {
+					height: 220px;
+					width: 350px;
+				}
 
-        &-link {
-          position: absolute;
-          height: 35px;
-          right: 64px;
-          bottom: 32px;
-          min-width: unset;
-          font-size: 14px;
-  
-          &::after {
-            padding: 3px;
-            top: calc(50% - 5px);
-            right: 10px;
-            border-width: 0 1px 1px 0;
-          }
-        }
-      }
-    }
-  }
+				&-content {
+					position: relative;
+					padding: 30px 0 0 30px;
+					flex: 1;
+					align-items: flex-start;
+				}
+
+				&-title {
+					max-width: 420px;
+					margin-bottom: 45px;
+					text-align: left;
+					font-size: 20px;
+
+					&::after {
+						width: 30px;
+						left: 0;
+						transform: translateX(0);
+					}
+				}
+
+				&-excerpt {
+					max-width: 320px;
+					margin-bottom: 0;
+					text-align: left;
+					font-size: 16px;
+				}
+
+				&-link {
+					position: absolute;
+					height: 35px;
+					right: 64px;
+					bottom: 32px;
+					min-width: unset;
+					font-size: 14px;
+
+					&::after {
+						padding: 3px;
+						top: calc(50% - 5px);
+						right: 10px;
+						border-width: 0 1px 1px 0;
+					}
+				}
+			}
+		}
+	}
 }

@@ -13,6 +13,8 @@
 		justify-content: center;
 		background: $purple;
 		position: relative;
+		transition: 0.5s;
+		animation-duration: 2s;
 	}
 	&__header {
 		&--desktop {
@@ -155,7 +157,20 @@
 		color: $purple;
 	}
 }
-
+.sticky-header {
+	position: fixed;
+	top: 0;
+	z-index: 100;
+	// animation-name: showStickyMenu;
+}
+@keyframes showStickyMenu {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
 @include desktop() {
 	.archive-tab {
 		display: flex;
@@ -170,6 +185,7 @@
 			height: 50px;
 			width: 100%;
 			padding: 0;
+			transition: 0.3s;
 		}
 		&__header {
 			display: flex;

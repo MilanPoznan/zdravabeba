@@ -44,7 +44,6 @@ jQuery(function($) {
 
 	if ($(window).width() < 1200) {
 		const $hamburger = $('.hamburger');
-
 		//Menu
 		$hamburger.on('click', () => {
 			$('.hamburger').toggleClass('is-active');
@@ -58,19 +57,13 @@ jQuery(function($) {
 		});
 
 		$('.menu-item-has-children').on('click', e => {
-			e.preventDefault();
+			// e.preventDefault();
 			let menuWithChildren = e.target;
 			$(e.target)
 				.next()
 				.toggleClass('show-submenu');
 		});
-	} else {
-		$('.menu-item-has-children').on('hover', e => {
-			// $('.sub-menu').toggle('slow');
-		});
 	}
-	// End menu
-	$(window).on('resize', () => {});
 
 	// init navigation module
 	const navigation = new Navigation($);
@@ -83,7 +76,6 @@ jQuery(function($) {
 #######################*/
 
 function twitterShareFx(e) {
-	console.log('asd');
 	e.preventDefault();
 	var twitterWindow = window.open(
 		'https://twitter.com/share?url=' + document.URL,

@@ -46,6 +46,9 @@
 				line-height: 28px;
 			}
 		}
+		&__single-proizvod {
+			margin-top: -40px;
+		}
 		&__content-overlay {
 			position: absolute;
 			display: block;
@@ -63,7 +66,7 @@
       }
 
 			h2 {
-        font-size: 48px;
+				font-size: 48px;
 				margin-bottom: 0;
 			}
     }
