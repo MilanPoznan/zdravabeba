@@ -9,14 +9,6 @@
 		font-weight: 600;
 		font-size: 22px;
 		text-transform: uppercase;
-		a {
-			pointer-events: none;
-		}
-	}
-	.enable-click {
-		a {
-			pointer-events: auto;
-		}
 	}
 	&__folow-us {
 		height: 80px;
@@ -40,6 +32,12 @@
 	}
 }
 .menu-item-has-children {
+	// pointer-events: none;
+	// .enable-click {
+	// 	a {
+	// 		pointer-events: auto;
+	// 	}
+	// }
 	ul {
 		display: none;
 		li {
@@ -129,9 +127,9 @@
 					width: 100%;
 				}
 			}
-			a {
-				pointer-events: auto;
-			}
+			// a {
+			// 	pointer-events: auto;
+			// }
 		}
 		&__folow-us {
 			display: none;

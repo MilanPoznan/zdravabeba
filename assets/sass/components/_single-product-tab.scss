@@ -62,6 +62,10 @@
 			color: $purple;
 		}
 	}
+	&__single-description {
+		width: 100%;
+		padding: 20px 5% 0;
+	}
 }
 
 @include tablet() {
@@ -81,6 +85,11 @@
 		background: $beige;
 		&__single-proizvod {
 			background: $white;
+		}
+		&__single-description {
+			max-width: 1160px;
+			margin: 0 auto;
+			padding: 20px 0 0;
 		}
 	}
 

@@ -2,14 +2,14 @@
 get_header();
 ?>
 <section class="proizvod">
-  <div class="proizvod__hero">
-    CaO
-  </div>
   <div class="proizvod__single-proizvod">
     <?php  include 'template-parts/one-product.php'; ?>
   </div>
 <div class="proizvod__single-proizvod">
   <?php  include 'template-parts/single-product-tab-section.php'; ?>
+</div>
+<div class="proizvod__single-description">
+  <?php the_field('item_description') ?>
 </div>
 <div class="proizvod__proizvodi-section">
   <?php  include 'template-parts/products-section.php'; ?>
