@@ -106,6 +106,21 @@
 /****************
 * Media queries *
 ****************/
+@include phone-lg() {
+  .footer {
+    &__links {
+      justify-content: flex-start;
+    }
+    &__box {
+      padding-right: 15%;
+      width: fit-content;
+      &:last-child {
+        display: block;
+      }
+    }
+  }
+}
+
 @include tablet() {
   .site-footer {
     padding: 60px 0px;
