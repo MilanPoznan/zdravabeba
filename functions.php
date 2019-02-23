@@ -156,7 +156,7 @@ function get_last_articles($class, $categories, $colors) {
 								$post_link = get_permalink($single_post[0]->ID);
 								 ?>
 							</div>
-							<a href="<?php echo $post_link; ?>"  class="category-articles__post-cta general-cta general-cta--<?php echo $color ?>"><span>Procitajte više</span></a>
+							<a href="<?php echo $post_link; ?>"  class="category-articles__post-cta general-cta general-cta--<?php echo $color ?>"><span>Pročitajte više</span></a>
 						</div>
 						<div class="single-post-hover single-post-hover--<?php echo $colors[$key]; ?>"></div>
 					</div>
@@ -193,14 +193,16 @@ function get_last_articles($class, $categories, $colors) {
 							<div class="category-articles__post-desc post-desc">
 								<?php echo wp_trim_words(get_the_content(), 14); ?>
 							</div>
-							<a href="<?php echo $post_link; ?>"  class="category-articles__post-cta general-cta general-cta--<?php echo $colors; ?>"><span>Procitajte više</span></a>
+							<a href="<?php echo $post_link; ?>"  class="category-articles__post-cta general-cta general-cta--<?php echo $colors; ?>"><span>Pročitajte više</span></a>
 						</div>
 						<div class="single-post-hover single-post-hover--<?php echo $colors; ?>"></div>
 					</div>
 				<?php endforeach;
 				wp_reset_postdata();?>
-				<a href="<?php echo $category_url; ?>" class="category-articles__archive-link">Pogledaj sve artikle</a>
-			</div>
+      </div>
+      <div class="category-articles__archive-link-wrapper">
+        <a href="<?php echo $category_url; ?>" class="category-articles__archive-link">Pogledaj sve artikle</a>
+      </div>
 		</div>
 		<?php
 	}

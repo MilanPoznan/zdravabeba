@@ -150,11 +150,11 @@ em {
 .general {
 	margin-bottom: 80px;
 	h1 {
-		font-size: 52px;
+		font-size: 34px;
 		font-family: $raleway-light;
 	}
 	h2 {
-		font-size: 48px;
+		font-size: 38px;
 		font-family: $raleway-light;
 	}
 	h3 {
@@ -274,6 +274,10 @@ em {
       font-size: 18px;
     }
   }
+
+  .text1column {
+    margin-bottom: 20px;
+  }
 }
 
 .general-text {
@@ -282,7 +286,7 @@ em {
 	}
 	&__title {
 		margin-bottom: 30px;
-		font-size: 52px;
+		font-size: 38px;
 		line-height: 1.21;
 		color: $purple;
 		text-transform: uppercase;
@@ -359,12 +363,23 @@ em {
  * Media queries *
  ****************/
 @include tablet() {
+  .general {
+    h1 {
+      font-size: 52px;
+    }
+  }
+
+  h2 {
+		font-size: 48px;
+	}
+
 	.general-text {
 		&__box {
 			padding: 80px 0;
 		}
 		&__title {
-			margin-bottom: 50px;
+      margin-bottom: 50px;
+      font-size: 52px;
 		}
 		&__content {
 			p {

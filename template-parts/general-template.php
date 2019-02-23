@@ -21,14 +21,14 @@ get_header();
 			<div class="general">
         <?php
           if (is_single()) { 
-            $post_id = get_the_id();
-            $post_categories = wp_get_post_categories( $post_id );
-            $first_category_id = $post_categories[0];
-            // var_dump($post_categories);
+            $cat = get_the_category();
+            $first_cat_id = $cat[0]->cat_ID;
+            $parent_cat_id = $cat[0]->parent;
+
             ?>
             <div class="single__breadcrumb">
-              <a href="<?php echo site_url();?>" class="single__breadcrumb-home">Početna</a>
-              <a href="<?php echo get_category_link( $first_category_id ); ?>" class="single__breadcrumb-archive"><?php echo get_cat_name($first_category_id)?></a>
+              <a href="<?php echo get_category_link( $parent_cat_id );?>" class="single__breadcrumb-home"><?php echo get_cat_name( $parent_cat_id )?></a>
+              <a href="<?php echo get_category_link( $first_cat_id ); ?>" class="single__breadcrumb-archive"><?php echo get_cat_name($first_cat_id)?></a>
               <span class="single__breadcrumb-post-title"><?php the_title()?></span>
             </div>
         <?php }
