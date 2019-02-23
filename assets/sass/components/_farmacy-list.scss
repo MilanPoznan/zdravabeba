@@ -1,0 +1,42 @@
+.farmacy-list {
+	&__wrapper {
+		padding: 0 5%;
+	}
+	h1 {
+		margin: 20px 0;
+		text-align: center;
+	}
+	&__list {
+		color: $purple;
+		font-family: $raleway-bold;
+		a {
+			margin: 10px 0;
+		}
+	}
+}
+
+@include desktop() {
+	.farmacy-list {
+		padding: 40px;
+		h1 {
+			margin: 0 auto 60px;
+		}
+		&__wrapper {
+			max-width: 1160px;
+			margin: 0 auto;
+		}
+		&__list {
+			column-count: 2;
+			font-size: 22px;
+			margin: 16px 0;
+			display: flex;
+			flex-flow: row;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			a {
+				width: 45%;
+				text-align: center;
+			}
+		}
+	}
+}
