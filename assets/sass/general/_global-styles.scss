@@ -475,6 +475,14 @@ img[class$='-imgtobg'] {
 }
 
 @include desktop() {
+	.general {
+		h1 {
+			&::after,
+			&::before {
+				display: none;
+			}
+		}
+	}
 	h1 {
 		position: relative;
 		width: fit-content;
