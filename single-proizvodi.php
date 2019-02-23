@@ -18,6 +18,10 @@ get_header();
   <h2 class="proizvod__preporucujemo-title">PREPORUČUJEMO</h2>
   <?php get_last_articles('planiranje',  array(8, 9, 10), array('purple', 'yellow', 'orange') ); ?>
 </div>
+<div class="proizvod__lista-apoteka">
+  <?php  include 'template-parts/lista-apoteka.php'; ?>
+
+</div>
 </section>
 <?php
 get_footer();
