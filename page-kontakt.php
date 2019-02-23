@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <section class="contact">
-  <h2><?php the_field('contact_title'); ?></h2>
+  <h1><?php the_field('contact_title'); ?></h1>
 
   <div class="contact__content">
     <div class="contact__wrapper">

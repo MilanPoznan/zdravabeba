@@ -35,7 +35,7 @@
 				<div class="footer__box">
 					<p class="footer__links--title">BREND</p>
 					<ul>
-						<li><a href="<?php echo get_page_link( 14 ); ?>">O nama</a></li>
+						<li><a href="<?php echo site_url() . '/o-nama'; ?>">O nama</a></li>
 					</ul>
 				</div><!-- .footer__box -->
 				<div class="footer__box">

@@ -220,6 +220,10 @@
       &-title {
         margin-top: 50px;
         max-width: unset;
+        &::after, 
+        &::before {
+          display: none !important;
+        }
       }
 
       &-subtitle {
