@@ -35,7 +35,7 @@
 				<div class="footer__box">
 					<p class="footer__links--title">BREND</p>
 					<ul>
-						<li><a href="<?php echo get_page_link( 14 ); ?>">O nama</a></li>
+						<li><a href="<?php echo site_url() . '/o-nama'; ?>">O nama</a></li>
 					</ul>
 				</div><!-- .footer__box -->
 				<div class="footer__box">
@@ -52,10 +52,10 @@
 				<div class="footer__social">
 					<p class="footer__social--title">Pratite nas na:</p>
 					<div class="footer__social-icons">
-						<a href="https://www.facebook.com/FemibionRS/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-						<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-						<a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-						<a href="https://www.youtube.com"><i class="fa fa-youtube-play"></i></a>
+						<a href="https://www.facebook.com/FemibionRS/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+					  <!-- <a href="#" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+						<a href="#" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+						<a href="https://www.youtube.com" target="_blank"><i class="fa fa-youtube-play"></i></a> -->
 					</div>
 				</div><!-- .footer__social-->			
 				<div class="footer__copy">&copy; <?php echo date("Y"); ?> Copyright | EL Pharma.</div>
