@@ -95,6 +95,11 @@
 		}
   }
 
+  &__archive-link-wrapper {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
 	&__archive-link {
 		position: relative;
 		text-transform: uppercase;
@@ -148,15 +153,26 @@
 			width: 100%;
 			max-width: 1160px;
 			flex-flow: row;
-			justify-content: space-between;
+			justify-content: center;
 			padding-bottom: 80px;
 		}
 		&__overlay {
 			top: 220px;
 		}
 		&__post {
-			width: 350px;
-			margin-bottom: 25px;
+      width: 350px;
+      margin-left: 26px;
+      margin-right: 26px;
+      margin-bottom: 25px;
+      
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
 			&:hover {
         .category-articles__post-img {
           transform: scale(1.1);
@@ -227,6 +243,10 @@
           border-radius: 0%;
 				}
 			}
+    }
+    &__archive-link-wrapper {
+      max-width: 1160px;
+      margin: 0 auto;
     }
 		&__archive-link {
 			position: absolute;

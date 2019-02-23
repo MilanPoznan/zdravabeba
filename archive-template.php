@@ -21,9 +21,10 @@
   </div>
   <div class="archive-page__single-proizvod">
     <div class="archive-page__title-section">
-      <h1>PROIZVODI</h1>
+      <h2>PROIZVODI</h2>
     </div>
     <?php  include 'template-parts/one-product.php'; ?>
+    <?php  include 'template-parts/second-product.php'; ?>
   </div>
 </div>
 

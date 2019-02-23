@@ -17,17 +17,17 @@
 	}
 	&__single-proizvod {
 		background: $beige;
-	}
-
-	&__title-section {
-		h2 {
-			margin-bottom: 30px;
-			font-family: $raleway-light;
-			font-size: 52px;
-			text-align: center;
-			color: $purple;
-		}
-	}
+  }
+  
+  &__title-section {    
+    h2 {
+      margin-bottom: 30px;
+      font-family: $raleway-light;
+      font-size: 38px;
+      text-align: center;
+      color: $purple;
+    }
+  }
 }
 
 @include desktop() {
@@ -60,10 +60,18 @@
 			z-index: -1;
 		}
 		&__title-section {
+      h1 {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+
 			h2 {
 				font-size: 48px;
 				margin-bottom: 0;
 			}
-		}
+    }
+    &__single-proizvod {
+      padding-top: 30px;
+    }
 	}
 }
