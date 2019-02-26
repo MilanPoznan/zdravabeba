@@ -50,7 +50,7 @@
               <div class="archive-tab__post-description">
                 <?php
                 $my_post_content = $single_post[0]->post_content;;
-                echo wp_trim_words($my_post_content, 30);
+                echo wp_trim_words($my_post_content, 60);
                   $post_link = get_permalink($single_post[0]->ID);
                 ?>
                 <a href="<?php echo $post_link ?>"  class="archive-tab__post-cta general-cta general-cta--purple"><span>Pročitajte više</span></a>

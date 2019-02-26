@@ -14,7 +14,7 @@
       endwhile;
         ?>
     </div>
-    <div class="archive-page__content-overlay"></div>
+    <!-- <div class="archive-page__content-overlay"></div> -->
   </div>
   <div class="archive-page__tabs">
     <?php include 'tab-archive.php'; ?>
