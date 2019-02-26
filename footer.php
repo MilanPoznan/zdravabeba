@@ -64,6 +64,7 @@
 		</div><!-- .footer -->
 	</footer><!-- #colophon -->
 
+	<div class="footer__container">
 	<div class="footer__privacy-policy">
 		<div class="footer__terms">
 			<a href="<?php echo site_url() . '/politika-privatnosti'; ?>">Politika privatnosti</a>
@@ -74,6 +75,7 @@
 			<img src="<?php echo get_template_directory_uri() ?>/assets/img/footer-logo.jpg" alt="Footer Logo Image">
 		</div>
 	</div><!-- .footer__privacy-policy -->
+	</div><!-- .footer__container -->
 </div><!-- #page -->
 <?php get_template_part('template-parts/cookie-popup'); ?>
 <?php wp_footer(); ?>
