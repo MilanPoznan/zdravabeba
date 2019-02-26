@@ -83,16 +83,16 @@
 	}
 	&__content {
 		width: 100%;
-    color: $grey;
-    
-    &-title {
-      width: 90%;
-      margin: 0 auto;
-      margin-bottom: 20px;
-      h1 {
-        text-align: center;
-      }
-    }
+		color: $grey;
+
+		&-title {
+			width: 90%;
+			margin: 0 auto;
+			margin-bottom: 20px;
+			h1 {
+				text-align: center;
+			}
+		}
 		h2 {
 			color: $purple;
 			margin-bottom: 30px;
@@ -119,7 +119,7 @@
 	&__post-title {
 		color: $purple;
 		margin-bottom: 20px;
-    font-family: $raleway-bold;
+		font-family: $raleway-bold;
 	}
 	&__post-description {
 		margin-bottom: 30px;
@@ -152,10 +152,10 @@
 			z-index: 1;
 		}
 	}
-	.active-tab-link {
-		background: $white;
-		color: $purple;
-	}
+	// .active-tab-link {
+	// 	background: $white;
+	// 	color: $purple;
+	// }
 }
 .sticky-header {
 	position: fixed;
@@ -217,6 +217,11 @@
 		}
 		&__header-tab {
 			width: 25%;
+			transition: 0.4s;
+			&:hover {
+				background: $white;
+				color: $purple;
+			}
 		}
 		&__mask-select {
 			display: none;
@@ -317,8 +322,8 @@
 			}
 		}
 	}
-	.active-tab-link {
-		background: $white;
-		color: $purple;
-	}
+	// .active-tab-link {
+	// 	background: $white;
+	// 	color: $purple;
+	// }
 }

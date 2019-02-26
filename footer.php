@@ -17,7 +17,7 @@
 
 		<div class="footer">
 			<a class="back-to-top" href="#">Povratak na vrh</a>
-			
+
 			<div class="footer__wrapper">
 			<div class="footer__description">
         Dobrodošli na uzbudljiv put ka materinstvu. Mislite o Femibion-u kao o svom partneru u trudnoći koji Vam daje inspiraciju i stručne savete koji su Vam potrebni tokom ovog posebnog perioda. Ovde smo da Vam pomognemo ne samo da postanete sjajna mama već i da ostanete sjajna žena, kakva jeste. U čast avanture koja je pred Vama…
@@ -27,9 +27,9 @@
 				<div class="footer__box">
 					<p class="footer__links--title">Faze</p>
 					<ul>
-						<li><a href="<?php echo get_category_link( 4 ); ?> ">Planiranje</a></li>
-						<li><a href="<?php echo get_category_link( 11 ); ?>">Trudnoća</a></li>
-						<li><a href="<?php echo get_category_link( 7 ); ?>">Materinstvo</a></li>
+						<li><a href="http://www.femibion.ellectadigital.com/planiranje/">Planiranje</a></li>
+						<li><a href="http://www.femibion.ellectadigital.com/trudnoca/">Trudnoća</a></li>
+						<li><a href="http://www.femibion.ellectadigital.com/materinstvo/">Materinstvo</a></li>
 					</ul>
 				</div><!-- .footer__box -->
 				<div class="footer__box">
@@ -57,7 +57,7 @@
 						<a href="#" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
 						<a href="https://www.youtube.com" target="_blank"><i class="fa fa-youtube-play"></i></a> -->
 					</div>
-				</div><!-- .footer__social-->			
+				</div><!-- .footer__social-->
 				<div class="footer__copy">&copy; <?php echo date("Y"); ?> Copyright | EL Pharma.</div>
 			</div><!-- .footer__social -->
 
