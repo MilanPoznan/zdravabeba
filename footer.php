@@ -53,6 +53,7 @@
 					<p class="footer__social--title">Pratite nas na:</p>
 					<div class="footer__social-icons">
 						<a href="https://www.facebook.com/FemibionRS/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+						<a href="https://www.instagram.com/femibion.srbija/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>						
 					  <!-- <a href="#" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
 						<a href="#" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
 						<a href="https://www.youtube.com" target="_blank"><i class="fa fa-youtube-play"></i></a> -->
@@ -64,6 +65,7 @@
 		</div><!-- .footer -->
 	</footer><!-- #colophon -->
 
+	<div class="footer__container">
 	<div class="footer__privacy-policy">
 		<div class="footer__terms">
 			<a href="<?php echo site_url() . '/politika-privatnosti'; ?>">Politika privatnosti</a>
@@ -74,6 +76,7 @@
 			<img src="<?php echo get_template_directory_uri() ?>/assets/img/footer-logo.jpg" alt="Footer Logo Image">
 		</div>
 	</div><!-- .footer__privacy-policy -->
+	</div><!-- .footer__container -->
 </div><!-- #page -->
 <?php get_template_part('template-parts/cookie-popup'); ?>
 <?php wp_footer(); ?>
