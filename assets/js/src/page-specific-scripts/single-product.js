@@ -4,7 +4,10 @@ jQuery(function($) {
 	const $tableHeader = $('.single-tab__header-column');
 	const $tableContent = $('.js-product-row');
 	const $tableHeaderIndex = $tableHeader.data('index');
-
+	$('.one-product__cta').on('click', function() {
+		$(this).toggleClass('active');
+		$('.farmacy-list__wrapper').slideToggle();
+	});
 	$tabDropdownTitle.on('click', e => {
 		$(e.target)
 			.next()

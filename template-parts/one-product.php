@@ -14,9 +14,11 @@
         <div class="one-product__text">
           <?php the_field('product_description'); ?>
         </div>
-        <a href="<?php the_field('product_cta_link'); ?>" class="one-product__cta general-cta general-cta--purple">
+        <div class="one-product__cta general-cta general-cta--purple">
           <span><?php the_field('product_cta_text'); ?></span>
-        </a>
+        </div>
+        <?php  include 'lista-apoteka.php'; ?>
+
       </div>
     </div>
   </div>

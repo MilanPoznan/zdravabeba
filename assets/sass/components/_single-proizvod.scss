@@ -13,11 +13,11 @@
 		padding: 0 5% 60px;
 		font-family: $raleway-light;
 		color: $grey;
-    font-size: 16px;
-    
-    &--second {
-      padding-bottom: 90px;
-    }
+		font-size: 16px;
+
+		&--second {
+			padding-bottom: 90px;
+		}
 	}
 	&__title {
 		font-size: 36px;
@@ -38,7 +38,7 @@
 		position: relative;
 		display: flex;
 		height: 60px;
-		width: fit-content;
+		width: 300px;
 		min-width: 250px;
 		padding: 0 30px;
 		flex-flow: column;
@@ -55,10 +55,16 @@
 			content: '';
 			top: calc(50% - 6px);
 			right: 20px;
-			transform: rotate(-45deg);
+			transform: rotate(45deg);
 			border: solid $purple;
 			border-width: 0 2px 2px 0;
 			z-index: 1;
+			transition: 0.3s;
+		}
+	}
+	.active {
+		&::after {
+			transform: rotate(225deg);
 		}
 	}
 }
@@ -72,11 +78,11 @@
 		&__content {
 			display: flex;
 			padding: 80px 0;
-      justify-content: space-between;
-      
-      &--second {
-        padding-top: 20px;
-      }
+			justify-content: space-between;
+
+			&--second {
+				padding-top: 20px;
+			}
 		}
 		&__image-wrapp {
 			padding: 0;
