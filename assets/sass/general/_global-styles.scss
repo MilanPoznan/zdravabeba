@@ -197,6 +197,13 @@ em {
 		line-height: 24px;
 		color: $pink;
 	}
+	a {
+		color: $pink;
+		text-decoration: none;
+	}
+	li a {
+		color: $pink;
+	}
 	ul,
 	ol {
 		padding: 0 5%;
