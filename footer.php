@@ -69,7 +69,7 @@
 	<div class="footer__privacy-policy">
 		<div class="footer__terms">
 			<a href="<?php echo site_url() . '/politika-privatnosti'; ?>">Politika privatnosti</a>
-			<!-- <a href="#">Mapa strony</a>  -->
+			<a href="<?php echo the_permalink(534);?>"><?php echo get_the_title(534); ?></a>
 			<a href="<?php echo site_url() . '/uslovi-koriscenja'; ?>">Uslovi korišćenja</a>
 		</div>
 		<div class="footer__logo">

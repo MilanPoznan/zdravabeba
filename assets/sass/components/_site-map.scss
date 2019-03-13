@@ -1,0 +1,177 @@
+.site-map {
+  background-color: $white;
+  &__inner-wrapper {
+    padding: 60px 5% 80px;
+  }
+
+  &__title {
+    font-size: 48px;
+    margin-bottom: 60px;
+    text-align: center;
+    color: $purple;
+  }
+
+  &__homepage {
+    margin-bottom: 42px;
+
+    &-title {
+      margin-bottom: 38px;
+      font-family: $raleway-bold;
+      color: $purple;
+    }
+    &-link {
+      font-family: $raleway;
+      color: $dark-grey;
+    }
+  }
+
+  &__faze {
+    margin-bottom: 42px;
+
+    &-title {
+      margin-bottom: 38px;
+      font-family: $raleway-bold;
+      color: $purple;
+    }
+    &-planiranje, &-trudnoca, &-materinstvo {
+      margin-bottom: 35px;
+      &-title {
+        margin-bottom: 38px;
+        font-family: $raleway-bold;
+        font-size: 20px;
+      }
+      &-pages {
+        margin-bottom: 28px;
+        font-size: 20px;
+        &-title {
+          margin-bottom: 16px;
+
+          span {
+            font-family: 'Times New Roman', Times, serif;
+          }
+        }
+      }
+      &-articles {
+        h3 {
+          margin-bottom: 16px;
+          font-size: 20px;
+          font-family: $raleway;
+          color: $dark-grey;
+
+          span {
+            font-family: 'Times New Roman', Times, serif;
+          }
+        }
+        a {
+          font-family: $raleway;
+          color: $dark-grey;
+        }
+
+      }
+    }
+    &-planiranje {
+      &-title {
+        color: $viol-purple;
+      }
+    }
+    &-trudnoca {
+      &-title {
+        color: $yellow;
+      }
+    }
+    &-materinstvo {
+      &-title {
+        color: $orange;
+      }
+    }
+  }
+
+  &__proizvodi, &__kontakt, &__ostalo {
+    margin-bottom: 42px;
+
+    &-title {
+      margin-bottom: 38px;
+      font-family: $raleway-bold;
+      color: $purple;
+    }
+    &-list {
+      a {
+        font-family: $raleway;
+        color: $dark-grey;
+      }
+    }
+  }
+  a {
+    position: relative;
+    display: block;
+    padding-left: 10px;
+    margin-bottom: 2px;
+    font-size: 18px;
+
+    &::after {
+      position: absolute;
+      content: '';
+      top: 12px;
+      left: 0;
+      border: solid $black;
+      border-width: 0 1px 1px 0;
+      display: inline-block;
+      padding: 2px;
+      transform: rotate(-45deg) translateY(-50%);
+    }
+  }
+}
+
+@include desktop() {
+  .site-map {
+    &__inner-wrapper {
+      max-width: 1160px;
+      margin: 0 auto;
+    }
+  
+    &__faze {
+      display: flex;
+      flex-flow: row;
+      flex-wrap: wrap;
+      
+      &-title {
+        width: 100%;
+      }
+      &-planiranje, &-trudnoca, &-materinstvo {
+        width: 30%;
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+      &-planiranje {
+        margin-left: 0;
+      }
+      &-materinstvo {
+        margin-right: 0;
+      }
+    }
+  
+    &__proizvodi, &__kontakt, &__ostalo {
+
+      &-title {
+      }
+      &-list {
+        display: flex;
+        flex-flow: row;
+        flex-wrap: wrap;
+
+        a {
+          width: 30%;
+          margin-left: 20px;
+          margin-right: 20px;
+
+          &:first-child {
+            margin-left: 0;
+          }
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
