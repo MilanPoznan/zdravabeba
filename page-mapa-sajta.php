@@ -26,7 +26,7 @@
           <h3 class="site-map__faze-planiranje-title">PLANIRANJE</h3>
           <div class="site-map__faze-planiranje-pages">
             <h3 class="site-map__faze-planiranje-pages-title">STRANE (<span>1</span>)</h3>
-            <a href="<?php echo the_permalink('74'); ?>" class="site-map__faze-planiranje-pages-link"><?php echo get_the_title(74); ?></a>
+            <a href="<?php the_permalink('74'); ?>" class="site-map__faze-planiranje-pages-link"><?php echo get_the_title(74); ?></a>
           </div>
           <div class="site-map__faze-planiranje-articles">
             <?php 
@@ -57,7 +57,7 @@
           <h3 class="site-map__faze-trudnoca-title">TRUDNOĆA</h3>
           <div class="site-map__faze-trudnoca-pages">
             <h3 class="site-map__faze-trudnoca-pages-title">STRANE (<span>1</span>)</h3>
-            <a href="<?php echo the_permalink(251); ?>" class="site-map__faze-trudnoca-pages-link"><?php echo get_the_title(251); ?></a>
+            <a href="<?php the_permalink(251); ?>" class="site-map__faze-trudnoca-pages-link"><?php echo get_the_title(251); ?></a>
           </div>
           <div class="site-map__faze-trudnoca-articles">
             <?php 
@@ -88,7 +88,7 @@
           <h3 class="site-map__faze-materinstvo-title">MATERINSTVO</h3>
           <div class="site-map__faze-materinstvo-pages">
             <h3 class="site-map__faze-materinstvo-pages-title">STRANE (<span>1</span>)</h3>
-            <a href="<?php echo the_permalink(253); ?>" class="site-map__faze-materinstvo-pages-link"><?php echo get_the_title(253); ?></a>
+            <a href="<?php the_permalink(253); ?>" class="site-map__faze-materinstvo-pages-link"><?php echo get_the_title(253); ?></a>
           </div>
           <div class="site-map__faze-materinstvo-articles">
             <?php 
@@ -140,8 +140,8 @@
       <div class="site-map__kontakt">
         <h2 class="site-map__kontakt-title">O NAMA</h2>
         <div class="site-map__kontakt-list">
-          <a href="<?php echo the_permalink(284); ?>"><?php echo get_the_title(284); ?></a>
-          <a href="<?php echo the_permalink(342); ?>"><?php echo get_the_title(342); ?></a>
+          <a href="<?php the_permalink(284); ?>"><?php echo get_the_title(284); ?></a>
+          <a href="<?php the_permalink(342); ?>"><?php echo get_the_title(342); ?></a>
         </div>
       </div>
       <!-- Kontakt End -->
@@ -150,8 +150,8 @@
       <div class="site-map__ostalo">
       <h2 class="site-map__ostalo-title">OSTALO</h2>
         <div class="site-map__ostalo-list">
-          <a href="<?php echo the_permalink(3); ?>"><?php echo get_the_title(3); ?></a>
-          <a href="<?php echo the_permalink(344); ?>"><?php echo get_the_title(344); ?></a>
+          <a href="<?php the_permalink(3); ?>"><?php echo get_the_title(3); ?></a>
+          <a href="<?php the_permalink(344); ?>"><?php echo get_the_title(344); ?></a>
         </div>
       </div>
       <!-- Ostalo End -->
