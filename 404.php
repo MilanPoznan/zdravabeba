@@ -1,60 +1,48 @@
 <?php
-/**
- * The template for displaying 404 pages (not found)
- *
- * @link https://codex.wordpress.org/Creating_an_Error_404_Page
- *
- * @package zdravabeba
- */
-
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main">
 
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'zdravabeba' ); ?></h1>
-				</header><!-- .page-header -->
+          <div class="general-text wrapper">
 
-				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'zdravabeba' ); ?></p>
+            <div class="general-text__box">
+              <h1 class="general-text__title">Izvinite, stranica nije pronađena!
+              </h1>
+            </div><!-- .general-text -->
+          </div>
+    </main><!-- #main -->
+  </div><!-- #primary -->
 
-					<?php
-					get_search_form();
+<?php
+$has_table = get_field('has_table');
+if( $has_table):
+  get_template_part('template-parts/table-section');
+endif;
+?>
 
-					the_widget( 'WP_Widget_Recent_Posts' );
-					?>
+<?php
+$has_testimonial = get_field('has_testimonial');
+if( $has_testimonial):
+  get_template_part('template-parts/testimonial-section');
+endif; ?>
+  <div class="single-post__other-posts">
+    <div class="single-post__proizvodi">
+      <?php
+      if (is_single()) {
+        get_template_part('template-parts/products-section');
+        get_template_part('template-parts/saveti-section');
+      }
+      ?>
+    </div>
+    <div class="single-post__saveti">
 
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'zdravabeba' ); ?></h2>
-						<ul>
-							<?php
-							wp_list_categories( array(
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							) );
-							?>
-						</ul>
-					</div><!-- .widget -->
-
-					<?php
-					/* translators: %1$s: smiley */
-					$zdravabeba_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'zdravabeba' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$zdravabeba_archive_content" );
-
-					the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
-
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
+    </div>
+    <div class="single-post__artikli">
+      <h2 class="single-post__artikli-title">Preporučujemo</h2>
+      <?php get_last_articles('single-artikli', array( 8, 9, 10 ), array('purple', 'yellow', 'orange') ); ?>
+    </div>
+  </div>
 <?php
 get_footer();
