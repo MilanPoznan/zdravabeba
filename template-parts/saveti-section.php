@@ -20,6 +20,7 @@
           <?php echo $proizvodi->post->post_title; ?>
         </div>
         <div class="category-articles__post-desc post-desc">
+          TESTIRANJE
           <?php
            echo $proizvodi->post->post_content;
           $post_link = get_permalink();

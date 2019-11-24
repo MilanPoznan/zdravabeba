@@ -119,7 +119,7 @@ add_action( 'after_setup_theme', 'zdravabeba_setup' );
 		<?php
 
 	}
-	add_action('wp_head', 'insert_social_in_head');
+	//add_action('wp_head', 'insert_social_in_head');
 
 	function add_cf_to_page() {
 		echo do_shortcode( '[contact-form-7 id="1234" title="Contact form 1"]' );
@@ -138,7 +138,8 @@ function get_last_articles($class, $categories, $colors) {
 				foreach ($categories as $key=>$value) {
 					$args = array(
 					 'posts_per_page' => 1,
-					 'cat' => $value
+					 'cat' => $value,
+					 'orderby','date'
 					);
 					$single_post = get_posts($args);
 					wp_reset_query();
@@ -150,10 +151,12 @@ function get_last_articles($class, $categories, $colors) {
 							<div class="category-articles__post-title post-title post-title--<?php echo $colors[$key]; ?>">
 								<?php echo $single_post[0]->post_title; ?>
 							</div>
-							<div class="category-articles__post-desc post-desc">
+							<div class="category-articles__post-desc post-desc test">
 								<?php
 								 echo wp_trim_words($single_post[0]->post_content, 14);
-								$post_link = get_permalink($single_post[0]->ID);
+								 $single_id = $single_post[0]->ID;
+								$post_link = get_permalink($single_id);
+								var_dump($post_link);
 								 ?>
 							</div>
 							<a href="<?php echo $post_link; ?>"  class="category-articles__post-cta general-cta general-cta--<?php echo $color ?>"><span>Pročitajte više</span></a>
@@ -341,6 +344,10 @@ function zdravabeba_scripts() {
 		wp_enqueue_script( 'archive-template', get_template_directory_uri() . '/assets/js/archive-page-template.js', array( 'jquery' ), 1.0, true );
 
 	}
+	if (is_front_page() ) {
+    wp_enqueue_script( 'homepage', get_template_directory_uri() . '/assets/js/homepage.js', array( 'jquery' ), 1.0, true );
+
+  }
 	if (is_singular('proizvodi')) {
 		wp_enqueue_script( 'single-product', get_template_directory_uri() . '/assets/js/single-product.js', array( 'jquery' ), 1.0, true );
 	}

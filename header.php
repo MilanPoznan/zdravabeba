@@ -27,7 +27,12 @@
       gtag('config', 'UA-119012432-2');
   </script>
 
-	<?php wp_head(); ?>
+	<?php wp_head();
+	$schemamarkup = get_post_meta(get_the_ID(), 'schemamarkup', true);
+	if(!empty($schemamarkup)) {
+	  echo $schemamarkup;
+	}
+	?>
 </head>
 
 <body <?php body_class(); ?>>

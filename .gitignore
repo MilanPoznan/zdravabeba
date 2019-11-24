@@ -1,5 +1,6 @@
 # ignore theme directories
 node_modules
+nvm
 vendor
 tmp
 .sass-cache
